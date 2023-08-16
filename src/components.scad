@@ -29,6 +29,14 @@ m4_bolt_hex_exterior = 3.5 + hole_tolerance;
 // 24mm button
 small_button_radius = 12 + hole_tolerance;
 
+// case dimensions
+frame_x = 185;
+frame_y = 210;
+frame_z = 45;
+top_plate_x = 175;
+top_plate_y = 200;
+top_plate_z = 5;
+
 /* PARTS */
 
 module m4_hole() {
@@ -80,7 +88,7 @@ module levermountholes() {
 }
 
 module base_topplate() {
-	cube([175,200,5], center=true);
+	cube([top_plate_x, top_plate_y, top_plate_z], center=true);
 }
 
 module topplate() {
@@ -104,5 +112,12 @@ module topplate() {
 			m4_hole_countersink();
 		translate([-77.5, -90, 2])
 			m4_hole_countersink();
+	}
+}
+
+module frame_panel_surround() {
+	difference() {
+		cube([frame_x, frame_y, top_plate_z], center=true);
+		scale([1, 1, 2]) base_topplate();
 	}
 }
