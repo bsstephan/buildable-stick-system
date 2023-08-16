@@ -79,9 +79,13 @@ module levermountholes() {
 		m4_hole_countersink();
 }
 
+module base_topplate() {
+	cube([175,200,5], center=true);
+}
+
 module topplate() {
 	difference() {
-		cube([175,200,5], center=true);
+		base_topplate();
 		// holes for mount bolts
 		translate([77.5, 90, 0])
 			m4_hole();
