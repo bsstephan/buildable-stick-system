@@ -51,6 +51,14 @@ module button_24mm_hole() {
 	cylinder(r=small_button_radius, h=100, $fn=50, center=true);
 }
 
+module frame_hex_bolt_hole() {
+	scale([1, 1, 2]) cylinder(r=m4_bolt_hex_exterior, h=frame_z, $fn=6, center=true);
+}
+
+module frame_interchange_hole() {
+	cylinder(r=15, h=50, $fn=50, center=true);
+}
+
 /* PIECES */
 
 module levermountbase() {
@@ -113,6 +121,10 @@ module topplate() {
 		translate([-77.5, -90, 2])
 			m4_hole_countersink();
 	}
+}
+
+module frame_mount_column() {
+	cube([20, 20, frame_z], center=true);
 }
 
 module frame_panel_surround() {
