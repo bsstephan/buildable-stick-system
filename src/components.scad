@@ -19,12 +19,12 @@
 /* QUASI-CONSTANTS */
 
 // adjustments
-hole_tolerance = 0.25;
+hole_tolerance = 0.15;
 
 // M4
 m4_bolt_radius = 2 + hole_tolerance;
-m4_bolt_countersink_radius = 6 + hole_tolerance;
-m4_bolt_hex_exterior = 3.5 + hole_tolerance;
+m4_bolt_countersink_radius = 6.1 + hole_tolerance;
+m4_bolt_hex_exterior_radius = 3.6 + hole_tolerance;
 
 // 24mm button
 small_button_radius = 12 + hole_tolerance;
@@ -44,7 +44,7 @@ module m4_hole() {
 }
 
 module m4_hole_countersink() {
-	cylinder(r1=m4_bolt_radius, r2=m4_bolt_countersink_radius, h=3.1, $fn=50, center=true);
+	cylinder(r1=m4_bolt_radius, r2=m4_bolt_countersink_radius, h=3.2, $fn=50, center=true);
 }
 
 module button_24mm_hole() {
@@ -52,7 +52,7 @@ module button_24mm_hole() {
 }
 
 module frame_hex_bolt_hole() {
-	scale([1, 1, 2]) cylinder(r=m4_bolt_hex_exterior, h=frame_z, $fn=6, center=true);
+	scale([1, 1, 2]) cylinder(r=m4_bolt_hex_exterior_radius, h=frame_z, $fn=6, center=true);
 }
 
 module frame_interchange_hole() {
