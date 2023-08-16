@@ -16,7 +16,7 @@
  * bullet-system-stick. If not, see <https://www.gnu.org/licenses/>.
  */
 
-use <components.scad>
+include <components.scad>
 
 // combine the lever mount and generic plate, with mounting holes
 module leverplate() {
