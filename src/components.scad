@@ -123,6 +123,13 @@ module topplate() {
 	}
 }
 
+module frame_box() {
+	difference() {
+		cube([frame_x, frame_y, frame_z], center=true);
+		cube([160, 185, frame_z+5], center=true);
+	}
+}
+
 module frame_mount_column() {
 	cube([20, 20, frame_z], center=true);
 }
@@ -131,5 +138,33 @@ module frame_panel_surround() {
 	difference() {
 		cube([frame_x, frame_y, top_plate_z], center=true);
 		scale([1, 1, 2]) base_topplate();
+	}
+}
+
+module base_frame() {
+	frame_box();
+	translate([0, 0, frame_z/2 + top_plate_z/2])
+		frame_panel_surround();
+	translate([(top_plate_x/2)-10, (top_plate_y/2)-10, 0])
+		frame_mount_column();
+	translate([-((top_plate_x/2)-10), (top_plate_y/2)-10, 0])
+		frame_mount_column();
+	translate([(top_plate_x/2)-10, -((top_plate_y/2)-10), 0])
+		frame_mount_column();
+	translate([-((top_plate_x/2)-10), -((top_plate_y/2)-10), 0])
+		frame_mount_column();
+}
+
+module frame() {
+	difference() {
+		base_frame();
+		translate([(top_plate_x/2)-10, (top_plate_y/2)-10, 0])
+			frame_hex_bolt_hole();
+		translate([-((top_plate_x/2)-10), (top_plate_y/2)-10, 0])
+			frame_hex_bolt_hole();
+		translate([(top_plate_x/2)-10, -((top_plate_y/2)-10), 0])
+			frame_hex_bolt_hole();
+		translate([-((top_plate_x/2)-10), -((top_plate_y/2)-10), 0])
+			frame_hex_bolt_hole();
 	}
 }
