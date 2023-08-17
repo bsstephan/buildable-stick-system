@@ -178,6 +178,25 @@ module frame() {
 
 /* LAYOUTS */
 
+module noir_button_p1() {
+	translate([40, 145, 0]) button_30mm_hole();
+}
+
+module noir_plus_one() {
+	// standard 8 (all relative to the first button) (via r/fightsticks)
+	noir_button_p1();
+	translate([32.94, 7.37+4.49, 0]) noir_button_p1();
+	translate([32.94+34.54, 7.37, 0]) noir_button_p1();
+	translate([32.94+34.54+33.02, -6.86, 0]) noir_button_p1();
+	translate([-3.47, -6.86-19.64-4.32-7.62, 0]) noir_button_p1();
+	translate([29.38, -6.86-19.64, 0]) noir_button_p1();
+	translate([29.38+3.56+31.24, -6.86-19.64-4.32, 0]) noir_button_p1();
+	translate([29.38+3.56+31.24+3.3+29.04, -6.86-19.64-4.32-7.62-6.93, 0]) noir_button_p1();
+
+	// just my guesstimate on this one
+	translate([-3.47-3.47, -78, 0]) noir_button_p1();
+}
+
 module sega_2p_p1() {
 	translate([33, 145, 0]) button_30mm_hole();
 }
