@@ -18,7 +18,11 @@
 
 include <components.scad>
 
-difference() {
-	translate([top_plate_x/2, top_plate_y/2, 0]) topplate();
-	sega_2p_plus_one();
+module sega_2p_plus_one_panel() {
+	difference() {
+		translate([top_plate_x/2, top_plate_y/2, 0]) topplate();
+		sega_2p_plus_one();
+	}
 }
+
+sega_2p_plus_one_panel();

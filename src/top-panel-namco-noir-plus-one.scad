@@ -18,7 +18,11 @@
 
 include <components.scad>
 
-difference() {
-	translate([top_plate_x/2, top_plate_y/2, 0]) topplate();
-	noir_plus_one();
+module namco_noir_plus_one_panel() {
+	difference() {
+		translate([top_plate_x/2, top_plate_y/2, 0]) topplate();
+		noir_plus_one();
+	}
 }
+
+namco_noir_plus_one_panel();
