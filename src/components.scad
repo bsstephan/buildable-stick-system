@@ -29,6 +29,9 @@ m4_bolt_hex_exterior_radius = 3.6 + hole_tolerance;
 // 24mm button
 small_button_radius = 12 + hole_tolerance;
 
+// 30mm button
+big_button_radius = 15 + hole_tolerance;
+
 // case dimensions
 frame_x = 185;
 frame_y = 210;
@@ -49,6 +52,10 @@ module m4_hole_countersink() {
 
 module button_24mm_hole() {
 	cylinder(r=small_button_radius, h=100, $fn=50, center=true);
+}
+
+module button_30mm_hole() {
+	cylinder(r=big_button_radius, h=100, $fn=50, center=true);
 }
 
 module frame_hex_bolt_hole() {
@@ -167,4 +174,25 @@ module frame() {
 		translate([-((top_plate_x/2)-10), -((top_plate_y/2)-10), 0])
 			frame_hex_bolt_hole();
 	}
+}
+
+/* LAYOUTS */
+
+module sega_2p_p1() {
+	translate([33, 145, 0]) button_30mm_hole();
+}
+
+module sega_2p_plus_one() {
+	// via slagcoin
+	sega_2p_p1();
+	translate([30.5, 11+9, 0]) sega_2p_p1();
+	translate([30.5+36, 11+9, 0]) sega_2p_p1();
+	translate([30.5+36+36, 11, 0]) sega_2p_p1();
+	translate([0, -19-9-11, 0]) sega_2p_p1();
+	translate([30.5, -19, 0]) sega_2p_p1();
+	translate([30.5+36, -19, 0]) sega_2p_p1();
+	translate([30.5+36+36, -19-9, 0]) sega_2p_p1();
+
+	// just my guesstimate on this one
+	translate([0, -19-9-11-19-9-11, 0]) sega_2p_p1();
 }
