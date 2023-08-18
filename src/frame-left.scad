@@ -18,7 +18,7 @@
 
 include <components.scad>
 
-module left_frame() {
+module base_left_frame() {
 	difference() {
 		frame();
 		// chop the right edge off
@@ -26,11 +26,15 @@ module left_frame() {
 	}
 }
 
-difference() {
-	left_frame();
-	// connection holes to other frames
-	frame_connection_holes();
+module left_frame() {
+	difference() {
+		base_left_frame();
+		// connection holes to other frames
+		frame_connection_holes();
 
-	// cable routing hole
-	frame_cable_routing_hole();
+		// cable routing hole
+		frame_cable_routing_hole();
+	}
 }
+
+left_frame();
