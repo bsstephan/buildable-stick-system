@@ -33,9 +33,13 @@ module leverplate() {
 	}
 }
 
-// put a 24mm hole in the lever plate just as a test
-difference() {
-	leverplate();
-	translate([70,0,0])
-		button_24mm_hole();
+module left_lever_panel() {
+	// put a 24mm hole in the lever plate just as a test
+	difference() {
+		leverplate();
+		translate([70,0,0])
+			button_24mm_hole();
+	}
 }
+
+left_lever_panel();
