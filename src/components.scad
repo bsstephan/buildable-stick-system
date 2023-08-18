@@ -193,12 +193,12 @@ module noir_plus_one() {
 	translate([29.38+3.56+31.24, -6.86-19.64-4.32, 0]) noir_button_p1();
 	translate([29.38+3.56+31.24+3.3+29.04, -6.86-19.64-4.32-7.62-6.93, 0]) noir_button_p1();
 
-	// just my guesstimate on this one
+	// just my guesstimate on this one, but note that this is the same position as sega 2p
 	translate([-3.47-3.47, -78, 0]) noir_button_p1();
 }
 
 module sega_2p_p1() {
-	translate([33, 145, 0]) button_30mm_hole();
+	translate([33.06, 145, 0]) button_30mm_hole();
 }
 
 module sega_2p_plus_one() {
@@ -212,6 +212,6 @@ module sega_2p_plus_one() {
 	translate([30.5+36, -19, 0]) sega_2p_p1();
 	translate([30.5+36+36, -19-9, 0]) sega_2p_p1();
 
-	// just my guesstimate on this one
+	// just my guesstimate on this one, but note that this is the same position as sega 2p
 	translate([0, -19-9-11-19-9-11, 0]) sega_2p_p1();
 }
