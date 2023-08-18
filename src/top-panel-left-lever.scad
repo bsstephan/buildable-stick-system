@@ -19,7 +19,7 @@
 include <components.scad>
 
 // combine the lever mount and generic plate, with mounting holes
-module lever_plate() {
+module left_lever_panel() {
 	difference() {
 		// base plate
 		union() {
@@ -30,15 +30,6 @@ module lever_plate() {
 		}
 		// holes to mount the lever
 		levermountholes();
-	}
-}
-
-module left_lever_panel() {
-	// put a 24mm hole in the lever plate just as a test
-	difference() {
-		lever_plate();
-		translate([70,0,0])
-			button_24mm_hole();
 	}
 }
 
