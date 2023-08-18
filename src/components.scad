@@ -33,8 +33,8 @@ small_button_radius = 12 + hole_tolerance;
 big_button_radius = 15 + hole_tolerance;
 
 // case dimensions
-frame_x = 185;
-frame_y = 210;
+frame_x = 183;
+frame_y = 208;
 frame_z = 45;
 top_plate_x = 175;
 top_plate_y = 200;
@@ -151,7 +151,7 @@ module topplate() {
 module frame_box() {
 	difference() {
 		cube([frame_x, frame_y, frame_z], center=true);
-		cube([160, 185, frame_z+5], center=true);
+		cube([frame_x-26, frame_y-26, frame_z+5], center=true);
 	}
 }
 
@@ -167,7 +167,7 @@ module frame_panel_surround() {
 }
 
 module frame_side_chopper() {
-	translate([frame_x/2, 0, 0]) cube([10.001, 2*(frame_y+top_plate_y), 2*(frame_z+top_plate_z)], center=true);
+	translate([frame_x/2, 0, 0]) cube([8, 2*(frame_y+top_plate_y), 2*(frame_z+top_plate_z)], center=true);
 }
 
 module frame_connection_holes() {
