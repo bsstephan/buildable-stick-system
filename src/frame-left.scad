@@ -28,17 +28,9 @@ module left_frame() {
 
 difference() {
 	left_frame();
-	// connection hole to other frames
-	translate([frame_x/2, (frame_y/4)+10, (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, (frame_y/4)+10, -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, (frame_y/4)-10, (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, (frame_y/4)-10, -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-
-	translate([frame_x/2, -((frame_y/4)+10), (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, -((frame_y/4)+10), -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, -((frame_y/4)-10), (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, -((frame_y/4)-10), -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	// connection holes to other frames
+	frame_connection_holes();
 
 	// cable routing hole
-	translate([frame_x/2, 0, 0]) rotate([0, 90, 0]) frame_interchange_hole();
+	frame_cable_routing_hole();
 }

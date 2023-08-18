@@ -148,6 +148,22 @@ module frame_panel_surround() {
 	}
 }
 
+module frame_connection_holes() {
+	translate([frame_x/2, (frame_y/4)+10, (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, (frame_y/4)+10, -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, (frame_y/4)-10, (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, (frame_y/4)-10, -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+
+	translate([frame_x/2, -((frame_y/4)+10), (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, -((frame_y/4)+10), -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, -((frame_y/4)-10), (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, -((frame_y/4)-10), -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+}
+
+module frame_cable_routing_hole() {
+	translate([frame_x/2, 0, 0]) rotate([0, 90, 0]) frame_interchange_hole();
+}
+
 module base_frame() {
 	frame_box();
 	translate([0, 0, frame_z/2 + top_plate_z/2])
