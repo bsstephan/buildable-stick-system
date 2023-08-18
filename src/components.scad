@@ -40,6 +40,10 @@ top_plate_x = 175;
 top_plate_y = 200;
 top_plate_z = 5;
 
+// neutrik D screw holes
+neutrik_d_screw_radius = 1.6 + hole_tolerance;
+neutrik_d_radius = 12 + hole_tolerance;
+
 /* PARTS */
 
 module m4_hole() {
@@ -64,6 +68,20 @@ module frame_hex_bolt_hole() {
 
 module frame_interchange_hole() {
 	cylinder(r=15, h=50, $fn=50, center=true);
+}
+
+module neutrik_d_hole() {
+	cylinder(r=neutrik_d_radius, h=100, $fn=50, center=true);
+}
+
+module neutrik_d_screw_hole() {
+	cylinder(r=neutrik_d_screw_radius, h=100, $fn=50, center=true);
+}
+
+module neutrik_d_mount() {
+	neutrik_d_hole();
+	translate([9.5, 12, 0]) neutrik_d_screw_hole();
+	translate([-9.5, -12, 0]) neutrik_d_screw_hole();
 }
 
 /* PIECES */
