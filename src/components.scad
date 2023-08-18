@@ -148,6 +148,10 @@ module frame_panel_surround() {
 	}
 }
 
+module frame_side_chopper() {
+	translate([frame_x/2, 0, 0]) cube([10.001, 2*(frame_y+top_plate_y), 2*(frame_z+top_plate_z)], center=true);
+}
+
 module frame_connection_holes() {
 	translate([frame_x/2, (frame_y/4)+10, (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
 	translate([frame_x/2, (frame_y/4)+10, -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
