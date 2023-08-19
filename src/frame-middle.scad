@@ -42,9 +42,6 @@ module middle_frame() {
 		translate([0, 100, 0]) rotate([90, 0, 0]) neutrik_d_mount();
 		translate([-40, 100, 0]) rotate([90, 0, 0]) neutrik_d_mount();
 		translate([40, 100, 0]) rotate([90, 0, 0]) neutrik_d_mount();
-
-		// max panel thickness per ethercon
-		translate([0, 10, 10]) cube([120, 180, 60], center=true);
 	}
 }
 

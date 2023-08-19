@@ -205,6 +205,9 @@ module frame() {
 			frame_hex_bolt_hole();
 		translate([-((top_plate_x/2)-10), -((top_plate_y/2)-10), 0])
 			frame_hex_bolt_hole();
+
+		// thin up the mount point to accommodate snap-ins, ethercon adapter
+		translate([0, 10, 10]) cube([120, 180, 60], center=true);
 	}
 }
 

@@ -17,29 +17,10 @@
  */
 
 include <components.scad>
+use <frame-left.scad>
 
-module base_left_frame() {
-	difference() {
-		frame();
-		// chop the right edge off
-		frame_side_chopper();
-	}
+module right_frame() {
+	mirror([1, 0, 0]) left_frame();
 }
 
-module left_frame() {
-	difference() {
-		base_left_frame();
-		// connection holes to other frames
-		frame_connection_holes();
-
-		// cable routing hole
-		frame_cable_routing_hole();
-
-		// aux button holes
-		translate([0, 100, 0]) rotate([90, 0, 0]) button_24mm_hole();
-		translate([-40, 100, 0]) rotate([90, 0, 0]) button_24mm_hole();
-		translate([40, 100, 0]) rotate([90, 0, 0]) button_24mm_hole();
-	}
-}
-
-left_frame();
+right_frame();
