@@ -37,7 +37,7 @@ big_button_radius = 15 + hole_tolerance;
 // case dimensions
 frame_x = 183;
 frame_y = 208;
-frame_z = 45;
+frame_z = 45;			// reminder: inside (including mounts) is chopped by top_plate_z for plates
 top_plate_x = 175;
 top_plate_y = 200;
 top_plate_z = 5;

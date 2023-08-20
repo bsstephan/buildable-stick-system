@@ -6,3 +6,4 @@ Notes for "next time".
 
 * The panels' connection points could probably be a bit thinner to accommodate more bolts. A 20mm bolt barely clears the
   two panels and I don't like that kind of bolt connection.
+* Engraving some cosmetic stuff? Or maybe a place to mount other plates?
