@@ -31,12 +31,12 @@ module middle_frame() {
 	difference() {
 		base_middle_frame();
 		// connection holes to other frames
-		frame_connection_holes();
-		mirror([1, 0, 0]) frame_connection_holes();
+		translate([0, 0, -top_plate_z/2]) frame_connection_holes();
+		translate([0, 0, -top_plate_z/2]) mirror([1, 0, 0]) frame_connection_holes();
 
 		// cable routing holes
-		frame_cable_routing_hole();
-		mirror([1, 0, 0]) frame_cable_routing_hole();
+		translate([0, 0, -top_plate_z/2]) frame_cable_routing_hole();
+		translate([0, 0, -top_plate_z/2]) mirror([1, 0, 0]) frame_cable_routing_hole();
 
 		// neutrik mounts for connector, switches
 		translate([0, 100, 0]) rotate([90, 0, 0]) neutrik_d_mount();

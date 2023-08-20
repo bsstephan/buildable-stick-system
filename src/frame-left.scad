@@ -30,10 +30,10 @@ module left_frame() {
 	difference() {
 		base_left_frame();
 		// connection holes to other frames
-		frame_connection_holes();
+		translate([0, 0, -top_plate_z/2]) frame_connection_holes();
 
 		// cable routing hole
-		frame_cable_routing_hole();
+		translate([0, 0, -top_plate_z/2]) frame_cable_routing_hole();
 
 		// aux button holes
 		translate([0, 100, 0]) rotate([90, 0, 0]) button_24mm_hole();
