@@ -235,6 +235,24 @@ module frame() {
 
 /* LAYOUTS */
 
+module dir_arc_30mm_button_l() {
+	translate([68, 132, 0]) button_30mm_hole();
+}
+
+module dir_arc_w_30mm() {
+	dir_arc_30mm_button_l();
+	translate([35, 0, 0]) dir_arc_30mm_button_l();
+	translate([35+33.5, -12.9, 0]) dir_arc_30mm_button_l();
+	translate([35+7, 34.5, 0]) dir_arc_30mm_button_l();
+	// just my guesstimate on this one, but note that this is the same position as sega 2p (just mirrored)
+	translate([top_plate_x-33.06, 145-19-9-11-19-9-11, 0]) button_30mm_hole();
+}
+
+module dir_arc_w_30mm_plus_one() {
+	dir_arc_w_30mm();
+	translate([-33.5, -12.9, 0]) dir_arc_30mm_button_l();
+}
+
 module noir_button_p1() {
 	translate([40, 145, 0]) button_30mm_hole();
 }
