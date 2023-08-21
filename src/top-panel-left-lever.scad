@@ -25,8 +25,7 @@ module left_lever_panel() {
 		union() {
 			translate([20,-20,0])
 				topplate();
-			translate([0,0,-4])
-				levermountbase();
+			translate([0, 0, -((top_plate_z/2)+(lever_mount_z/2))]) levermountbase();
 		}
 		// holes to mount the lever
 		levermountholes();

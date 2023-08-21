@@ -34,6 +34,11 @@ small_button_radius = 12 + hole_tolerance;
 // 30mm button
 big_button_radius = 15 + hole_tolerance;
 
+// JLF mount dimensions
+lever_mount_x = 53;
+lever_mount_y = 95;
+lever_mount_z = 2;
+
 // case dimensions
 frame_x = 183;
 frame_y = 208;
@@ -91,7 +96,7 @@ module neutrik_d_mount() {
 module levermountbase() {
 	difference() {
 		// base plate
-		cube([53,95,3], center=true);
+		cube([lever_mount_x, lever_mount_y, lever_mount_z], center=true);
 		// joystick hole
 		cylinder(r=21, h=3.1, $fn=50, center=true);
 	}
