@@ -23,6 +23,9 @@ include <roundedcube.scad>
 // adjustments
 hole_tolerance = 0.15;
 
+// M3
+m3_screw_selftap_radius = 1.3;
+
 // M4
 m4_bolt_radius = 2 + hole_tolerance;
 m4_bolt_countersink_radius = 6.1 + hole_tolerance;
@@ -89,6 +92,20 @@ module neutrik_d_mount() {
 	neutrik_d_hole();
 	translate([9.5, 12, 0]) neutrik_d_screw_hole();
 	translate([-9.5, -12, 0]) neutrik_d_screw_hole();
+}
+
+module m3_mount_post() {
+	difference() {
+		cylinder(r=m3_screw_selftap_radius*4, h=8, $fn=6, center=true);
+		cylinder(r=m3_screw_selftap_radius, h=8*2, $fn=50, center=true);
+	}
+}
+
+module pcb_mount() {
+	translate([44, 18.5, 0]) m3_mount_post();
+	translate([44, -18.5, 0]) m3_mount_post();
+	translate([-44, 18.5, 0]) m3_mount_post();
+	translate([-44, -18.5, 0]) m3_mount_post();
 }
 
 /* PIECES */
