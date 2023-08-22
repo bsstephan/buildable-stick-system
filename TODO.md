@@ -6,6 +6,8 @@ Notes for "next time".
 
 * I need at least 5mm, maybe 10mm, more height, to fit some of my levers like the Nobi Bullet
     * I couldn't even fit a JLF without the compensations in v1 on the bottom panel
+* Top plates are 1-2mm too thick for snap-ins, maybe have a variant with a couple shaved off like with the bottom plate
+  workaround
 * The panels' connection points could probably be a bit thinner to accommodate more bolts. A 20mm bolt barely clears the
   two panels and I don't like that kind of bolt connection.
 * Engraving some cosmetic stuff? Or maybe a place to mount other plates?
