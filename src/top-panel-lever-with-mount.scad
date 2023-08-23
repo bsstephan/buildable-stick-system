@@ -17,20 +17,11 @@
  */
 
 include <components.scad>
+use <top-panel-lever.scad>
 
-// combine the lever mount and generic plate, with mounting holes
-module lever_panel() {
-	difference() {
-		// base plate
-		union() {
-			translate([0,-20,0])
-				topplate();
-			translate([0, 0, -((top_plate_z/2)+(lever_mount_z/2))])
-				levermountbase();
-		}
-		// holes to mount the lever
-		levermountholes();
-	}
+module lever_panel_with_mount() {
+	lever_panel();
+	translate([0, -top_plate_y/2+25, -(top_plate_z/2) - 3]) pcb_mount();
 }
 
-lever_panel();
+lever_panel_with_mount();
