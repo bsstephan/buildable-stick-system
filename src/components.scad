@@ -251,6 +251,25 @@ module frame() {
 
 /* LAYOUTS */
 
+// Directional Arc (both hands)
+
+module dir_arc_24mm_combined_6_button() {
+	button_24mm_hole_for_snapins();
+	translate([29.5, 0, 0]) button_24mm_hole_for_snapins();
+	translate([29.5+26.3, -12.9, 0]) button_24mm_hole_for_snapins();
+
+	translate([29.5+26.3+15.5+9.7+2.6, 0, 0]) button_24mm_hole_for_snapins();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9, 10.9, 0]) button_24mm_hole_for_snapins();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9, 0]) button_24mm_hole_for_snapins();
+	translate([29.5+26.3+15.5+9.7, -29.4, 0]) button_24mm_hole_for_snapins();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9-1.7, 10.9-30.1, 0]) button_24mm_hole_for_snapins();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9-30.1, 0]) button_24mm_hole_for_snapins();
+
+	translate([29.5+26.3+15.5, -65.2, 0]) button_30mm_hole_for_snapins();
+}
+
+// Directional Arc (left hand)
+
 module dir_arc_30mm_button_l() {
 	translate([68, 132, 0]) button_30mm_hole_for_snapins();
 }
@@ -268,6 +287,8 @@ module dir_arc_w_30mm_plus_one() {
 	dir_arc_w_30mm();
 	translate([-33.5, -12.9, 0]) dir_arc_30mm_button_l();
 }
+
+// Namco Noir (right hand)
 
 module noir_button_p1() {
 	translate([40, 145, 0]) button_30mm_hole_for_snapins();
@@ -287,6 +308,8 @@ module noir_plus_one() {
 	// just my guesstimate on this one, but note that this is the same position as sega 2p
 	translate([-3.47-3.47, -78, 0]) noir_button_p1();
 }
+
+// Sega Astro City 2P (right hand)
 
 module sega_2p_p1() {
 	translate([33.06, 145, 0]) button_30mm_hole_for_snapins();
