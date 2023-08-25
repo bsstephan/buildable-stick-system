@@ -68,8 +68,24 @@ module button_24mm_hole() {
 	cylinder(r=small_button_radius, h=100, $fn=50, center=true);
 }
 
+module button_24mm_hole_for_snapins() {
+	button_24mm_hole();
+	// carve out space for snap-ins, leave 3mm
+	// slagcoin has screw-in nut diameter at 35mm, so radius+3 to leave some space
+	// translation is to leave 3mm thickness in the plate without recentering anything
+	translate([0, 0, -25]) cylinder(r=small_button_radius+3, h=49, $fn=50, center=true);
+}
+
 module button_30mm_hole() {
 	cylinder(r=big_button_radius, h=100, $fn=50, center=true);
+}
+
+module button_30mm_hole_for_snapins() {
+	button_30mm_hole();
+	// carve out space for snap-ins, leave 3mm
+	// slagcoin has screw-in nut diameter at 36mm, so radius+4 to leave some space
+	// translation is to leave 3mm thickness in the plate without recentering anything
+	translate([0, 0, -25]) cylinder(r=big_button_radius+4, h=49, $fn=50, center=true);
 }
 
 module frame_hex_bolt_hole() {
@@ -236,7 +252,7 @@ module frame() {
 /* LAYOUTS */
 
 module dir_arc_30mm_button_l() {
-	translate([68, 132, 0]) button_30mm_hole();
+	translate([68, 132, 0]) button_30mm_hole_for_snapins();
 }
 
 module dir_arc_w_30mm() {
@@ -245,7 +261,7 @@ module dir_arc_w_30mm() {
 	translate([35+33.5, -12.9, 0]) dir_arc_30mm_button_l();
 	translate([35+7, 34.5, 0]) dir_arc_30mm_button_l();
 	// just my guesstimate on this one, but note that this is the same position as sega 2p (just mirrored)
-	translate([top_plate_x-33.06, 145-19-9-11-19-9-11, 0]) button_30mm_hole();
+	translate([top_plate_x-33.06, 145-19-9-11-19-9-11, 0]) button_30mm_hole_for_snapins();
 }
 
 module dir_arc_w_30mm_plus_one() {
@@ -254,7 +270,7 @@ module dir_arc_w_30mm_plus_one() {
 }
 
 module noir_button_p1() {
-	translate([40, 145, 0]) button_30mm_hole();
+	translate([40, 145, 0]) button_30mm_hole_for_snapins();
 }
 
 module noir_plus_one() {
@@ -273,7 +289,7 @@ module noir_plus_one() {
 }
 
 module sega_2p_p1() {
-	translate([33.06, 145, 0]) button_30mm_hole();
+	translate([33.06, 145, 0]) button_30mm_hole_for_snapins();
 }
 
 module sega_2p_plus_one() {

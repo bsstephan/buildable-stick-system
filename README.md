@@ -45,7 +45,6 @@ What you'll need beyond these objects:
 
 This is a living repository, and as such, there are likely issues with the objects, known or otherwise. Be aware:
 
-* The top panel is 5mm tall and doesn't have an inset; snap-in buttons likely do not fit.
 * A composition error made the frame 5mm shorter than intended and wasn't noticed until I printed everything:
     * Some levers don't have enough clearance in the case.
     * Buttons with traditional quick connects are a *very* tight fit, you will probably need to bend pins.
