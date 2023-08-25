@@ -1,4 +1,4 @@
-# Bullet System Stick
+# The Buildable Stick System
 
 Files for 3D printing an arcade stick.
 
@@ -73,12 +73,12 @@ Made possible by the amazing efforts of [slagcoin](https://www.slagcoin.com/).
 
 Written by and copyright Brian S. Stephan (<bss@incorporeal.org>).
 
-bullet-system-stick is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+The Buildable Stick System is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
 License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
 version.
 
-bullet-system-stick is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+The Buildable Stick System is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
 warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License along with bullet-system-stick. If not, see
+You should have received a copy of the GNU General Public License along with the Buildable Stick System. If not, see
 <https://www.gnu.org/licenses/>.
