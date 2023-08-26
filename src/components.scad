@@ -177,9 +177,32 @@ module base_topplate() {
 	cube([top_plate_x, top_plate_y, top_plate_z], center=true);
 }
 
+// this takes the base_topplate and makes it a small frame, putting a larger top plate
+module base_topplate_with_raised_overhang() {
+	// make a frame out of the top plate (and keep the main plate on the center plane)
+	translate([0, 0, -5]) difference() {
+		base_topplate();
+		cube([top_plate_x-10, top_plate_y-10, top_plate_z*2], center=true);
+	}
+	translate([(top_plate_x/2)-10, (top_plate_y/2)-10, -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([-((top_plate_x/2)-10), (top_plate_y/2)-10, -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([(top_plate_x/2)-10, -((top_plate_y/2)-10), -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([-((top_plate_x/2)-10), -((top_plate_y/2)-10), -2.5]) resize([0, 0, 10]) frame_mount_column();
+
+	// larger top plate
+	roundedcube([top_plate_x+25, top_plate_y+25, top_plate_z], center=true, radius=1);
+}
+
 module topplate() {
 	difference() {
 		base_topplate();
+		top_plate_holes();
+	}
+}
+
+module topplate_with_raised_overhang() {
+	difference() {
+		base_topplate_with_raised_overhang();
 		top_plate_holes();
 	}
 }
