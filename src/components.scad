@@ -64,6 +64,19 @@ module m4_hole_countersink() {
 	cylinder(r1=m4_bolt_radius, r2=m4_bolt_countersink_radius, h=3.2, $fn=50, center=true);
 }
 
+module top_plate_holes() {
+	// holes for mount bolts
+	translate([77.5, 90, 0]) m4_hole();
+	translate([77.5, -90, 0]) m4_hole();
+	translate([-77.5, 90, 0]) m4_hole();
+	translate([-77.5, -90, 0]) m4_hole();
+	// holes for mount bolt countersinks
+	translate([77.5, 90, 2]) m4_hole_countersink();
+	translate([77.5, -90, 2]) m4_hole_countersink();
+	translate([-77.5, 90, 2]) m4_hole_countersink();
+	translate([-77.5, -90, 2]) m4_hole_countersink();
+}
+
 module button_24mm_hole() {
 	cylinder(r=small_button_radius, h=100, $fn=50, center=true);
 }
@@ -167,24 +180,7 @@ module base_topplate() {
 module topplate() {
 	difference() {
 		base_topplate();
-		// holes for mount bolts
-		translate([77.5, 90, 0])
-			m4_hole();
-		translate([77.5, -90, 0])
-			m4_hole();
-		translate([-77.5, 90, 0])
-			m4_hole();
-		translate([-77.5, -90, 0])
-			m4_hole();
-		// holes for mount bolt countersinks
-		translate([77.5, 90, 2])
-			m4_hole_countersink();
-		translate([77.5, -90, 2])
-			m4_hole_countersink();
-		translate([-77.5, 90, 2])
-			m4_hole_countersink();
-		translate([-77.5, -90, 2])
-			m4_hole_countersink();
+		top_plate_holes();
 	}
 }
 
