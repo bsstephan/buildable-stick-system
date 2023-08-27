@@ -273,7 +273,7 @@ module frame() {
 
 // Directional Arc (both hands)
 
-module dir_arc_24mm_combined_6_button() {
+module dir_arc_24mm_6_button() {
 	button_24mm_hole_for_snapins();
 	translate([29.5, 0, 0]) button_24mm_hole_for_snapins();
 	translate([29.5+26.3, -12.9, 0]) button_24mm_hole_for_snapins();

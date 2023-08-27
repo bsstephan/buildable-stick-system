@@ -18,11 +18,11 @@
 
 include <components.scad>
 
-module dir_arc_24mm_combined_6_button_panel() {
+module dir_arc_24mm_6_button_panel() {
 	difference() {
 		rotate([0, 0, -90]) topplate_with_raised_overhang();
-		translate([-top_plate_x+105, -top_plate_y/2+135, 0]) dir_arc_24mm_combined_6_button();
+		translate([-top_plate_x+105, -top_plate_y/2+135, 0]) dir_arc_24mm_6_button();
 	}
 }
 
-dir_arc_24mm_combined_6_button_panel();
+dir_arc_24mm_6_button_panel();
