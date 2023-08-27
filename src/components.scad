@@ -214,7 +214,7 @@ module topplate_with_raised_overhang() {
 module frame_box() {
 	difference() {
 		roundedcube([frame_x, frame_y, frame_z], center=true, radius=3);
-		cube([frame_x-(panel_support_width*2), frame_y-(panel_support_width*2), frame_z+5], center=true);
+		cube([frame_x-(panel_support_width*4), frame_y-(panel_support_width*4), frame_z+5], center=true);
 	}
 }
 
