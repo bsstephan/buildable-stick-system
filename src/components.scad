@@ -50,6 +50,9 @@ top_plate_x = 175;
 top_plate_y = 200;
 top_plate_z = 5;
 
+// frame interior that supports the top plates
+panel_support_width = 5;
+
 // neutrik D screw holes
 neutrik_d_screw_radius = 1.6 + hole_tolerance;
 neutrik_d_radius = 12 + hole_tolerance;
@@ -84,9 +87,9 @@ module button_24mm_hole() {
 module button_24mm_hole_for_snapins() {
 	button_24mm_hole();
 	// carve out space for snap-ins, leave 3mm
-	// slagcoin has screw-in nut diameter at 35mm, so radius+3 to leave some space
+	// slagcoin has screw-in nut diameter at 29.5mm, so radius+6 to leave some space
 	// translation is to leave 3mm thickness in the plate without recentering anything
-	translate([0, 0, -25]) cylinder(r=small_button_radius+3, h=49, $fn=50, center=true);
+	translate([0, 0, -25]) cylinder(r=small_button_radius+6, h=49, $fn=50, center=true);
 }
 
 module button_30mm_hole() {
@@ -96,9 +99,9 @@ module button_30mm_hole() {
 module button_30mm_hole_for_snapins() {
 	button_30mm_hole();
 	// carve out space for snap-ins, leave 3mm
-	// slagcoin has screw-in nut diameter at 36mm, so radius+4 to leave some space
+	// slagcoin has screw-in nut diameter at 36mm, so radius+6 to leave some space
 	// translation is to leave 3mm thickness in the plate without recentering anything
-	translate([0, 0, -25]) cylinder(r=big_button_radius+4, h=49, $fn=50, center=true);
+	translate([0, 0, -25]) cylinder(r=big_button_radius+6, h=49, $fn=50, center=true);
 }
 
 module frame_hex_bolt_hole() {
@@ -121,6 +124,7 @@ module neutrik_d_mount() {
 	neutrik_d_hole();
 	translate([9.5, 12, 0]) neutrik_d_screw_hole();
 	translate([-9.5, -12, 0]) neutrik_d_screw_hole();
+	translate([0, 0, 25]) cube([32, 37, 50], center=true);
 }
 
 module m3_mount_post() {
@@ -182,7 +186,7 @@ module base_topplate_with_raised_overhang() {
 	// make a frame out of the top plate (and keep the main plate on the center plane)
 	translate([0, 0, -5]) difference() {
 		base_topplate();
-		cube([top_plate_x-10, top_plate_y-10, top_plate_z*2], center=true);
+		cube([top_plate_x-(panel_support_width*2), top_plate_y-(panel_support_width*2), top_plate_z*2], center=true);
 	}
 	translate([(top_plate_x/2)-10, (top_plate_y/2)-10, -2.5]) resize([0, 0, 10]) frame_mount_column();
 	translate([-((top_plate_x/2)-10), (top_plate_y/2)-10, -2.5]) resize([0, 0, 10]) frame_mount_column();
@@ -210,7 +214,7 @@ module topplate_with_raised_overhang() {
 module frame_box() {
 	difference() {
 		roundedcube([frame_x, frame_y, frame_z], center=true, radius=3);
-		cube([frame_x-26, frame_y-26, frame_z+5], center=true);
+		cube([frame_x-(panel_support_width*2), frame_y-(panel_support_width*2), frame_z+5], center=true);
 	}
 }
 
@@ -262,9 +266,6 @@ module frame() {
 			frame_hex_bolt_hole();
 		translate([-((top_plate_x/2)-10), -((top_plate_y/2)-10), 0])
 			frame_hex_bolt_hole();
-
-		// thin up the mount point to accommodate snap-ins, ethercon adapter
-		translate([0, 10, 10]) cube([120, 180, 60], center=true);
 	}
 }
 

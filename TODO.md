@@ -11,6 +11,4 @@ Notes for "next time".
   adding 5mm to the frame should leave a couple mm for support to get added back
 * PCB mount on `top-panel-dir_arc-plus-w-30mm-plus-one-with-mount.scad` doesn't leave room for a USB cable on the right
   hand side
-* The panels' connection points could probably be a bit thinner to accommodate more bolts. A 20mm bolt barely clears the
-  two panels and I don't like that kind of bolt connection.
 * Engraving some cosmetic stuff? Or maybe a place to mount other plates?
