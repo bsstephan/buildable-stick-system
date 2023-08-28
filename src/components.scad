@@ -288,6 +288,13 @@ module dir_arc_24mm_6_button() {
 	translate([29.5+26.3+15.5, -65.2, 0]) button_30mm_hole_for_snapins();
 }
 
+// 6 button plus the normal fourth column for 8 button actually on a third row
+module dir_arc_24mm_8_button_compressed() {
+	dir_arc_24mm_6_button();
+	translate([29.5+26.3+15.5+9.7+2.6+2.6, 29.4, 0]) button_24mm_hole_for_snapins();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9+2.6, 40.3, 0]) button_24mm_hole_for_snapins();
+}
+
 // Directional Arc (left hand)
 
 module dir_arc_30mm_button_l() {
