@@ -24,8 +24,8 @@ module solo_frame() {
 
 		// neutrik mounts for connector, switches
 		translate([0, (frame_x/2)-2.5, 0]) rotate([90, 0, 0]) neutrik_d_mount();
-		translate([-40, (frame_x/2)-2.5, 0]) rotate([270, 0, 0]) button_24mm_hole_for_snapins();
-		translate([40, (frame_x/2)-2.5, 0]) rotate([270, 0, 0]) button_24mm_hole_for_snapins();
+		translate([-40, (frame_x/2)-2.5, 0]) rotate([90, 0, 0]) neutrik_d_mount();
+		translate([40, (frame_x/2)-2.5, 0]) rotate([90, 0, 0]) neutrik_d_mount();
 
 		// aux button holes
 		translate([-frame_y/2+2.5, 0, 0]) rotate([0, 0, 270])
