@@ -22,8 +22,8 @@ module base_middle_frame() {
 	difference() {
 		frame();
 		// chop the left and right edge off
-		frame_side_chopper();
-		mirror([1, 0, 0]) frame_side_chopper();
+		side_chopper();
+		mirror([1, 0, 0]) side_chopper();
 	}
 }
 

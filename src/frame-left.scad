@@ -22,7 +22,7 @@ module base_left_frame() {
 	difference() {
 		frame();
 		// chop the right edge off
-		frame_side_chopper();
+		side_chopper();
 	}
 }
 

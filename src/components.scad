@@ -231,8 +231,8 @@ module frame_mount_column() {
 	cube([20, 20, frame_z], center=true);
 }
 
-module frame_side_chopper() {
-	translate([frame_x/2, 0, 0]) cube([8, 2*(frame_y+top_plate_y), 2*(frame_z+top_plate_z)], center=true);
+module side_chopper() {
+	translate([frame_x/2+4, 0, 0]) cube([16, 2*(frame_y+top_plate_y), 2*(frame_z+top_plate_z)], center=true);
 }
 
 module frame_connection_holes() {
