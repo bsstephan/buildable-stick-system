@@ -21,7 +21,7 @@ include <components.scad>
 module bottom_panel() {
 	difference() {
 		mirror([0, 0, 1]) topplate();
-		translate([0, 0, top_plate_z/2]) cube([top_plate_x*2/3, top_plate_y*2/3, top_plate_z], center=true);
+		translate([0, 0, top_plate_z/2]) cube([top_plate_x*5/6, top_plate_y*5/6, top_plate_z], center=true);
 	}
 }
 
