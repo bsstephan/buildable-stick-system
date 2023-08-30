@@ -29,17 +29,17 @@ module solo_frame() {
 
 		// aux button holes
 		translate([-frame_y/2+2.5, 0, 0]) rotate([0, 0, 270])
-			translate([0, 0, 0]) rotate([90, 0, 0]) button_24mm_hole_for_snapins();
+			translate([0, 0, 0]) rotate([90, 0, 0]) button_24mm_hole();
 		translate([-frame_y/2+2.5, 0, 0]) rotate([0, 0, 270])
-			translate([-40, 0, 0]) rotate([90, 0, 0]) button_24mm_hole_for_snapins();
+			translate([-40, 0, 0]) rotate([90, 0, 0]) button_24mm_hole();
 		translate([-frame_y/2+2.5, 0, 0]) rotate([0, 0, 270])
-			translate([40, 0, 0]) rotate([90, 0, 0]) button_24mm_hole_for_snapins();
+			translate([40, 0, 0]) rotate([90, 0, 0]) button_24mm_hole();
 		translate([frame_y/2-2.5, 0, 0]) rotate([0, 0, 90])
-			translate([0, 0, 0]) rotate([90, 0, 0]) button_24mm_hole_for_snapins();
+			translate([0, 0, 0]) rotate([90, 0, 0]) button_24mm_hole();
 		translate([frame_y/2-2.5, 0, 0]) rotate([0, 0, 90])
-			translate([-40, 0, 0]) rotate([90, 0, 0]) button_24mm_hole_for_snapins();
+			translate([-40, 0, 0]) rotate([90, 0, 0]) button_24mm_hole();
 		translate([frame_y/2-2.5, 0, 0]) rotate([0, 0, 90])
-			translate([40, 0, 0]) rotate([90, 0, 0]) button_24mm_hole_for_snapins();
+			translate([40, 0, 0]) rotate([90, 0, 0]) button_24mm_hole();
 	}
 }
 

@@ -80,24 +80,20 @@ module top_plate_holes() {
 	translate([-77.5, -90, 2]) m4_hole_countersink();
 }
 
+// button hole, with extra wide bits for various uses (cutting out space
+// for snap-ins, etc.
 module button_24mm_hole() {
 	cylinder(r=small_button_radius, h=100, $fn=50, center=true);
-}
-
-module button_24mm_hole_for_snapins() {
-	button_24mm_hole();
 	// carve out space for snap-ins, leave 3mm
 	// slagcoin has screw-in nut diameter at 29.5mm, so radius+6 to leave some space
 	// translation is to leave 3mm thickness in the plate without recentering anything
 	translate([0, 0, -25]) cylinder(r=small_button_radius+6, h=49, $fn=50, center=true);
 }
 
+// button hole, with extra wide bits for various uses (cutting out space
+// for snap-ins, etc.
 module button_30mm_hole() {
 	cylinder(r=big_button_radius, h=100, $fn=50, center=true);
-}
-
-module button_30mm_hole_for_snapins() {
-	button_30mm_hole();
 	// carve out space for snap-ins, leave 3mm
 	// slagcoin has screw-in nut diameter at 36mm, so radius+6 to leave some space
 	// translation is to leave 3mm thickness in the plate without recentering anything
@@ -283,31 +279,31 @@ module frame() {
 // Directional Arc (both hands)
 
 module dir_arc_24mm_6_button() {
-	button_24mm_hole_for_snapins();
-	translate([29.5, 0, 0]) button_24mm_hole_for_snapins();
-	translate([29.5+26.3, -12.9, 0]) button_24mm_hole_for_snapins();
+	button_24mm_hole();
+	translate([29.5, 0, 0]) button_24mm_hole();
+	translate([29.5+26.3, -12.9, 0]) button_24mm_hole();
 
-	translate([29.5+26.3+15.5+9.7+2.6, 0, 0]) button_24mm_hole_for_snapins();
-	translate([29.5+26.3+15.5+9.7+2.6+26.9, 10.9, 0]) button_24mm_hole_for_snapins();
-	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9, 0]) button_24mm_hole_for_snapins();
-	translate([29.5+26.3+15.5+9.7, -29.4, 0]) button_24mm_hole_for_snapins();
-	translate([29.5+26.3+15.5+9.7+2.6+26.9-1.7, 10.9-30.1, 0]) button_24mm_hole_for_snapins();
-	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9-30.1, 0]) button_24mm_hole_for_snapins();
+	translate([29.5+26.3+15.5+9.7+2.6, 0, 0]) button_24mm_hole();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9, 10.9, 0]) button_24mm_hole();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9, 0]) button_24mm_hole();
+	translate([29.5+26.3+15.5+9.7, -29.4, 0]) button_24mm_hole();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9-1.7, 10.9-30.1, 0]) button_24mm_hole();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9-30.1, 0]) button_24mm_hole();
 
-	translate([29.5+26.3+15.5, -65.2, 0]) button_30mm_hole_for_snapins();
+	translate([29.5+26.3+15.5, -65.2, 0]) button_30mm_hole();
 }
 
 // 6 button plus the normal fourth column for 8 button actually on a third row
 module dir_arc_24mm_8_button_compressed() {
 	dir_arc_24mm_6_button();
-	translate([29.5+26.3+15.5+9.7+2.6+2.6, 29.4, 0]) button_24mm_hole_for_snapins();
-	translate([29.5+26.3+15.5+9.7+2.6+26.9+2.6, 40.3, 0]) button_24mm_hole_for_snapins();
+	translate([29.5+26.3+15.5+9.7+2.6+2.6, 29.4, 0]) button_24mm_hole();
+	translate([29.5+26.3+15.5+9.7+2.6+26.9+2.6, 40.3, 0]) button_24mm_hole();
 }
 
 // Directional Arc (left hand)
 
 module dir_arc_30mm_button_l() {
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([73, 132, 0]) button_30mm_hole_for_snapins();
+	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([73, 132, 0]) button_30mm_hole();
 }
 
 module dir_arc_w_30mm() {
@@ -316,7 +312,7 @@ module dir_arc_w_30mm() {
 	translate([35+33.5, -12.9, 0]) dir_arc_30mm_button_l();
 	translate([35+7, 34.5, 0]) dir_arc_30mm_button_l();
 	// just my guesstimate on this one, but note that this is the same position as sega 2p (just mirrored)
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([top_plate_x-28.06, 145-19-9-11-19-9-11, 0]) button_30mm_hole_for_snapins();
+	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([top_plate_x-28.06, 145-19-9-11-19-9-11, 0]) button_30mm_hole();
 }
 
 module dir_arc_w_30mm_plus_one() {
@@ -327,7 +323,7 @@ module dir_arc_w_30mm_plus_one() {
 // Namco Noir (right hand)
 
 module noir_button_p1() {
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([35, 145, 0]) button_30mm_hole_for_snapins();
+	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([35, 145, 0]) button_30mm_hole();
 }
 
 module noir_plus_one() {
@@ -348,7 +344,7 @@ module noir_plus_one() {
 // Sega Astro City 2P (right hand)
 
 module sega_2p_p1() {
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([28.06, 145, 0]) button_30mm_hole_for_snapins();
+	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([28.06, 145, 0]) button_30mm_hole();
 }
 
 module sega_2p_plus_one() {

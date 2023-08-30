@@ -36,9 +36,9 @@ module left_frame() {
 		translate([0, 0, -top_plate_z/2]) frame_cable_routing_hole();
 
 		// aux button holes
-		translate([0, 100, 0]) rotate([90, 0, 0]) button_24mm_hole();
-		translate([-40, 100, 0]) rotate([90, 0, 0]) button_24mm_hole();
-		translate([40, 100, 0]) rotate([90, 0, 0]) button_24mm_hole();
+		translate([0, 101.5, 0]) rotate([270, 0, 0]) button_24mm_hole();
+		translate([-40, 101.5, 0]) rotate([270, 0, 0]) button_24mm_hole();
+		translate([40, 101.5, 0]) rotate([270, 0, 0]) button_24mm_hole();
 	}
 }
 
