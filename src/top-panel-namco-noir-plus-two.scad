@@ -20,7 +20,7 @@ include <components.scad>
 
 module namco_noir_plus_two_panel() {
 	difference() {
-		translate([top_plate_x/2, top_plate_y/2, 0]) topplate();
+		topplate();
 		noir_plus_one();
 		translate([32.94-3.47-3.47, -78+7.37+4.49, 0]) noir_button_p1();
 	}

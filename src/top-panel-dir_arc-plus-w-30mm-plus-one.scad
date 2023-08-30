@@ -20,7 +20,7 @@ include <components.scad>
 
 module dir_arc_w_30mm_plus_one_panel() {
 	difference() {
-		translate([top_plate_x/2, top_plate_y/2, 0]) topplate();
+		topplate();
 		dir_arc_w_30mm_plus_one();
 	}
 }
