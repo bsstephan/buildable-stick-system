@@ -307,7 +307,7 @@ module dir_arc_24mm_8_button_compressed() {
 // Directional Arc (left hand)
 
 module dir_arc_30mm_button_l() {
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([68, 132, 0]) button_30mm_hole_for_snapins();
+	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([73, 132, 0]) button_30mm_hole_for_snapins();
 }
 
 module dir_arc_w_30mm() {
@@ -316,7 +316,7 @@ module dir_arc_w_30mm() {
 	translate([35+33.5, -12.9, 0]) dir_arc_30mm_button_l();
 	translate([35+7, 34.5, 0]) dir_arc_30mm_button_l();
 	// just my guesstimate on this one, but note that this is the same position as sega 2p (just mirrored)
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([top_plate_x-33.06, 145-19-9-11-19-9-11, 0]) button_30mm_hole_for_snapins();
+	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([top_plate_x-28.06, 145-19-9-11-19-9-11, 0]) button_30mm_hole_for_snapins();
 }
 
 module dir_arc_w_30mm_plus_one() {
@@ -327,7 +327,7 @@ module dir_arc_w_30mm_plus_one() {
 // Namco Noir (right hand)
 
 module noir_button_p1() {
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([40, 145, 0]) button_30mm_hole_for_snapins();
+	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([35, 145, 0]) button_30mm_hole_for_snapins();
 }
 
 module noir_plus_one() {
@@ -348,7 +348,7 @@ module noir_plus_one() {
 // Sega Astro City 2P (right hand)
 
 module sega_2p_p1() {
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([33.06, 145, 0]) button_30mm_hole_for_snapins();
+	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([28.06, 145, 0]) button_30mm_hole_for_snapins();
 }
 
 module sega_2p_plus_one() {
