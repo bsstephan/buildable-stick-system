@@ -19,22 +19,17 @@
 include <components.scad>
 
 // combine the lever mount and generic plate, with mounting holes
-module left_lever_panel() {
+module top_panel_left_lever() {
 	difference() {
 		// base plate
 		union() {
-			translate([20,-20,0])
-				topplate();
+			translate([0,-20,0]) topplate_with_raised_overhang();
 			translate([0, 0, -((top_plate_z/2)+(lever_mount_z/2))]) levermountbase();
 		}
 		// holes to mount the lever
 		levermountholes();
+		side_chopper();
 	}
 }
 
-module left_lever_panel_with_mount() {
-	left_lever_panel();
-	translate([0, -top_plate_y/2+25, -(top_plate_z/2) - 3]) pcb_mount();
-}
-
-left_lever_panel_with_mount();
+top_panel_left_lever();
