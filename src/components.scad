@@ -57,6 +57,10 @@ panel_support_width = 5;
 neutrik_d_screw_radius = 1.6 + hole_tolerance;
 neutrik_d_radius = 12 + hole_tolerance;
 
+// additional button radius for decorative panels, etc.
+decorative_radius = 12;
+jumbo_decorative_radius = 15;
+
 /* PARTS */
 
 module m4_hole() {
@@ -88,6 +92,9 @@ module button_24mm_hole() {
 	// slagcoin has screw-in nut diameter at 29.5mm, so radius+6 to leave some space
 	// translation is to leave 3mm thickness in the plate without recentering anything
 	translate([0, 0, -25]) cylinder(r=small_button_radius+6, h=49, $fn=50, center=true);
+	// space for decorative button surround stuff
+	translate([0, 0, 50]) cylinder(r=small_button_radius+decorative_radius, h=20, $fn=50, center=true);
+	translate([0, 0, 70]) cylinder(r=small_button_radius+jumbo_decorative_radius, h=20, $fn=50, center=true);
 }
 
 // button hole, with extra wide bits for various uses (cutting out space
@@ -98,6 +105,9 @@ module button_30mm_hole() {
 	// slagcoin has screw-in nut diameter at 36mm, so radius+6 to leave some space
 	// translation is to leave 3mm thickness in the plate without recentering anything
 	translate([0, 0, -25]) cylinder(r=big_button_radius+6, h=49, $fn=50, center=true);
+	// space for decorative button surround stuff
+	translate([0, 0, 50]) cylinder(r=big_button_radius+decorative_radius, h=20, $fn=50, center=true);
+	translate([0, 0, 70]) cylinder(r=big_button_radius+jumbo_decorative_radius, h=20, $fn=50, center=true);
 }
 
 module frame_hex_bolt_hole() {
