@@ -11,4 +11,8 @@ Notes for "next time".
   adding 5mm to the frame should leave a couple mm for support to get added back
 * PCB mount on `top-panel-dir_arc-plus-w-30mm-plus-one-with-mount.scad` doesn't leave room for a USB cable on the right
   hand side
+
+## v3
+
+* Check that the 24mm cutouts in the frame are good enough, somehow I didn't have them when I printed v2
 * Engraving some cosmetic stuff? Or maybe a place to mount other plates?
