@@ -43,13 +43,7 @@ What you'll need beyond these objects:
 
 ### Issues and Limitations
 
-This is a living repository, and as such, there are likely issues with the objects, known or otherwise. Be aware:
-
-* A composition error made the frame 5mm shorter than intended and wasn't noticed until I printed everything:
-    * Some levers don't have enough clearance in the case.
-    * Buttons with traditional quick connects are a *very* tight fit, you will probably need to bend pins.
-* The PCB mount position was very tight on the buttons panel; it will probably have to be moved.
-
+This is a living repository, and as such, there are likely issues with the objects, known or otherwise.
 These issues may be fixed in the future; see `TODO.md` for details.
 
 ## Development and Contributing
