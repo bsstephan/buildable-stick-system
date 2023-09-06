@@ -17,14 +17,13 @@
  */
 
 include <components.scad>
-use <misc-neutrik-d-plate.scad>
 
-module neutrik_d_plate_20mm() {
+module neutrik_d_plate() {
 	difference() {
-		neutrik_d_plate();
-		cylinder(r=10+hole_tolerance, h=5, $fn=50, center=true);
-		cube([2.2, 22, 5], center=true);
+		cube([30, 35, 2], center=true);
+		translate([9.5, 12, 0]) neutrik_d_screw_hole();
+		translate([-9.5, -12, 0]) neutrik_d_screw_hole();
 	}
 }
 
-neutrik_d_plate_20mm();
+neutrik_d_plate();
