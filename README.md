@@ -33,7 +33,7 @@ What you'll need beyond these objects:
     * 4 40mm M4 hex brass standoffs
     * 8 12-16mm M4 countersunk hex bolts
 * Per frame connection point:
-    * 8 25mm M4 bolts
+    * 8 16mm M4 bolts
     * 8 M4 flange nuts
 * For a lever:
     * 4 12-16mm M4 countersunk hex bolts
