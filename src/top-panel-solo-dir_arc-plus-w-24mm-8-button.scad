@@ -20,7 +20,7 @@ include <components.scad>
 
 module dir_arc_plus_w_24mm_8_button_panel() {
 	difference() {
-		rotate([0, 0, -90]) top_plate_with_raised_overhang();
+		top_plate_with_raised_overhang_long();
 		translate([-top_plate_x+105, -top_plate_y/2+123, 0]) dir_arc_24mm_8_button_compressed();
 		translate([-34.5, 51, 0]) button_24mm_hole();
 	}

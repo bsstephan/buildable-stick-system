@@ -226,6 +226,10 @@ module top_plate_with_raised_overhang() {
 	}
 }
 
+module top_plate_with_raised_overhang_long() {
+	rotate([0, 0, -90]) top_plate_with_raised_overhang();
+}
+
 module frame_box() {
 	difference() {
 		roundedcube([frame_x, frame_y, frame_z], center=true, radius=3);
