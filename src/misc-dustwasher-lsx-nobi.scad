@@ -21,7 +21,8 @@ include <components.scad>
 module lsx_nobi_dustwasher() {
 	difference() {
 		cylinder(r=jumbo_decorative_radius+5+hole_tolerance, h=2, $fn=50, center=true);
-		cylinder(r=5+hole_tolerance, h=2.1, $fn=50, center=true);
+		// 5.5 = 5 (diameter of shaft is 10mm) + .5 to let it take an angle
+		cylinder(r=5.5+hole_tolerance, h=2.1, $fn=50, center=true);
 	}
 }
 
