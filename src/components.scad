@@ -43,11 +43,14 @@ lever_mount_y = 95;
 lever_mount_z = 2;
 
 // case dimensions
+// base frame box. reminder: top of inside (including mounts) is chopped by top_plate_z for plates
 frame_x = 183;
 frame_y = 208;
-frame_z = 50;			// reminder: inside (including mounts) is chopped by top_plate_z for plates
-top_plate_x = 175;
-top_plate_y = 200;
+frame_z = 50;
+
+// top plate, which can either be the whole plate ("inset") or the mounting frame for a plate that overhangs
+top_plate_x = frame_x - 8;
+top_plate_y = frame_y - 8;
 top_plate_z = 5;
 
 plate_to_frame_point_x = (top_plate_x/2)-10;
