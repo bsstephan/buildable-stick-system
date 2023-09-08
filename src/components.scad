@@ -48,10 +48,19 @@ frame_x = 183;
 frame_y = 208;
 frame_z = 50;
 
+// depth of the "lip" of the frame that the top plate sets into/supports the overhang
+frame_wall = 8;
+
 // top plate, which can either be the whole plate ("inset") or the mounting frame for a plate that overhangs
-top_plate_x = frame_x - 8;
-top_plate_y = frame_y - 8;
+top_plate_x = frame_x - frame_wall;
+top_plate_y = frame_y - frame_wall;
 top_plate_z = 5;
+
+// how much the top plate x/y is expanded to overhang the frame
+// note that this is relative to the top plate (so the wall is added back)
+top_plate_overhang_amount = frame_wall + 17;
+overhang_top_plate_x = top_plate_x + top_plate_overhang_amount;
+overhang_top_plate_y = top_plate_y + top_plate_overhang_amount;
 
 plate_to_frame_point_x = (top_plate_x/2)-10;
 plate_to_frame_point_y = (top_plate_y/2)-10;
@@ -194,7 +203,7 @@ module base_topplate() {
 }
 
 module overhang_plate() {
-	roundedcube([top_plate_x+25, top_plate_y+25, top_plate_z], center=true, radius=1);
+	roundedcube([overhang_top_plate_x, overhang_top_plate_y, top_plate_z], center=true, radius=1);
 }
 
 // this takes the base_topplate and makes it a small frame, putting a larger top plate
