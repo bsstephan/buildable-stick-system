@@ -50,6 +50,9 @@ top_plate_x = 175;
 top_plate_y = 200;
 top_plate_z = 5;
 
+plate_to_frame_point_x = (top_plate_x/2)-10;
+plate_to_frame_point_y = (top_plate_y/2)-10;
+
 // frame interior that supports the top plates
 panel_support_width = 5;
 
@@ -73,15 +76,15 @@ module m4_hole_countersink() {
 
 module top_plate_holes() {
 	// holes for mount bolts
-	translate([77.5, 90, 0]) m4_hole();
-	translate([77.5, -90, 0]) m4_hole();
-	translate([-77.5, 90, 0]) m4_hole();
-	translate([-77.5, -90, 0]) m4_hole();
+	translate([plate_to_frame_point_x, plate_to_frame_point_y, 0]) m4_hole();
+	translate([plate_to_frame_point_x, -plate_to_frame_point_y, 0]) m4_hole();
+	translate([-plate_to_frame_point_x, plate_to_frame_point_y, 0]) m4_hole();
+	translate([-plate_to_frame_point_x, -plate_to_frame_point_y, 0]) m4_hole();
 	// holes for mount bolt countersinks
-	translate([77.5, 90, 2]) m4_hole_countersink();
-	translate([77.5, -90, 2]) m4_hole_countersink();
-	translate([-77.5, 90, 2]) m4_hole_countersink();
-	translate([-77.5, -90, 2]) m4_hole_countersink();
+	translate([plate_to_frame_point_x, plate_to_frame_point_y, 2]) m4_hole_countersink();
+	translate([plate_to_frame_point_x, -plate_to_frame_point_y, 2]) m4_hole_countersink();
+	translate([-plate_to_frame_point_x, plate_to_frame_point_y, 2]) m4_hole_countersink();
+	translate([-plate_to_frame_point_x, -plate_to_frame_point_y, 2]) m4_hole_countersink();
 }
 
 // button hole, with extra wide bits for various uses (cutting out space
@@ -198,10 +201,10 @@ module base_top_plate_with_raised_overhang() {
 		base_topplate();
 		cube([top_plate_x-(panel_support_width*2), top_plate_y-(panel_support_width*2), top_plate_z*2], center=true);
 	}
-	translate([(top_plate_x/2)-10, (top_plate_y/2)-10, -2.5]) resize([0, 0, 10]) frame_mount_column();
-	translate([-((top_plate_x/2)-10), (top_plate_y/2)-10, -2.5]) resize([0, 0, 10]) frame_mount_column();
-	translate([(top_plate_x/2)-10, -((top_plate_y/2)-10), -2.5]) resize([0, 0, 10]) frame_mount_column();
-	translate([-((top_plate_x/2)-10), -((top_plate_y/2)-10), -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([plate_to_frame_point_x, plate_to_frame_point_y, -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([-(plate_to_frame_point_x), plate_to_frame_point_y, -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([plate_to_frame_point_x, -(plate_to_frame_point_y), -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([-(plate_to_frame_point_x), -(plate_to_frame_point_y), -2.5]) resize([0, 0, 10]) frame_mount_column();
 	overhang_plate();
 }
 
@@ -263,28 +266,20 @@ module frame_cable_routing_hole() {
 
 module base_frame() {
 	frame_box();
-	translate([(top_plate_x/2)-10, (top_plate_y/2)-10, 0])
-		frame_mount_column();
-	translate([-((top_plate_x/2)-10), (top_plate_y/2)-10, 0])
-		frame_mount_column();
-	translate([(top_plate_x/2)-10, -((top_plate_y/2)-10), 0])
-		frame_mount_column();
-	translate([-((top_plate_x/2)-10), -((top_plate_y/2)-10), 0])
-		frame_mount_column();
+	translate([plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_mount_column();
+	translate([-plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_mount_column();
+	translate([plate_to_frame_point_x, -(plate_to_frame_point_y), 0]) frame_mount_column();
+	translate([-plate_to_frame_point_x, -(plate_to_frame_point_y), 0]) frame_mount_column();
 }
 
 module frame() {
 	difference() {
 		base_frame();
 		translate([0, 0, frame_z/2]) scale([1, 1, 2]) base_topplate();
-		translate([(top_plate_x/2)-10, (top_plate_y/2)-10, 0])
-			frame_hex_bolt_hole();
-		translate([-((top_plate_x/2)-10), (top_plate_y/2)-10, 0])
-			frame_hex_bolt_hole();
-		translate([(top_plate_x/2)-10, -((top_plate_y/2)-10), 0])
-			frame_hex_bolt_hole();
-		translate([-((top_plate_x/2)-10), -((top_plate_y/2)-10), 0])
-			frame_hex_bolt_hole();
+		translate([plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
+		translate([-plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
+		translate([plate_to_frame_point_x, -plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
+		translate([-plate_to_frame_point_x, -plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
 	}
 }
 
