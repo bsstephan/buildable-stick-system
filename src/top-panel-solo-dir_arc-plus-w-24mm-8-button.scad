@@ -17,7 +17,6 @@
  */
 
 include <components.scad>
-use <top-panel-solo-dir_arc-24mm-6-button.scad>
 
 module dir_arc_plus_w_24mm_8_button_panel() {
 	difference() {
