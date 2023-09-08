@@ -20,7 +20,7 @@ include <components.scad>
 
 module top_panel_right_sega_2p_plus_one() {
 	difference() {
-		topplate_with_raised_overhang();
+		top_plate_with_raised_overhang();
 		sega_2p_plus_one();
 		rotate([0, 0, 180]) side_chopper();
 	}

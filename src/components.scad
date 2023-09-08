@@ -192,7 +192,7 @@ module overhang_plate() {
 }
 
 // this takes the base_topplate and makes it a small frame, putting a larger top plate
-module base_topplate_with_raised_overhang() {
+module base_top_plate_with_raised_overhang() {
 	// make a frame out of the top plate (and keep the main plate on the center plane)
 	translate([0, 0, -5]) difference() {
 		base_topplate();
@@ -219,9 +219,9 @@ module bottom_plate_with_overhang() {
 	}
 }
 
-module topplate_with_raised_overhang() {
+module top_plate_with_raised_overhang() {
 	difference() {
-		base_topplate_with_raised_overhang();
+		base_top_plate_with_raised_overhang();
 		top_plate_holes();
 	}
 }
