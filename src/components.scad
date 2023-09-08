@@ -357,17 +357,24 @@ module sega_2p_p1() {
 	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([28.06, 145, 0]) button_30mm_hole();
 }
 
-module sega_2p_plus_one() {
+module sega_2p_6_button() {
 	// via slagcoin
 	sega_2p_p1();
 	translate([30.5, 11+9, 0]) sega_2p_p1();
 	translate([30.5+36, 11+9, 0]) sega_2p_p1();
-	translate([30.5+36+36, 11, 0]) sega_2p_p1();
 	translate([0, -19-9-11, 0]) sega_2p_p1();
 	translate([30.5, -19, 0]) sega_2p_p1();
 	translate([30.5+36, -19, 0]) sega_2p_p1();
-	translate([30.5+36+36, -19-9, 0]) sega_2p_p1();
+}
 
-	// just my guesstimate on this one, but note that this is the same position as sega 2p
+module sega_2p() {
+	sega_2p_6_button();
+	translate([30.5+36+36, 11, 0]) sega_2p_p1();
+	translate([30.5+36+36, -19-9, 0]) sega_2p_p1();
+}
+
+module sega_2p_plus_one() {
+	sega_2p();
+	// just my guesstimate on this one
 	translate([0, -19-9-11-19-9-11, 0]) sega_2p_p1();
 }
