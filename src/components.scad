@@ -303,19 +303,21 @@ module frame() {
 
 // Directional Arc (both hands)
 
-module dir_arc_24mm_6_button() {
+module dir_arc_24mm_directionals() {
 	button_24mm_hole();
 	translate([29.5, 0, 0]) button_24mm_hole();
 	translate([29.5+26.3, -12.9, 0]) button_24mm_hole();
+	translate([29.5+26.3+15.5, -65.2, 0]) button_30mm_hole();
+}
 
+module dir_arc_24mm_6_button() {
+	dir_arc_24mm_directionals();
 	translate([29.5+26.3+15.5+9.7+2.6, 0, 0]) button_24mm_hole();
 	translate([29.5+26.3+15.5+9.7+2.6+26.9, 10.9, 0]) button_24mm_hole();
 	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9, 0]) button_24mm_hole();
 	translate([29.5+26.3+15.5+9.7, -29.4, 0]) button_24mm_hole();
 	translate([29.5+26.3+15.5+9.7+2.6+26.9-1.7, 10.9-30.1, 0]) button_24mm_hole();
 	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9-30.1, 0]) button_24mm_hole();
-
-	translate([29.5+26.3+15.5, -65.2, 0]) button_30mm_hole();
 }
 
 // 6 button plus the normal fourth column for 8 button actually on a third row
