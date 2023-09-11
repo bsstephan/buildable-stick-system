@@ -329,22 +329,26 @@ module dir_arc_24mm_8_button_compressed() {
 
 // Directional Arc (left hand)
 
-module dir_arc_30mm_button_l() {
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([73, 132, 0]) button_30mm_hole();
-}
-
-module dir_arc_w_30mm() {
-	dir_arc_30mm_button_l();
-	translate([35, 0, 0]) dir_arc_30mm_button_l();
-	translate([35+33.5, -12.9, 0]) dir_arc_30mm_button_l();
-	translate([35+7, 34.5, 0]) dir_arc_30mm_button_l();
+module dir_arc_30mm_thumb_button() {
 	// just my guesstimate on this one, but note that this is the same position as sega 2p (just mirrored)
 	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([top_plate_x-28.06, 145-19-9-11-19-9-11, 0]) button_30mm_hole();
 }
 
+module dir_arc_30mm() {
+	dir_arc_30mm_thumb_button();
+	translate([-5.4, 52.2, 0]) dir_arc_30mm_thumb_button();
+	translate([-5.4-33.8, 52.2+12.9, 0]) dir_arc_30mm_thumb_button();
+	translate([-5.4-33.8-34.8, 52.2+12.9, 0]) dir_arc_30mm_thumb_button();
+}
+
+module dir_arc_w_30mm() {
+	dir_arc_30mm();
+	translate([-5.4-26.8, 52.2+12.9+34.5, 0]) dir_arc_30mm_thumb_button();
+}
+
 module dir_arc_w_30mm_plus_one() {
 	dir_arc_w_30mm();
-	translate([-33.5, -12.9, 0]) dir_arc_30mm_button_l();
+	translate([-5.4-33.8-34.8-33.8, 52.2, 0]) dir_arc_30mm_thumb_button();
 }
 
 // Namco Noir (right hand)
