@@ -17,7 +17,7 @@
  */
 
 include <components.scad>
-use <top-panel-dir_arc-plus-w-30mm-plus-one.scad>
+use <top-panel-inset-dir_arc-plus-w-30mm-plus-one.scad>
 
 module dir_arc_w_30mm_plus_one_panel_with_mount() {
 	dir_arc_w_30mm_plus_one_panel();
