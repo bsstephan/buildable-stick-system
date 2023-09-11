@@ -44,7 +44,7 @@ lever_mount_z = 2;
 
 // case dimensions
 // base frame box. reminder: top of inside (including mounts) is chopped by top_plate_z for plates
-frame_x = 183;
+frame_x = 233;
 frame_y = 208;
 frame_z = 50;
 
@@ -243,10 +243,6 @@ module top_plate_with_raised_overhang() {
 		base_top_plate_with_raised_overhang();
 		top_plate_holes();
 	}
-}
-
-module top_plate_with_raised_overhang_long() {
-	rotate([0, 0, -90]) top_plate_with_raised_overhang();
 }
 
 module frame_box() {
