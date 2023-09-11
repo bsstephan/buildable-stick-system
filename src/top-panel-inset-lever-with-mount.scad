@@ -17,7 +17,7 @@
  */
 
 include <components.scad>
-use <top-panel-lever.scad>
+use <top-panel-inset-lever.scad>
 
 module lever_panel_with_mount() {
 	lever_panel();
