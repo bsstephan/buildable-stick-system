@@ -265,15 +265,15 @@ module side_chopper() {
 }
 
 module frame_connection_holes() {
-	translate([frame_x/2, (frame_y/4)+10, (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, (frame_y/4)+10, -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, (frame_y/4)-10, (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, (frame_y/4)-10, -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, (frame_y/4)+15, (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, (frame_y/4)+15, -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, (frame_y/4)-15, (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, (frame_y/4)-15, -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
 
-	translate([frame_x/2, -((frame_y/4)+10), (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, -((frame_y/4)+10), -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, -((frame_y/4)-10), (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
-	translate([frame_x/2, -((frame_y/4)-10), -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, -((frame_y/4)+15), (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, -((frame_y/4)+15), -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, -((frame_y/4)-15), (frame_z/4)]) rotate([0, 90, 0]) m4_hole();
+	translate([frame_x/2, -((frame_y/4)-15), -(frame_z/4)]) rotate([0, 90, 0]) m4_hole();
 }
 
 module frame_cable_routing_hole() {
