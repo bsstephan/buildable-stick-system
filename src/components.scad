@@ -331,7 +331,7 @@ module dir_arc_24mm_8_button_compressed() {
 
 module dir_arc_30mm_thumb_button() {
 	// just my guesstimate on this one, but note that this is the same position as sega 2p (just mirrored)
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([top_plate_x-28.06, 145-19-9-11-19-9-11, 0]) button_30mm_hole();
+	translate([(top_plate_x/2)-28.06, (-top_plate_y/2)+67, 0]) button_30mm_hole();
 }
 
 module dir_arc_30mm() {
