@@ -51,6 +51,9 @@ frame_z = 50;
 // depth of the "lip" of the frame that the top plate sets into/supports the overhang
 frame_wall = 8;
 
+// per neutrik (mm)
+neutrik_panel_thickness = 3;
+
 // top plate, which can either be the whole plate ("inset") or the mounting frame for a plate that overhangs
 top_plate_x = frame_x - frame_wall;
 top_plate_y = frame_y - frame_wall;
@@ -145,6 +148,7 @@ module neutrik_d_mount() {
 	neutrik_d_hole();
 	translate([9.5, 12, 0]) neutrik_d_screw_hole();
 	translate([-9.5, -12, 0]) neutrik_d_screw_hole();
+	// clearance for cutting space out of e.g. frame wall
 	translate([0, 0, 25]) cube([32, 37, 50], center=true);
 }
 
