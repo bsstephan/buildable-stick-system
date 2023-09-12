@@ -148,8 +148,11 @@ module neutrik_d_mount() {
 	neutrik_d_hole();
 	translate([9.5, 12, 0]) neutrik_d_screw_hole();
 	translate([-9.5, -12, 0]) neutrik_d_screw_hole();
-	// clearance for cutting space out of e.g. frame wall
-	translate([0, 0, 25]) cube([32, 40, 50], center=true);
+}
+
+// space for a neutrik D mount or 24mm button
+module frame_cutout() {
+	cube([36.5, 8, 40], center=true);
 }
 
 module m3_mount_post() {
