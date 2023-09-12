@@ -41,7 +41,14 @@ What you'll need beyond these objects:
 * Buttons and levers as desired
 * Wiring as required
 
-### Issues and Limitations
+## Rough Costs
+
+This is a rough estimate of the cost to produce one of these sticks. Filament masses from Bambu Studio estimates, using
+Bambu PLA Basic.
+
+* Left/right frame: 141.84g (~$3.54 USD as of 2023-09-12)
+
+## Issues and Limitations
 
 This is a living repository, and as such, there are likely issues with the objects, known or otherwise.
 These issues may be fixed in the future; see `TODO.md` for details.
