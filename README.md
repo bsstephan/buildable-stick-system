@@ -30,7 +30,7 @@ What you'll need beyond these objects:
   Board](https://github.com/OpenStickCommunity/Hardware/tree/main/RP2040%20Advanced%20Breakout%20Board))
     * 4 M3 8mm hex bolts to secure the PCB to a panel
 * Per frame and plate combo:
-    * 4 40mm M4 hex brass standoffs
+    * 4 45mm M4 hex brass standoffs
     * 8 12-16mm M4 countersunk hex bolts
 * Per frame connection point:
     * 8 16mm M4 bolts
