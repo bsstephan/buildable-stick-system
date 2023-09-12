@@ -43,10 +43,17 @@ What you'll need beyond these objects:
 
 ## Rough Costs
 
-This is a rough estimate of the cost to produce one of these sticks. Filament masses from Bambu Studio estimates, using
-Bambu PLA Basic.
+This is a rough estimate of the cost to produce one of these sticks, assuming a usual 2-frame design and layout.
+Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
 
-* Left/right frame: 141.84g (~$3.54 USD as of 2023-09-12)
+* Left frame: $3.54 USD (141.84g, as of 2023-09-12)
+* Right frame: $3.54 USD (141.84g, as of 2023-09-12)
+* 8 16mm M4 bolts to connect the frames: $0.72 USD (you can get a pack of 100 on Amazon for $9, as of 2023-09-12)
+* 8 M4 flange nuts to connect the frames: $0.68 USD (you can get a pack of 100 on Amazon for $9, as of 2023-09-12)
+* 8 45mm M4 spacers to connect panels to frames: $2.40 USD (you can get a pack of 10 on AliExpress for $3, as of
+  2023-09-12)
+    * (You could 3D print these too, but you're probably better off with brass ones as they give some weight to the
+      stick anyway.)
 
 ## Issues and Limitations
 
