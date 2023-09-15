@@ -38,6 +38,9 @@ What you'll need beyond these objects:
 * For a lever:
     * 4 12-16mm M4 countersunk hex bolts
     * 4 M4 flange nuts
+* For Neutrik D connections:
+    * 2 10mm M3 hex bolts
+    * 2 M3 flange nuts
 * Buttons and levers as desired
 * Wiring as required
 
@@ -46,16 +49,26 @@ What you'll need beyond these objects:
 This is a rough estimate of the cost to produce one of these sticks, assuming a usual 2-frame design and layout.
 Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
 
-* Left frame: $3.54 USD (141.84g, as of 2023-09-12)
-* Right frame: $3.54 USD (141.84g, as of 2023-09-12)
-* Two top panels: ~$6.74 USD (~135g each, as of 2023-09-12)
-* Two bottom panels: $5.90 USD (118.16g each, as of 2023-09-12)
-* 8 16mm M4 bolts to connect the frames: $0.72 USD (you can get a pack of 100 on Amazon for $9, as of 2023-09-12)
-* 8 M4 flange nuts to connect the frames: $0.68 USD (you can get a pack of 100 on Amazon for $9, as of 2023-09-12)
-* 8 45mm M4 spacers to connect panels to frames: $2.40 USD (you can get a pack of 10 on AliExpress for $3, as of
+* Left and right frame: **$7.08 USD** (141.84g each, as of 2023-09-12)
+* Left and right top panels: **~$6.74 USD** (~135g each, as of 2023-09-12)
+* Left and right bottom panels: **$5.90 USD** (118.16g each, as of 2023-09-12)
+* Miscellaneous mounting plates, decorative plates, etc.: **~$1.00 USD** (~40g, as of 2023-09-12)
+* 8 16mm M4 bolts to connect the frames: **$0.72 USD** (you can get a pack of 100 on Amazon for $9, as of 2023-09-12)
+* 8 M4 flange nuts to connect the frames: **$0.68 USD** (you can get a pack of 100 on Amazon for $8.50, as of 2023-09-12)
+* 4 10mm M3 bolts to connect Neutrik D plates to frames: **$0.40 USD** (you can get a pack of 100 on Amazon for $10, as
+  of 2023-09-12)
+* 4 M3 flange nuts to connect Neutrik D plates to frames: **$0.34 USD** (you can get a pack of 100 on Amazon for $8.50,
+  as of 2023-09-12)
+* 8 45mm M4 spacers to connect panels to frames: **$2.40 USD** (you can get a pack of 10 on AliExpress for $3, as of
   2023-09-12)
     * (You could 3D print these too, but you're probably better off with brass ones as they give some weight to the
       stick anyway.)
+* 16 16mm M4 bolts to connect plates to frames: **$1.44 USD** (you can get a pack of 100 on Amazon for $9, as of
+  2023-09-12)
+
+With an enclosure coming in around $26, depending on your choices --- say, ~$30 for TheTrain's RP2040 Advanced Breakout
+Board, ~$60 for Sanwa buttons and a lever, and ~$20 for miscellaneous connectors and wiring --- you can put a
+full-featured controller with an open source foundation together for around $135.
 
 ## Issues and Limitations
 
