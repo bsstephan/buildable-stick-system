@@ -70,6 +70,10 @@ With an enclosure coming in around $26, depending on your choices --- say, ~$30 
 Board, ~$60 for Sanwa buttons and a lever, and ~$20 for miscellaneous connectors and wiring --- you can put a
 full-featured controller with an open source foundation together for around $135.
 
+## Miscellany
+
+See the `/docs/` directory for more thoughts too scattered for this document.
+
 ## Issues and Limitations
 
 This is a living repository, and as such, there are likely issues with the objects, known or otherwise.
