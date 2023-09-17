@@ -2,7 +2,7 @@
 
 Files for 3D printing an arcade stick.
 
-![An example of stick components displayed in OpenSCAD](docs/three-panel-example-v2.png)
+![An example of stick components displayed in OpenSCAD](docs/two-panel-example-v3.png)
 
 Originally an attempt to make a couple customized STL files for the [OpenStickCommunity Fightstick
 Case](https://github.com/OpenStickCommunity/Hardware/tree/main/Fightstick%20Case), the changes ballooned to fit my
@@ -61,10 +61,14 @@ Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
   as of 2023-09-12)
 * 8 45mm M4 spacers to connect panels to frames: **$2.40 USD** (you can get a pack of 10 on AliExpress for $3, as of
   2023-09-12)
-    * (You could 3D print these too, but you're probably better off with brass ones as they give some weight to the
-      stick anyway.)
-* 16 16mm M4 bolts to connect plates to frames: **$1.44 USD** (you can get a pack of 100 on Amazon for $9, as of
+    * You could 3D print these too, but you're probably better off with brass ones as they give some weight to the
+      stick anyway
+* 8 16mm M4 bolts to connect top plates to frames: **$0.72 USD** (you can get a pack of 100 on Amazon for $9, as of
+* 8 12mm M4 bolts to connect bottom plates to frames: **$0.72 USD** (you can get a pack of 100 on Amazon for $9, as of
   2023-09-12)
+    * You may be tempted to use 16mm M4 bolts for both the top and bottom, but the spacers I have aren't threaded all
+      the way through the shaft, and 16mm bolts won't make it all the way on the bottom panel, but do on the top panel
+      (which is 5mm thicker); be careful I guess
 
 With an enclosure coming in around $26, depending on your choices --- say, ~$30 for TheTrain's RP2040 Advanced Breakout
 Board, ~$60 for Sanwa buttons and a lever, and ~$20 for miscellaneous connectors and wiring --- you can put a
