@@ -333,19 +333,30 @@ module dir_arc_24mm_directionals() {
 
 module dir_arc_24mm_6_button() {
 	dir_arc_24mm_directionals();
-	translate([29.5+26.3+15.5+9.7+2.6, 0, 0]) button_24mm_hole();
-	translate([29.5+26.3+15.5+9.7+2.6+26.9, 10.9, 0]) button_24mm_hole();
-	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9, 0]) button_24mm_hole();
+	translate([29.5+26.3+27.8, 0, 0]) button_24mm_hole();
+	translate([29.5+26.3+27.8+26.9, 10.9, 0]) button_24mm_hole();
+	translate([29.5+26.3+27.8+26.9+29.6, 10.9, 0]) button_24mm_hole();
 	translate([29.5+26.3+15.5+9.7, -29.4, 0]) button_24mm_hole();
-	translate([29.5+26.3+15.5+9.7+2.6+26.9-1.7, 10.9-30.1, 0]) button_24mm_hole();
-	translate([29.5+26.3+15.5+9.7+2.6+26.9+29.6, 10.9-30.1, 0]) button_24mm_hole();
+	translate([29.5+26.3+27.8+26.9-1.7, 10.9-30.1, 0]) button_24mm_hole();
+	translate([29.5+26.3+27.8+26.9+29.6-0.2, 10.9-30.1, 0]) button_24mm_hole();
+}
+
+module dir_arc_24mm_8_button() {
+	dir_arc_24mm_6_button();
+	translate([29.5+26.3+27.8+26.9+29.6+29.5, 7.1, 0]) button_24mm_hole();
+	translate([29.5+26.3+27.8+26.9+29.6+29.5-0.3, -23.9, 0]) button_24mm_hole();
 }
 
 // 6 button plus the normal fourth column for 8 button actually on a third row
 module dir_arc_24mm_8_button_compressed() {
 	dir_arc_24mm_6_button();
-	translate([29.5+26.3+15.5+9.7+2.6+2.6, 29.4, 0]) button_24mm_hole();
-	translate([29.5+26.3+15.5+9.7+2.6+26.9+2.6, 40.3, 0]) button_24mm_hole();
+	translate([29.5+26.3+27.8+2.6, 29.4, 0]) button_24mm_hole();
+	translate([29.5+26.3+27.8+26.9+2.6, 40.3, 0]) button_24mm_hole();
+}
+
+module dir_arc_plus_w_24mm_8_button() {
+	dir_arc_24mm_8_button();
+	translate([36, 28, 0]) button_24mm_hole();
 }
 
 // Directional Arc (left hand)

@@ -18,11 +18,16 @@
 
 include <components.scad>
 
-module dir_arc_plus_w_24mm_8_button_panel() {
+module dir_arc_plus_w_24mm_8_button_decorative_plate() {
 	difference() {
-		top_plate_with_raised_overhang();
-		translate([-80.5, top_plate_y/6, 0]) dir_arc_plus_w_24mm_8_button();
+		decorative_add=10;
+		// get a 1mm slice of the bigger button cylinders
+		translate([0, 0, -45]) dir_arc_plus_w_24mm_8_button();
+		translate([0, 0, -50]) cube([500, 500, 98], center=true);
+		translate([0, 0, 50]) cube([500, 500, 98], center=true);
+		// cut out the normal holes
+		translate([0, 0, -1]) dir_arc_plus_w_24mm_8_button();
 	}
 }
 
-dir_arc_plus_w_24mm_8_button_panel();
+dir_arc_plus_w_24mm_8_button_decorative_plate();
