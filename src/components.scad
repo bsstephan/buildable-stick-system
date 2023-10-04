@@ -23,6 +23,9 @@ include <roundedcube.scad>
 // adjustments
 hole_tolerance = 0.15;
 
+// M2
+m2_screw_selftap_radius = 0.95;
+
 // M3
 m3_screw_selftap_radius = 1.3;
 
@@ -153,6 +156,25 @@ module neutrik_d_mount() {
 // space for a neutrik D mount or 24mm button
 module frame_cutout() {
 	cube([36.5, 8, 40], center=true);
+}
+
+module m2_mount_post() {
+	difference() {
+		cylinder(r=m2_screw_selftap_radius*2.25, h=3, $fn=6, center=true);
+		cylinder(r=m2_screw_selftap_radius, h=3*2, $fn=50, center=true);
+	}
+}
+
+module oled_ssd1306_mount() {
+	translate([11.5, 12, 0]) m2_mount_post();
+	translate([11.5, -12, 0]) m2_mount_post();
+	translate([-11.5, 12, 0]) m2_mount_post();
+	translate([-11.5, -12, 0]) m2_mount_post();
+}
+
+module oled_ssd1306_mount_cutout() {
+	translate([0, 1.9, 0]) cube([25, 14, 5], center=true);
+	translate([0, 0, -1.0]) cube([35, 35, 4], center=true);
 }
 
 module m3_mount_post() {
