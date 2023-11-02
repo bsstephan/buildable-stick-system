@@ -30,10 +30,10 @@ module right_frame() {
 	difference() {
 		base_right_frame();
 		// connection holes to other frames
-		mirror([1, 0, 0]) translate([0, 0, -top_plate_z/2]) frame_connection_holes();
+		mirror([1, 0, 0]) frame_connection_holes();
 
 		// cable routing hole
-		mirror([1, 0, 0]) translate([0, 0, -top_plate_z/2]) frame_cable_routing_hole();
+		mirror([1, 0, 0]) frame_cable_routing_hole();
 
 		// aux button holes
 		translate([30, 101.5, 0]) rotate([270, 0, 0]) button_24mm_hole();

@@ -258,7 +258,7 @@ module topplate() {
 
 module bottom_plate_with_overhang() {
 	difference() {
-		overhang_plate();
+		rotate([180, 0, 0]) base_top_plate_with_raised_overhang();
 		rotate([180, 0, 0]) top_plate_holes();
 	}
 }
@@ -313,6 +313,7 @@ module frame() {
 	difference() {
 		base_frame();
 		translate([0, 0, frame_z/2]) scale([1, 1, 2]) base_topplate();
+		translate([0, 0, -frame_z/2]) scale([1, 1, 2]) base_topplate();
 		translate([plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([-plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([plate_to_frame_point_x, -plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
