@@ -369,19 +369,19 @@ module dir_arc_30mm_thumb_button() {
 
 module dir_arc_30mm() {
 	dir_arc_30mm_thumb_button();
-	translate([-5.4, 52.2, 0]) dir_arc_30mm_thumb_button();
-	translate([-5.4-33.8, 52.2+12.9, 0]) dir_arc_30mm_thumb_button();
-	translate([-5.4-33.8-34.8, 52.2+12.9, 0]) dir_arc_30mm_thumb_button();
+	translate([0, 57.2, 0]) dir_arc_30mm_thumb_button();
+	translate([-33.8, 57.2+12.9, 0]) dir_arc_30mm_thumb_button();
+	translate([-33.8-34.8, 57.2+12.9, 0]) dir_arc_30mm_thumb_button();
 }
 
 module dir_arc_w_30mm() {
 	dir_arc_30mm();
-	translate([-5.4-26.8, 52.2+12.9+34.5, 0]) dir_arc_30mm_thumb_button();
+	translate([-26.8, 57.2+12.9+34.5, 0]) dir_arc_30mm_thumb_button();
 }
 
 module dir_arc_w_30mm_plus_one() {
 	dir_arc_w_30mm();
-	translate([-5.4-33.8-34.8-33.8, 52.2, 0]) dir_arc_30mm_thumb_button();
+	translate([-33.8-34.8-33.8, 57.2, 0]) dir_arc_30mm_thumb_button();
 }
 
 // Namco Noir (right hand)
