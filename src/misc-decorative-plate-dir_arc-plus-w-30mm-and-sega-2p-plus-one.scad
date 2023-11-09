@@ -20,7 +20,7 @@ include <components.scad>
 
 module dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate() {
 	difference() {
-		// get a 1mm slice of the bigger button cylinders
+		// get a 2mm slice of the bigger button cylinders
 		union() {
 			translate([-top_plate_x/2, 0, -65]) dir_arc_w_30mm();
 			translate([top_plate_x/2, 0, -65]) sega_2p_plus_one();
