@@ -31,8 +31,6 @@ module dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate() {
 		translate([-top_plate_x/2, 0, -1]) dir_arc_w_30mm();
 		translate([top_plate_x/2, 0, -1]) sega_2p_plus_one();
 	}
-	/* // fill in some space */
-	/* translate([-6, -6, 0]) cube([23, 23, 1], center=true); */
 }
 
 dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate();
