@@ -4,6 +4,12 @@ Files for 3D printing an arcade stick.
 
 ![An example of stick components displayed in OpenSCAD](docs/two-panel-example-v3.png)
 
+[OpenSCAD-based illustration of how the components for an overhang panel-based stick fit together.]
+
+![A photo of a completed stick](docs/finished-v3.1.jpg)
+
+[Photo of a completed inset panel-based stick.]
+
 Originally an attempt to make a couple customized STL files for the [OpenStickCommunity Fightstick
 Case](https://github.com/OpenStickCommunity/Hardware/tree/main/Fightstick%20Case), the changes ballooned to fit my
 design and became incompatible with that project's components. This should be considered a different project with some
