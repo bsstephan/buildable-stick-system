@@ -37,7 +37,11 @@ What you'll need beyond these objects:
     * 4 M3 8mm hex bolts to secure the PCB to a panel
 * Per frame and plate combo:
     * 4 40mm M4 hex brass standoffs (or equivalent)
-    * 8 12-16mm M4 countersunk hex bolts
+    * 8 M4 countersunk hex bolts
+        * Overhang plates should use 12-16mm length bolts since they are taller
+        * Inset plates should probably use 8-12mm bolts --- some standoffs aren't threaded the whole way, making 16mm
+          too long to go flush
+        * If making the 40mm standoffs from multiple smaller ones, make sure they have enough length to take your bolts!
 * Per frame connection point:
     * 8 16mm M4 bolts
     * 8 M4 flange nuts
@@ -56,8 +60,8 @@ This is a rough estimate of the cost to produce one of these sticks, assuming a 
 Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
 
 * Left and right frame: **$7.08 USD** (141.84g each, as of 2023-09-12)
-* Left and right top panels: **~$6.74 USD** (~135g each, as of 2023-09-12)
-* Left and right bottom panels: **$5.90 USD** (118.16g each, as of 2023-09-12)
+* Left and right (overhang) top panels: **~$6.74 USD** (~135g each, as of 2023-09-12)
+* Left and right (overhang) bottom panels: **$5.90 USD** (118.16g each, as of 2023-09-12)
 * Miscellaneous mounting plates, decorative plates, etc.: **~$1.00 USD** (~40g, as of 2023-09-12)
 * 8 16mm M4 bolts to connect the frames: **$0.72 USD** (you can get a pack of 100 on Amazon for $9, as of 2023-09-12)
 * 8 M4 flange nuts to connect the frames: **$0.68 USD** (you can get a pack of 100 on Amazon for $8.50, as of 2023-09-12)
@@ -74,9 +78,6 @@ Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
 * 8 16mm M4 bolts to connect top plates to frames: **$0.72 USD** (you can get a pack of 100 on Amazon for $9, as of
 * 8 12mm M4 bolts to connect bottom plates to frames: **$0.72 USD** (you can get a pack of 100 on Amazon for $9, as of
   2023-09-12)
-    * You may be tempted to use 16mm M4 bolts for both the top and bottom, but the spacers I have aren't threaded all
-      the way through the shaft, and 16mm bolts won't make it all the way on the bottom panel, but do on the top panel
-      (which is 5mm thicker); be careful I guess
 
 With an enclosure coming in around $26, depending on your choices --- say, ~$30 for TheTrain's RP2040 Advanced Breakout
 Board, ~$60 for Sanwa buttons and a lever, and ~$20 for miscellaneous connectors and wiring --- you can put a
