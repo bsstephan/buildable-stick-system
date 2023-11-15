@@ -45,6 +45,9 @@ lever_mount_x = 53;
 lever_mount_y = 95;
 lever_mount_z = 2;
 
+// standard lever hole
+lever_plate_hole = 12;
+
 // case dimensions
 // base frame box. reminder: top of inside (including mounts) is chopped by top_plate_z for plates
 frame_x = 233;
@@ -206,7 +209,7 @@ module levermountbase() {
 // should work with JLF, JLW, LS-32, LS-33, LS-40, LS-55, LS-56
 module levermountholes() {
 	// joystick hole
-	cylinder(r=12, h=5.1, $fn=50, center=true);
+	cylinder(r=lever_plate_hole, h=5.1, $fn=50, center=true);
 	// holes for joystick bolts
 	translate([20, 42.5, 0])
 		m4_hole();
