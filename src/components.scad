@@ -276,6 +276,7 @@ module top_plate_with_raised_overhang() {
 module frame_box() {
 	difference() {
 		roundedcube([frame_x, frame_y, frame_z], center=true, radius=3);
+		// cut out the middle to make it a box
 		cube([top_plate_x-(panel_support_width*2), top_plate_y-(panel_support_width*2), frame_z+5], center=true);
 	}
 }
