@@ -67,9 +67,9 @@ top_plate_z = 5;
 
 // how much the top plate x/y is expanded to overhang the frame
 // note that this is relative to the top plate (so the wall is added back)
-top_plate_overhang_amount = (frame_wall * 2) + 17;
-overhang_top_plate_x = top_plate_x + top_plate_overhang_amount;
-overhang_top_plate_y = top_plate_y + top_plate_overhang_amount;
+top_plate_overhang_amount = 8.5;
+overhang_top_plate_x = top_plate_x + (frame_wall * 2) + (top_plate_overhang_amount * 2);
+overhang_top_plate_y = top_plate_y + (frame_wall * 2) + (top_plate_overhang_amount * 2);
 
 plate_to_frame_point_x = (top_plate_x/2)-10;
 plate_to_frame_point_y = (top_plate_y/2)-10;
