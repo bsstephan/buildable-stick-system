@@ -16,6 +16,7 @@
  * the Buildable Stick System. If not, see <https://www.gnu.org/licenses/>.
  */
 
+include <parameters.scad>
 include <components.scad>
 
 module top_panel_right_sega_2p_plus_one() {

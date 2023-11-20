@@ -16,6 +16,7 @@
  * the Buildable Stick System. If not, see <https://www.gnu.org/licenses/>.
  */
 
+include <parameters.scad>
 include <components.scad>
 
 module top_panel_solo_lever_and_sega_2p_6_button() {

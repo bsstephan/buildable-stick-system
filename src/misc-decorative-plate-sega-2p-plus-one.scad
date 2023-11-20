@@ -16,6 +16,7 @@
  * the Buildable Stick System. If not, see <https://www.gnu.org/licenses/>.
  */
 
+include <parameters.scad>
 include <components.scad>
 
 module sega_2p_plus_one_decorative_plate() {

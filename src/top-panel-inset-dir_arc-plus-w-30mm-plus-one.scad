@@ -16,6 +16,7 @@
  * the Buildable Stick System. If not, see <https://www.gnu.org/licenses/>.
  */
 
+include <parameters.scad>
 include <components.scad>
 
 module dir_arc_w_30mm_plus_one_panel() {

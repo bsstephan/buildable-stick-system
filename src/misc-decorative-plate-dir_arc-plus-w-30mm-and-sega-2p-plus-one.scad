@@ -16,6 +16,7 @@
  * the Buildable Stick System. If not, see <https://www.gnu.org/licenses/>.
  */
 
+include <parameters.scad>
 include <components.scad>
 
 module dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate() {
