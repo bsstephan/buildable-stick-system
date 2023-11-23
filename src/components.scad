@@ -87,9 +87,9 @@ module neutrik_d_mount() {
 	translate([-9.5, -12, 0]) neutrik_d_screw_hole();
 }
 
-// space for a neutrik D mount or 24mm button
+// space for a neutrik D mount or 24mm button - Z is to cut the whole inside without affecting panel lip
 module frame_cutout() {
-	cube([36.5, 8, 40], center=true);
+	cube([36.5, 8, frame_z-(top_plate_z*2)], center=true);
 }
 
 module m2_mount_post() {

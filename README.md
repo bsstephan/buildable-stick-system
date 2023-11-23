@@ -36,12 +36,12 @@ What you'll need beyond these objects:
   Board](https://github.com/OpenStickCommunity/Hardware/tree/main/RP2040%20Advanced%20Breakout%20Board))
     * 4 M3 8mm hex bolts to secure the PCB to a panel
 * Per frame and plate combo:
-    * 4 40mm M4 hex brass standoffs (or equivalent)
+    * 4 45mm M4 hex brass standoffs (or equivalent)
     * 8 M4 countersunk hex bolts
         * Overhang plates should use 12-16mm length bolts since they are taller
         * Inset plates should probably use 8-12mm bolts --- some standoffs aren't threaded the whole way, making 16mm
           too long to go flush
-        * If making the 40mm standoffs from multiple smaller ones, make sure they have enough length to take your bolts!
+        * If making the 45mm standoffs from multiple smaller ones, make sure they have enough length to take your bolts!
 * Per frame connection point:
     * 8 16mm M4 bolts
     * 8 M4 flange nuts
@@ -69,7 +69,7 @@ Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
   of 2023-09-12)
 * 4 M3 flange nuts to connect Neutrik D plates to frames: **$0.34 USD** (you can get a pack of 100 on Amazon for $8.50,
   as of 2023-09-12)
-* 8 40mm M4 spacers to connect panels to frames: **$2.40 USD** (you can get a pack of 10 on AliExpress for $3, as of
+* 8 45mm M4 spacers to connect panels to frames: **$2.40 USD** (you can get a pack of 10 on AliExpress for $3, as of
   2023-09-12)
     * You could 3D print these too, but you're probably better off with brass ones as they give some weight to the
       stick anyway
