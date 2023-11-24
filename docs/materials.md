@@ -21,4 +21,5 @@ bss's random thoughts and notes on 3D printing materials.
 
 ## Hatchbox PLA
 
-* Haven't done a lot of this yet, but my wife really likes the blue.
+* **Blue:** very blue. Wife likes it.
+* **White:** more opaque than the Bambu PLA mentioned above, makes a pretty decent (still slightly translucent) frame.
