@@ -92,6 +92,13 @@ module frame_cutout() {
 	cube([36.5, 8, frame_z-(top_plate_z*2)], center=true);
 }
 
+// bank of three 24mm buttons, commonly on a frame face
+module aux_control_three_button_cluster() {
+	translate([-40, 0, 0]) button_24mm_hole();
+	translate([0, 0, 0]) button_24mm_hole();
+	translate([40, 0, 0]) button_24mm_hole();
+}
+
 module m2_mount_post() {
 	difference() {
 		cylinder(r=m2_screw_selftap_radius*2.25, h=3, $fn=6, center=true);
