@@ -87,6 +87,13 @@ module neutrik_d_mount() {
 	translate([-9.5, -12, 0]) neutrik_d_screw_hole();
 }
 
+module rocker_20mm_mount() {
+	cylinder(r=10+hole_tolerance, h=5, $fn=50, center=true);
+	cube([2.2, 22, 5], center=true);
+	translate([9.5, 12, 0]) neutrik_d_screw_hole();
+	translate([-9.5, -12, 0]) neutrik_d_screw_hole();
+}
+
 // space for a neutrik D mount or 24mm button - Z is to cut the whole inside without affecting panel lip
 module frame_cutout() {
 	cube([36.5, 8, frame_z-(top_plate_z*2)], center=true);

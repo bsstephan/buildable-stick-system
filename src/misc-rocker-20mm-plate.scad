@@ -20,12 +20,11 @@ include <parameters.scad>
 include <components.scad>
 use <misc-neutrik-d-plate.scad>
 
-module neutrik_d_plate_20mm() {
+module rocker_plate_20mm() {
 	difference() {
 		neutrik_d_plate();
-		cylinder(r=10+hole_tolerance, h=5, $fn=50, center=true);
-		cube([2.2, 22, 5], center=true);
+		rocker_20mm_mount();
 	}
 }
 
-neutrik_d_plate_20mm();
+rocker_plate_20mm();
