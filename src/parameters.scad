@@ -50,6 +50,8 @@ frame_x = 233;
 frame_y = 208;
 frame_z = 55;
 
+frame_center_to_neutrik = 70;
+
 // depth of the "lip" of the frame that the top plate sets into/supports the overhang
 frame_wall = 4;
 

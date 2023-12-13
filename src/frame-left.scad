@@ -43,8 +43,10 @@ module left_frame() {
 		translate([10, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
 
 		// neutrix button hole
-		translate([70, (frame_y/2)-neutrik_panel_thickness, 0]) rotate([90, 0, 0]) neutrik_d_mount();
-		translate([70, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
+		translate([frame_center_to_neutrik, (frame_y/2)-neutrik_panel_thickness, 0])
+			rotate([90, 0, 0]) neutrik_d_mount();
+		translate([frame_center_to_neutrik, (frame_y/2)-neutrik_panel_thickness-4, 0])
+			frame_cutout();
 	}
 }
 
