@@ -23,7 +23,7 @@ use <misc-neutrik-d-plate.scad>
 module neutrik_d_plate_24mm() {
 	difference() {
 		neutrik_d_plate();
-		cylinder(r=12+hole_tolerance, h=5, $fn=50, center=true);
+		neutrik_d_mount();
 	}
 }
 
