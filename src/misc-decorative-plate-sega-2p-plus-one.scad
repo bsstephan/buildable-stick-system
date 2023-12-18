@@ -1,4 +1,5 @@
 /* Copyright Brian Stephan 2023
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * This file is part of the Buildable Stick System.
  *
