@@ -303,15 +303,15 @@ module dir_arc_30mm_thumb_button() {
 	translate([(top_plate_x/2)-28.06, (-top_plate_y/2)+62, 0]) button_30mm_hole();
 }
 
-module dir_arc_30mm() {
-	dir_arc_30mm_thumb_button();
+module dir_arc_30mm_finger_buttons() {
 	translate([0, 57.2, 0]) dir_arc_30mm_thumb_button();
 	translate([-33.8, 57.2+12.9, 0]) dir_arc_30mm_thumb_button();
 	translate([-33.8-34.8, 57.2+12.9, 0]) dir_arc_30mm_thumb_button();
 }
 
 module dir_arc_w_30mm() {
-	dir_arc_30mm();
+	dir_arc_30mm_thumb_button();
+	dir_arc_30mm_finger_buttons();
 	translate([-26.8, 57.2+12.9+34.5, 0]) dir_arc_30mm_thumb_button();
 }
 
