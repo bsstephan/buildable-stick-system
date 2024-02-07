@@ -8,7 +8,7 @@ include <components.scad>
 
 module top_panel_inset_sega_2p_plus_one_plus_control() {
 	difference() {
-		topplate();
+		panel();
 		sega_2p_plus_one();
 		rotate([0, 0, 180]) side_chopper();
 		translate([89, 30, 0]) button_24mm_hole();

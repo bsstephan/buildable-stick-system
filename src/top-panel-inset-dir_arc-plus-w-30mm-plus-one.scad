@@ -8,7 +8,7 @@ include <components.scad>
 
 module dir_arc_w_30mm_plus_one_panel() {
 	difference() {
-		topplate();
+		panel();
 		dir_arc_w_30mm_plus_one();
 	}
 }

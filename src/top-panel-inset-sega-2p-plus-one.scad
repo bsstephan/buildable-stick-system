@@ -8,7 +8,7 @@ include <components.scad>
 
 module sega_2p_plus_one_panel() {
 	difference() {
-		topplate();
+		panel();
 		sega_2p_plus_one();
 	}
 }

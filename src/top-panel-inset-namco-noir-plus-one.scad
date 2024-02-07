@@ -8,7 +8,7 @@ include <components.scad>
 
 module namco_noir_plus_one_panel() {
 	difference() {
-		topplate();
+		panel();
 		noir_plus_one();
 	}
 }

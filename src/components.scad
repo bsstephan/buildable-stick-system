@@ -162,19 +162,26 @@ module levermountholes() {
 		m4_hole_countersink();
 }
 
-module base_topplate() {
+module base_panel() {
 	cube([top_plate_x, top_plate_y, top_plate_z], center=true);
+}
+
+module panel() {
+	difference() {
+		base_panel();
+		top_plate_holes();
+	}
 }
 
 module overhang_plate() {
 	roundedcube([overhang_top_plate_x, overhang_top_plate_y, top_plate_z], center=true, radius=1);
 }
 
-// this takes the base_topplate and makes it a small frame, putting a larger top plate
+// this takes the base_panel and makes it a small frame, putting a larger top plate
 module base_top_plate_with_raised_overhang() {
 	// make a frame out of the top plate (and keep the main plate on the center plane)
 	translate([0, 0, -5]) difference() {
-		base_topplate();
+		base_panel();
 		cube([top_plate_x-(panel_support_width*2), top_plate_y-(panel_support_width*2), top_plate_z*2], center=true);
 	}
 	translate([plate_to_frame_point_x, plate_to_frame_point_y, -2.5]) resize([0, 0, 10]) frame_mount_column();
@@ -182,13 +189,6 @@ module base_top_plate_with_raised_overhang() {
 	translate([plate_to_frame_point_x, -(plate_to_frame_point_y), -2.5]) resize([0, 0, 10]) frame_mount_column();
 	translate([-(plate_to_frame_point_x), -(plate_to_frame_point_y), -2.5]) resize([0, 0, 10]) frame_mount_column();
 	overhang_plate();
-}
-
-module topplate() {
-	difference() {
-		base_topplate();
-		top_plate_holes();
-	}
 }
 
 module bottom_plate_with_overhang() {
@@ -249,8 +249,8 @@ module base_frame() {
 module frame() {
 	difference() {
 		base_frame();
-		translate([0, 0, frame_z/2]) scale([1, 1, 2]) base_topplate();
-		translate([0, 0, -frame_z/2]) scale([1, 1, 2]) base_topplate();
+		translate([0, 0, frame_z/2]) scale([1, 1, 2]) base_panel();
+		translate([0, 0, -frame_z/2]) scale([1, 1, 2]) base_panel();
 		translate([plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([-plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([plate_to_frame_point_x, -plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
