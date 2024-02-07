@@ -218,7 +218,8 @@ module frame_mount_column() {
 }
 
 module side_chopper() {
-	translate([(frame_x-frame_wall)/2, 0, 0]) cube([frame_wall, frame_y, frame_z], center=true);
+	translate([(frame_x-frame_wall)/2+top_plate_overhang_amount, 0, 0])
+		cube([frame_wall+top_plate_overhang_amount*2, overhang_top_plate_y, frame_z], center=true);
 }
 
 module frame_connection_holes() {
