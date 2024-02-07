@@ -191,13 +191,6 @@ module base_top_plate_with_raised_overhang() {
 	overhang_plate();
 }
 
-module bottom_plate_with_overhang() {
-	difference() {
-		rotate([180, 0, 0]) base_top_plate_with_raised_overhang();
-		rotate([180, 0, 0]) top_plate_holes();
-	}
-}
-
 module top_plate_with_raised_overhang() {
 	difference() {
 		base_top_plate_with_raised_overhang();
