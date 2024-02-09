@@ -8,7 +8,7 @@ include <components.scad>
 
 module top_panel_middle_dir_arc_w_30mm() {
 	difference() {
-		top_plate_with_raised_overhang();
+		panel_with_raised_overhang();
 		dir_arc_w_30mm();
 		rotate([0, 0, 180]) side_chopper();
 		side_chopper();

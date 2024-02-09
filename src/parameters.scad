@@ -32,7 +32,7 @@ lever_mount_z = 2;
 lever_plate_hole = 12;
 
 // case dimensions
-// base frame box. reminder: top of inside (including mounts) is chopped by top_plate_z for plates
+// base frame box. reminder: top of inside (including mounts) is chopped by panel_z for plates
 frame_x = 233;
 frame_y = 208;
 frame_z = 55;
@@ -46,18 +46,18 @@ frame_wall = 4;
 neutrik_panel_thickness = 3;
 
 // top plate, which can either be the whole plate ("inset") or the mounting frame for a plate that overhangs
-top_plate_x = frame_x - (frame_wall * 2);
-top_plate_y = frame_y - (frame_wall * 2);
-top_plate_z = 5;
+panel_x = frame_x - (frame_wall * 2);
+panel_y = frame_y - (frame_wall * 2);
+panel_z = 5;
 
 // how much the top plate x/y is expanded to overhang the frame
 // note that this is relative to the top plate (so the wall is added back)
-top_plate_overhang_amount = 8.5;
-overhang_top_plate_x = top_plate_x + (frame_wall * 2) + (top_plate_overhang_amount * 2);
-overhang_top_plate_y = top_plate_y + (frame_wall * 2) + (top_plate_overhang_amount * 2);
+panel_overhang_amount = 8.5;
+overhang_panel_x = panel_x + (frame_wall * 2) + (panel_overhang_amount * 2);
+overhang_panel_y = panel_y + (frame_wall * 2) + (panel_overhang_amount * 2);
 
-plate_to_frame_point_x = (top_plate_x/2)-10;
-plate_to_frame_point_y = (top_plate_y/2)-10;
+panel_to_frame_point_x = (panel_x/2)-10;
+panel_to_frame_point_y = (panel_y/2)-10;
 
 // frame interior that supports the top plates
 panel_support_width = 5;

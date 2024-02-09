@@ -9,7 +9,7 @@ use <top-panel-middle-dir_arc-plus-w-30mm.scad>
 
 module top_panel_middle_dir_arc_w_30mm_with_mount() {
 	top_panel_middle_dir_arc_w_30mm();
-	translate([-15, -40, -(top_plate_z/2) - 3]) rotate([0, 0, -45]) pcb_mount();
+	translate([-15, -40, -(panel_z/2) - 3]) rotate([0, 0, -45]) pcb_mount();
 }
 
 top_panel_middle_dir_arc_w_30mm_with_mount();

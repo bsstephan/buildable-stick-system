@@ -8,8 +8,8 @@ include <components.scad>
 
 module dir_arc_24mm_6_button_panel() {
 	difference() {
-		top_plate_with_raised_overhang();
-		translate([-71.5, -top_plate_y/2+122.5, 0]) dir_arc_24mm_6_button();
+		panel_with_raised_overhang();
+		translate([-71.5, -panel_y/2+122.5, 0]) dir_arc_24mm_6_button();
 	}
 }
 

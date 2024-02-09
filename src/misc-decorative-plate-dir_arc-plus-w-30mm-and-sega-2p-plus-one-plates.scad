@@ -12,18 +12,18 @@ module dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate_of_plates() {
 	difference() {
 		// get a 2mm slice of the bigger button cylinders
 		union() {
-			translate([-top_plate_x/2, 0, -25]) {
+			translate([-panel_x/2, 0, -25]) {
 				hull() union() {
 					dir_arc_30mm_finger_buttons();
 					translate([-26.8, 57.2+12.9+34.5, 0]) dir_arc_30mm_thumb_button();
 				}
 			}
-			translate([top_plate_x/2, 0, -25]) {
+			translate([panel_x/2, 0, -25]) {
 				hull() sega_2p();
 			}
 			hull() {
-				translate([-top_plate_x/2, 0, -25]) dir_arc_30mm_thumb_button();
-				translate([top_plate_x/2, -19-9-11-19-9-11, -25]) sega_2p_p1();
+				translate([-panel_x/2, 0, -25]) dir_arc_30mm_thumb_button();
+				translate([panel_x/2, -19-9-11-19-9-11, -25]) sega_2p_p1();
 			}
 			difference() {
 				translate([-60, -8, 0]) cube(60, center=true);
@@ -42,8 +42,8 @@ module dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate_of_plates() {
 		translate([0, 0, -100]) cube([500, 500, 198], center=true);
 		translate([0, 0, 100]) cube([500, 500, 198], center=true);
 		// cut out the normal holes
-		translate([-top_plate_x/2, 0, -1]) dir_arc_w_30mm();
-		translate([top_plate_x/2, 0, -1]) sega_2p_plus_one();
+		translate([-panel_x/2, 0, -1]) dir_arc_w_30mm();
+		translate([panel_x/2, 0, -1]) sega_2p_plus_one();
 	}
 }
 
