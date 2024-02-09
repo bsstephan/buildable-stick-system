@@ -9,12 +9,12 @@ include <components.scad>
 module top_panel_left_lever_and_dir_arc_w_30mm() {
 	difference() {
 		union() {
-			top_plate_with_raised_overhang();
-			translate([(-top_plate_x/2)+55, (top_plate_y/2)-75, -((top_plate_z/2)+(lever_mount_z/2))]) levermountbase();
+			panel_with_raised_overhang();
+			translate([(-panel_x/2)+55, (panel_y/2)-75, -((panel_z/2)+(lever_mount_z/2))]) levermountbase();
 		}
 		dir_arc_w_30mm();
 		side_chopper();
-		translate([(-top_plate_x/2)+55, (top_plate_y/2)-75, 0]) levermountholes();
+		translate([(-panel_x/2)+55, (panel_y/2)-75, 0]) levermountholes();
 	}
 }
 

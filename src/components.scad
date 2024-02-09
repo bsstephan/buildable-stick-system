@@ -13,17 +13,17 @@ module m4_hole_countersink() {
 	cylinder(r1=m4_bolt_radius, r2=m4_bolt_countersink_radius, h=3.2, $fn=50, center=true);
 }
 
-module top_plate_holes() {
+module panel_holes() {
 	// holes for mount bolts
-	translate([plate_to_frame_point_x, plate_to_frame_point_y, 0]) m4_hole();
-	translate([plate_to_frame_point_x, -plate_to_frame_point_y, 0]) m4_hole();
-	translate([-plate_to_frame_point_x, plate_to_frame_point_y, 0]) m4_hole();
-	translate([-plate_to_frame_point_x, -plate_to_frame_point_y, 0]) m4_hole();
+	translate([panel_to_frame_point_x, panel_to_frame_point_y, 0]) m4_hole();
+	translate([panel_to_frame_point_x, -panel_to_frame_point_y, 0]) m4_hole();
+	translate([-panel_to_frame_point_x, panel_to_frame_point_y, 0]) m4_hole();
+	translate([-panel_to_frame_point_x, -panel_to_frame_point_y, 0]) m4_hole();
 	// holes for mount bolt countersinks
-	translate([plate_to_frame_point_x, plate_to_frame_point_y, 2]) m4_hole_countersink();
-	translate([plate_to_frame_point_x, -plate_to_frame_point_y, 2]) m4_hole_countersink();
-	translate([-plate_to_frame_point_x, plate_to_frame_point_y, 2]) m4_hole_countersink();
-	translate([-plate_to_frame_point_x, -plate_to_frame_point_y, 2]) m4_hole_countersink();
+	translate([panel_to_frame_point_x, panel_to_frame_point_y, 2]) m4_hole_countersink();
+	translate([panel_to_frame_point_x, -panel_to_frame_point_y, 2]) m4_hole_countersink();
+	translate([-panel_to_frame_point_x, panel_to_frame_point_y, 2]) m4_hole_countersink();
+	translate([-panel_to_frame_point_x, -panel_to_frame_point_y, 2]) m4_hole_countersink();
 }
 
 // button hole, with extra wide bits for various uses (cutting out space
@@ -83,7 +83,7 @@ module rocker_20mm_mount() {
 
 // space for a neutrik D mount or 24mm button - Z is to cut the whole inside without affecting panel lip
 module frame_cutout() {
-	cube([36.5, 8, frame_z-(top_plate_z*2)], center=true);
+	cube([36.5, 8, frame_z-(panel_z*2)], center=true);
 }
 
 // bank of three 24mm buttons, commonly on a frame face
@@ -163,38 +163,38 @@ module levermountholes() {
 }
 
 module base_panel() {
-	cube([top_plate_x, top_plate_y, top_plate_z], center=true);
+	cube([panel_x, panel_y, panel_z], center=true);
 }
 
 module panel() {
 	difference() {
 		base_panel();
-		top_plate_holes();
+		panel_holes();
 	}
 }
 
 module overhang_plate() {
-	roundedcube([overhang_top_plate_x, overhang_top_plate_y, top_plate_z], center=true, radius=1);
+	roundedcube([overhang_panel_x, overhang_panel_y, panel_z], center=true, radius=1);
 }
 
 // this takes the base_panel and makes it a small frame, putting a larger top plate
-module base_top_plate_with_raised_overhang() {
+module base_panel_with_raised_overhang() {
 	// make a frame out of the top plate (and keep the main plate on the center plane)
 	translate([0, 0, -5]) difference() {
 		base_panel();
-		cube([top_plate_x-(panel_support_width*2), top_plate_y-(panel_support_width*2), top_plate_z*2], center=true);
+		cube([panel_x-(panel_support_width*2), panel_y-(panel_support_width*2), panel_z*2], center=true);
 	}
-	translate([plate_to_frame_point_x, plate_to_frame_point_y, -2.5]) resize([0, 0, 10]) frame_mount_column();
-	translate([-(plate_to_frame_point_x), plate_to_frame_point_y, -2.5]) resize([0, 0, 10]) frame_mount_column();
-	translate([plate_to_frame_point_x, -(plate_to_frame_point_y), -2.5]) resize([0, 0, 10]) frame_mount_column();
-	translate([-(plate_to_frame_point_x), -(plate_to_frame_point_y), -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([panel_to_frame_point_x, panel_to_frame_point_y, -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([-(panel_to_frame_point_x), panel_to_frame_point_y, -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([panel_to_frame_point_x, -(panel_to_frame_point_y), -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([-(panel_to_frame_point_x), -(panel_to_frame_point_y), -2.5]) resize([0, 0, 10]) frame_mount_column();
 	overhang_plate();
 }
 
-module top_plate_with_raised_overhang() {
+module panel_with_raised_overhang() {
 	difference() {
-		base_top_plate_with_raised_overhang();
-		top_plate_holes();
+		base_panel_with_raised_overhang();
+		panel_holes();
 	}
 }
 
@@ -202,7 +202,7 @@ module frame_box() {
 	difference() {
 		roundedcube([frame_x, frame_y, frame_z], center=true, radius=3);
 		// cut out the middle to make it a box
-		cube([top_plate_x-(panel_support_width*2), top_plate_y-(panel_support_width*2), frame_z+5], center=true);
+		cube([panel_x-(panel_support_width*2), panel_y-(panel_support_width*2), frame_z+5], center=true);
 	}
 }
 
@@ -211,8 +211,8 @@ module frame_mount_column() {
 }
 
 module side_chopper() {
-	translate([(frame_x-frame_wall)/2+top_plate_overhang_amount, 0, 0])
-		cube([frame_wall+top_plate_overhang_amount*2, overhang_top_plate_y, frame_z], center=true);
+	translate([(frame_x-frame_wall)/2+panel_overhang_amount, 0, 0])
+		cube([frame_wall+panel_overhang_amount*2, overhang_panel_y, frame_z], center=true);
 }
 
 module frame_connection_holes() {
@@ -233,10 +233,10 @@ module frame_cable_routing_hole() {
 
 module base_frame() {
 	frame_box();
-	translate([plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_mount_column();
-	translate([-plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_mount_column();
-	translate([plate_to_frame_point_x, -(plate_to_frame_point_y), 0]) frame_mount_column();
-	translate([-plate_to_frame_point_x, -(plate_to_frame_point_y), 0]) frame_mount_column();
+	translate([panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_mount_column();
+	translate([-panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_mount_column();
+	translate([panel_to_frame_point_x, -(panel_to_frame_point_y), 0]) frame_mount_column();
+	translate([-panel_to_frame_point_x, -(panel_to_frame_point_y), 0]) frame_mount_column();
 }
 
 module frame() {
@@ -244,10 +244,10 @@ module frame() {
 		base_frame();
 		translate([0, 0, frame_z/2]) scale([1, 1, 2]) base_panel();
 		translate([0, 0, -frame_z/2]) scale([1, 1, 2]) base_panel();
-		translate([plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
-		translate([-plate_to_frame_point_x, plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
-		translate([plate_to_frame_point_x, -plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
-		translate([-plate_to_frame_point_x, -plate_to_frame_point_y, 0]) frame_hex_bolt_hole();
+		translate([panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
+		translate([-panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
+		translate([panel_to_frame_point_x, -panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
+		translate([-panel_to_frame_point_x, -panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
 	}
 }
 
@@ -294,7 +294,7 @@ module dir_arc_plus_w_24mm_8_button() {
 
 module dir_arc_30mm_thumb_button() {
 	// just my guesstimate on this one, but note that this is the same position as sega 2p (just mirrored)
-	translate([(top_plate_x/2)-28.06, (-top_plate_y/2)+62, 0]) button_30mm_hole();
+	translate([(panel_x/2)-28.06, (-panel_y/2)+62, 0]) button_30mm_hole();
 }
 
 module dir_arc_30mm_finger_buttons() {
@@ -317,7 +317,7 @@ module dir_arc_w_30mm_plus_one() {
 // Namco Noir (right hand)
 
 module noir_button_p1() {
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([35, 140, 0]) button_30mm_hole();
+	translate([-panel_x/2, -panel_y/2, 0]) translate([35, 140, 0]) button_30mm_hole();
 }
 
 module noir_plus_one() {
@@ -338,7 +338,7 @@ module noir_plus_one() {
 // Sega Astro City 2P (right hand)
 
 module sega_2p_p1() {
-	translate([-top_plate_x/2, -top_plate_y/2, 0]) translate([28.06, 140, 0]) button_30mm_hole();
+	translate([-panel_x/2, -panel_y/2, 0]) translate([28.06, 140, 0]) button_30mm_hole();
 }
 
 module sega_2p_6_button() {

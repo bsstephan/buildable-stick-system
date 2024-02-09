@@ -11,8 +11,8 @@ module top_panel_left_lever() {
 	difference() {
 		// base plate
 		union() {
-			translate([0,-20,0]) top_plate_with_raised_overhang();
-			translate([0, 0, -((top_plate_z/2)+(lever_mount_z/2))]) levermountbase();
+			translate([0,-20,0]) panel_with_raised_overhang();
+			translate([0, 0, -((panel_z/2)+(lever_mount_z/2))]) levermountbase();
 		}
 		// holes to mount the lever
 		levermountholes();
