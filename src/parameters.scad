@@ -35,7 +35,7 @@ lever_plate_hole = 12;
 // base frame box. reminder: top of inside (including mounts) is chopped by panel_z for plates
 frame_x = 233;
 frame_y = 208;
-frame_z = 55;
+frame_z = 57;
 
 frame_center_to_neutrik = 70;
 
