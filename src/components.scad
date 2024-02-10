@@ -184,10 +184,14 @@ module base_panel_with_raised_overhang() {
 		base_panel();
 		cube([panel_x-(panel_support_width*2), panel_y-(panel_support_width*2), panel_z*2], center=true);
 	}
-	translate([panel_to_frame_point_x, panel_to_frame_point_y, -2.5]) resize([0, 0, 10]) frame_mount_column();
-	translate([-(panel_to_frame_point_x), panel_to_frame_point_y, -2.5]) resize([0, 0, 10]) frame_mount_column();
-	translate([panel_to_frame_point_x, -(panel_to_frame_point_y), -2.5]) resize([0, 0, 10]) frame_mount_column();
-	translate([-(panel_to_frame_point_x), -(panel_to_frame_point_y), -2.5]) resize([0, 0, 10]) frame_mount_column();
+	translate([panel_to_frame_point_x, panel_to_frame_point_y, -2.5]) resize([0, 0, 10])
+		frame_mount_column();
+	translate([-(panel_to_frame_point_x), panel_to_frame_point_y, -2.5]) resize([0, 0, 10])
+		rotate([0, 0, 90]) frame_mount_column();
+	translate([panel_to_frame_point_x, -(panel_to_frame_point_y), -2.5]) resize([0, 0, 10])
+		rotate([0, 0, 270]) frame_mount_column();
+	translate([-(panel_to_frame_point_x), -(panel_to_frame_point_y), -2.5]) resize([0, 0, 10])
+		rotate([0, 0, 180]) frame_mount_column();
 	overhang_plate();
 }
 
@@ -208,6 +212,9 @@ module frame_box() {
 
 module frame_mount_column() {
 	cube([20, 20, frame_z], center=true);
+	// add some corners back to do a lame chamfer
+	linear_extrude(height=frame_z, center=true)
+		polygon([[10, 10], [-20, 10], [10, -20]]);
 }
 
 module side_chopper() {
@@ -234,9 +241,9 @@ module frame_cable_routing_hole() {
 module base_frame() {
 	frame_box();
 	translate([panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_mount_column();
-	translate([-panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_mount_column();
-	translate([panel_to_frame_point_x, -(panel_to_frame_point_y), 0]) frame_mount_column();
-	translate([-panel_to_frame_point_x, -(panel_to_frame_point_y), 0]) frame_mount_column();
+	translate([-panel_to_frame_point_x, panel_to_frame_point_y, 0]) rotate([0, 0, 90]) frame_mount_column();
+	translate([-panel_to_frame_point_x, -(panel_to_frame_point_y), 0]) rotate([0, 0, 180])  frame_mount_column();
+	translate([panel_to_frame_point_x, -(panel_to_frame_point_y), 0]) rotate([0, 0, 270])  frame_mount_column();
 }
 
 module frame() {
