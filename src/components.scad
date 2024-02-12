@@ -204,7 +204,13 @@ module panel_with_raised_overhang() {
 
 module frame_box() {
 	difference() {
-		roundedcube([frame_x, frame_y, frame_z], center=true, radius=3);
+		points = [ [(frame_x/2)-3, (frame_y/2)-3, 0], [-(frame_x/2)+3, (frame_y/2)-3, 0],
+			[(frame_x/2)-3, -(frame_y/2)+3, 0], [-(frame_x/2)+3, -(frame_y/2)+3, 0] ];
+		hull() {
+			for (p = points) {
+				translate(p) cylinder(r=3, h=frame_z, center=true);
+			}
+		}
 		// cut out the middle to make it a box
 		cube([panel_x-(panel_support_width*2), panel_y-(panel_support_width*2), frame_z+5], center=true);
 	}
@@ -255,6 +261,9 @@ module frame() {
 		translate([-panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([panel_to_frame_point_x, -panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([-panel_to_frame_point_x, -panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
+
+		// comfort bevel
+		translate([0, -frame_y/2, frame_z/2]) rotate([45, 0, 0]) cube([frame_x+0.01, 4, 4], center=true);
 	}
 }
 
