@@ -164,12 +164,31 @@ module levermountholes() {
 
 module base_panel() {
 	cube([panel_x, panel_y, panel_z], center=true);
+	translate([panel_to_frame_point_x, panel_to_frame_point_y, -panel_z])
+		scale([1.4, 1.4, 0.1]) frame_hex_bolt_hole();
+	translate([-panel_to_frame_point_x, panel_to_frame_point_y, -panel_z])
+		scale([1.4, 1.4, 0.1]) frame_hex_bolt_hole();
+	translate([panel_to_frame_point_x, -panel_to_frame_point_y, -panel_z])
+		scale([1.4, 1.4, 0.1]) frame_hex_bolt_hole();
+	translate([-panel_to_frame_point_x, -panel_to_frame_point_y, -panel_z])
+		scale([1.4, 1.4, 0.1]) frame_hex_bolt_hole();
+}
+
+module base_bottom_panel() {
+	cube([panel_x, panel_y, panel_z], center=true);
 }
 
 module panel() {
 	difference() {
 		base_panel();
 		panel_holes();
+	}
+}
+
+module bottom_panel() {
+	difference() {
+		base_bottom_panel();
+		mirror([0, 0, 1]) panel_holes();
 	}
 }
 
@@ -182,7 +201,7 @@ module base_panel_with_raised_overhang() {
 	// make a frame out of the top plate (and keep the main plate on the center plane)
 	translate([0, 0, -5]) difference() {
 		base_panel();
-		cube([panel_x-(panel_support_width*2), panel_y-(panel_support_width*2), panel_z*2], center=true);
+		cube([panel_x-(panel_support_width*2), panel_y-(panel_support_width*2), panel_z], center=true);
 	}
 	translate([panel_to_frame_point_x, panel_to_frame_point_y, -2.5]) resize([0, 0, 10])
 		frame_mount_column();
@@ -264,6 +283,16 @@ module frame() {
 
 		// comfort bevel
 		translate([0, -frame_y/2, frame_z/2]) rotate([45, 0, 0]) cube([frame_x+0.01, 4, 4], center=true);
+
+		// slightly larger holes than the posts in the base_panel
+		translate([panel_to_frame_point_x, panel_to_frame_point_y, frame_z/2-panel_z-5])
+			scale([1.45, 1.45, 0.2]) frame_hex_bolt_hole();
+		translate([-panel_to_frame_point_x, panel_to_frame_point_y, frame_z/2-panel_z-5])
+			scale([1.45, 1.45, 0.2]) frame_hex_bolt_hole();
+		translate([panel_to_frame_point_x, -panel_to_frame_point_y, frame_z/2-panel_z-5])
+			scale([1.45, 1.45, 0.2]) frame_hex_bolt_hole();
+		translate([-panel_to_frame_point_x, -panel_to_frame_point_y, frame_z/2-panel_z-5])
+			scale([1.45, 1.45, 0.2]) frame_hex_bolt_hole();
 	}
 }
 

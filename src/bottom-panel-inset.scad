@@ -6,8 +6,8 @@
 include <parameters.scad>
 include <components.scad>
 
-module bottom_panel() {
-	mirror([0, 0, 1]) panel();
+module inset_bottom_panel() {
+	mirror([0, 0, 1]) bottom_panel();
 }
 
-bottom_panel();
+inset_bottom_panel();
