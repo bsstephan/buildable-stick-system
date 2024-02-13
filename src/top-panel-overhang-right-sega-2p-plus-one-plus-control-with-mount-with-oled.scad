@@ -5,7 +5,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <top-panel-right-sega-2p-plus-one-plus-control-with-mount.scad>
+use <top-panel-overhang-right-sega-2p-plus-one-plus-control-with-mount.scad>
 
 module top_panel_right_sega_2p_plus_one_plus_control_with_mount_with_oled() {
 	difference() {

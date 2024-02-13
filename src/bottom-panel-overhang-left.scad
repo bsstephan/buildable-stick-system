@@ -5,7 +5,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <bottom-panel-solo.scad>
+use <bottom-panel-overhang-solo.scad>
 
 module bottom_panel_left() {
 	difference() {

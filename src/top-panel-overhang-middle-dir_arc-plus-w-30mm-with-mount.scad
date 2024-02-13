@@ -5,7 +5,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <top-panel-middle-dir_arc-plus-w-30mm.scad>
+use <top-panel-overhang-middle-dir_arc-plus-w-30mm.scad>
 
 module top_panel_middle_dir_arc_w_30mm_with_mount() {
 	top_panel_middle_dir_arc_w_30mm();

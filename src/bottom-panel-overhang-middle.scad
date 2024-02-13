@@ -5,8 +5,8 @@
 
 include <parameters.scad>
 include <components.scad>
-use <bottom-panel-left.scad>
-use <bottom-panel-right.scad>
+use <bottom-panel-overhang-left.scad>
+use <bottom-panel-overhang-right.scad>
 
 module bottom_panel_middle() {
 	intersection() {

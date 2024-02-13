@@ -5,7 +5,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <bottom-panel-left.scad>
+use <bottom-panel-overhang-left.scad>
 
 module bottom_panel_right() {
 	rotate([0, 0, 180]) bottom_panel_left();
