@@ -169,13 +169,13 @@ module base_panel() {
 			// add posts that sink into the frame, just to give
 			// a somewhat more sturdy/tight connection
 			translate([panel_to_frame_point_x, panel_to_frame_point_y, -panel_z])
-				scale([1.4, 1.4, 0.1]) frame_hex_bolt_hole();
+				scale([1.5, 1.5, 0.1]) frame_hex_bolt_hole();
 			translate([-panel_to_frame_point_x, panel_to_frame_point_y, -panel_z])
-				scale([1.4, 1.4, 0.1]) frame_hex_bolt_hole();
+				scale([1.5, 1.5, 0.1]) frame_hex_bolt_hole();
 			translate([panel_to_frame_point_x, -panel_to_frame_point_y, -panel_z])
-				scale([1.4, 1.4, 0.1]) frame_hex_bolt_hole();
+				scale([1.5, 1.5, 0.1]) frame_hex_bolt_hole();
 			translate([-panel_to_frame_point_x, -panel_to_frame_point_y, -panel_z])
-				scale([1.4, 1.4, 0.1]) frame_hex_bolt_hole();
+				scale([1.5, 1.5, 0.1]) frame_hex_bolt_hole();
 		}
 		// the posts mentioned above need space for the actual hex bolts
 		// used in connecting to the frame
