@@ -21,13 +21,13 @@ module solo_frame() {
 		// aux button holes
 		translate([-frame_x/2+2.5, 0, 0]) rotate([90, 0, 270]) aux_control_three_button_cluster();
 		translate([(frame_x/2)-neutrik_panel_thickness-4, 0, 0]) rotate([0, 0, 90]) frame_cutout();
-		translate([(frame_x/2)-neutrik_panel_thickness-4, -40, 0]) rotate([0, 0, 90]) frame_cutout();
-		translate([(frame_x/2)-neutrik_panel_thickness-4, 40, 0]) rotate([0, 0, 90]) frame_cutout();
+		translate([(frame_x/2)-neutrik_panel_thickness-4, -37, 0]) rotate([0, 0, 90]) frame_cutout();
+		translate([(frame_x/2)-neutrik_panel_thickness-4, 37, 0]) rotate([0, 0, 90]) frame_cutout();
 
 		translate([frame_x/2+2.5, 0, 0]) rotate([90, 0, 270]) aux_control_three_button_cluster();
 		translate([-(frame_x/2)+neutrik_panel_thickness+4, 0, 0]) rotate([0, 0, 90]) frame_cutout();
-		translate([-(frame_x/2)+neutrik_panel_thickness+4, -40, 0]) rotate([0, 0, 90]) frame_cutout();
-		translate([-(frame_x/2)+neutrik_panel_thickness+4, 40, 0]) rotate([0, 0, 90]) frame_cutout();
+		translate([-(frame_x/2)+neutrik_panel_thickness+4, -37, 0]) rotate([0, 0, 90]) frame_cutout();
+		translate([-(frame_x/2)+neutrik_panel_thickness+4, 37, 0]) rotate([0, 0, 90]) frame_cutout();
 	}
 }
 

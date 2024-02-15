@@ -10,8 +10,8 @@ use <misc-neutrik-d-plate.scad>
 module aux_control_three_button_cluster_decorative_plate() {
 	difference() {
 		hull() {
-			translate([-50, 0, 0]) neutrik_d_plate();
-			translate([50, 0, 0]) neutrik_d_plate();
+			translate([-44, 0, 0]) neutrik_d_plate();
+			translate([44, 0, 0]) neutrik_d_plate();
 		}
 		translate([0, 0, -10]) aux_control_three_button_cluster();
 	}

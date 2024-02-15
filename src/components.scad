@@ -31,9 +31,9 @@ module panel_holes() {
 module button_24mm_hole() {
 	cylinder(r=small_button_radius, h=100, $fn=50, center=true);
 	// carve out space for snap-ins, leave 3mm
-	// slagcoin has screw-in nut diameter at 29.5mm, so radius+6 to leave some space
+	// slagcoin has screw-in nut diameter at 29.5mm, so radius+3 to leave some space
 	// translation is to leave 3mm thickness in the plate without recentering anything
-	translate([0, 0, -25]) cylinder(r=small_button_radius+6, h=49, $fn=50, center=true);
+	translate([0, 0, -25]) cylinder(r=small_button_radius+3, h=49, $fn=50, center=true);
 	// space for decorative button surround stuff
 	translate([0, 0, 50]) cylinder(r=small_button_radius*decorative_radius_scale, h=20, $fn=50, center=true);
 	translate([0, 0, 70]) cylinder(r=small_button_radius*jumbo_decorative_radius_scale, h=20, $fn=50, center=true);
@@ -83,14 +83,14 @@ module rocker_20mm_mount() {
 
 // space for a neutrik D mount or 24mm button - Z is to cut the whole inside without affecting panel lip
 module frame_cutout() {
-	cube([36.5, 8, frame_z-(panel_z*2)], center=true);
+	cube([30.5, 8, frame_z-(panel_z*2)], center=true);
 }
 
 // bank of three 24mm buttons, commonly on a frame face
 module aux_control_three_button_cluster() {
-	translate([-40, 0, 0]) button_24mm_hole();
+	translate([-37, 0, 0]) button_24mm_hole();
 	translate([0, 0, 0]) button_24mm_hole();
-	translate([40, 0, 0]) button_24mm_hole();
+	translate([37, 0, 0]) button_24mm_hole();
 }
 
 module m2_mount_post() {
