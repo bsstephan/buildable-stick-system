@@ -27,11 +27,14 @@ module middle_frame() {
 		mirror([1, 0, 0]) frame_cable_routing_hole();
 
 		// neutrik mounts for connector, switches
-		translate([0, (frame_y/2)-neutrik_panel_thickness, 0]) rotate([90, 0, 0]) neutrik_d_mount();
+		translate([0, (frame_y/2)-neutrik_panel_thickness, frame_bottom_bevel_height/2])
+			rotate([90, 0, 0]) neutrik_d_mount();
 		translate([0, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
-		translate([-40, (frame_y/2)-neutrik_panel_thickness, 0]) rotate([90, 0, 0]) neutrik_d_mount();
+		translate([-40, (frame_y/2)-neutrik_panel_thickness, frame_bottom_bevel_height/2])
+			rotate([90, 0, 0]) neutrik_d_mount();
 		translate([-40, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
-		translate([40, (frame_y/2)-neutrik_panel_thickness, 0]) rotate([90, 0, 0]) neutrik_d_mount();
+		translate([40, (frame_y/2)-neutrik_panel_thickness, frame_bottom_bevel_height/2])
+			rotate([90, 0, 0]) neutrik_d_mount();
 		translate([40, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
 	}
 }

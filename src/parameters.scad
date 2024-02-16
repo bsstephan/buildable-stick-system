@@ -37,6 +37,10 @@ frame_x = 233;
 frame_y = 208;
 frame_z = 57;
 
+// this sinks the bottom of the frame inward a bit, and is used to math out two shapes
+// when creating the frame box
+frame_bottom_bevel_height = 6;
+
 frame_center_to_neutrik = 70;
 
 // depth of the "lip" of the frame that the top plate sets into/supports the overhang
