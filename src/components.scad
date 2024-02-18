@@ -315,6 +315,9 @@ module frame() {
 		translate([-panel_to_frame_point_x, -panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
 
 		// comfort bevel
+		translate([frame_x/2, 0, frame_z/2]) rotate([0, 45, 0]) cube([4, frame_y+0.01, 4], center=true);
+		translate([-frame_x/2, 0, frame_z/2]) rotate([0, 45, 0]) cube([4, frame_y+0.01, 4], center=true);
+		translate([0, frame_y/2, frame_z/2]) rotate([45, 0, 0]) cube([frame_x+0.01, 4, 4], center=true);
 		translate([0, -frame_y/2, frame_z/2]) rotate([45, 0, 0]) cube([frame_x+0.01, 4, 4], center=true);
 
 		// slightly larger holes than the posts in the base_panel
