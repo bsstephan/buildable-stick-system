@@ -240,27 +240,16 @@ module panel_with_raised_overhang() {
 
 module frame_box() {
 	difference() {
-		frame_bottom_bevel_height = 6;
 		top_points = [
 			// top part, majority of shape
-			[(frame_x/2)-3, (frame_y/2)-3, frame_bottom_bevel_height/2],
-			[-(frame_x/2)+3, (frame_y/2)-3, frame_bottom_bevel_height/2],
-			[(frame_x/2)-3, -(frame_y/2)+3, frame_bottom_bevel_height/2],
-			[-(frame_x/2)+3, -(frame_y/2)+3, frame_bottom_bevel_height/2],
-		];
-		bottom_points = [
-			// bottom bevel
-			[(frame_x/2)-4, (frame_y/2)-4, -frame_z/2+frame_bottom_bevel_height/2],
-			[-(frame_x/2)+4, (frame_y/2)-4, -frame_z/2+frame_bottom_bevel_height/2],
-			[(frame_x/2)-4, -(frame_y/2)+4, -frame_z/2+frame_bottom_bevel_height/2],
-			[-(frame_x/2)+4, -(frame_y/2)+4, -frame_z/2+frame_bottom_bevel_height/2],
+			[(frame_x/2)-3, (frame_y/2)-3, panel_z/2],
+			[-(frame_x/2)+3, (frame_y/2)-3, panel_z/2],
+			[(frame_x/2)-3, -(frame_y/2)+3, panel_z/2],
+			[-(frame_x/2)+3, -(frame_y/2)+3, panel_z/2],
 		];
 		hull() {
 			for (p = top_points) {
-				translate(p) cylinder(r=3, h=frame_z-frame_bottom_bevel_height, center=true);
-			}
-			for (p = bottom_points) {
-				translate(p) cylinder(r=2, h=frame_bottom_bevel_height, center=true);
+				translate(p) cylinder(r=3, h=frame_z-panel_z, center=true);
 			}
 		}
 		// cut out the middle to make it a box
