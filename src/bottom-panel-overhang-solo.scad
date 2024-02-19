@@ -8,7 +8,7 @@ include <components.scad>
 
 module bottom_panel_solo() {
 	difference() {
-		rotate([180, 0, 0]) base_panel_with_raised_overhang();
+		overhang_plate();
 		rotate([180, 0, 0]) panel_holes();
 	}
 }
