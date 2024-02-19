@@ -311,13 +311,13 @@ module frame() {
 
 		// slightly larger holes than the posts in the base_panel
 		translate([panel_to_frame_point_x, panel_to_frame_point_y, frame_z/2-panel_z-5])
-			scale([1.45, 1.45, 0.2]) frame_hex_bolt_hole();
+			scale([1.55, 1.55, 0.2]) frame_hex_bolt_hole();
 		translate([-panel_to_frame_point_x, panel_to_frame_point_y, frame_z/2-panel_z-5])
-			scale([1.45, 1.45, 0.2]) frame_hex_bolt_hole();
+			scale([1.55, 1.55, 0.2]) frame_hex_bolt_hole();
 		translate([panel_to_frame_point_x, -panel_to_frame_point_y, frame_z/2-panel_z-5])
-			scale([1.45, 1.45, 0.2]) frame_hex_bolt_hole();
+			scale([1.55, 1.55, 0.2]) frame_hex_bolt_hole();
 		translate([-panel_to_frame_point_x, -panel_to_frame_point_y, frame_z/2-panel_z-5])
-			scale([1.45, 1.45, 0.2]) frame_hex_bolt_hole();
+			scale([1.55, 1.55, 0.2]) frame_hex_bolt_hole();
 	}
 }
 
