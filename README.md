@@ -99,6 +99,13 @@ Improvements, variants, new layouts, novel ideas, and etc. are all welcome.
 These files are suitable for previewing and rendering in OpenSCAD. They may also work in FreeCAD and perhaps other
 software, but they are developed in OpenSCAD, so YMMV otherwise.
 
+This project is hosted at [my personal Git site](https://git.incorporeal.org/bss/buildable-stick-system), but people are
+more likely to want to interact with [the GitHub mirror](https://github.com/bsstephan/buildable-stick-system). Feel free
+to use either.
+
+You may find me at a number of places; I maintain an IRC channel, `#buildable-stick-system`, on [my IRC network,
+Randomus](https://randomus.net/).
+
 ## Attribution
 
 Inspired by the incredible work of [TheTrain](https://github.com/TheTrainGoes) on the [OpenStickCommunity Fightstick
