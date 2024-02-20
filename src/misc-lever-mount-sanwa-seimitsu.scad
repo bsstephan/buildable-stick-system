@@ -6,15 +6,11 @@
 include <parameters.scad>
 include <components.scad>
 
-// combine the lever mount and generic plate, with mounting holes
-module lever_panel() {
+module sanwa_seimitsu_lever_mount() {
 	difference() {
-		// base plate
-		translate([0,-20,0]) panel();
-		// holes to mount the lever
+		levermountbase();
 		levermountholes();
-		levermountcountersinks();
 	}
 }
 
-lever_panel();
+sanwa_seimitsu_lever_mount();

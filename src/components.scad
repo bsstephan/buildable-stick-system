@@ -151,6 +151,9 @@ module levermountholes() {
 		m4_hole();
 	translate([-20, -42.5, 0])
 		m4_hole();
+}
+
+module levermountcountersinks() {
 	// holes for joystick bolt countersinks
 	translate([20, 42.5, 2])
 		m4_hole_countersink();
