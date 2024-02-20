@@ -12,24 +12,24 @@ module solo_frame() {
 
 		// neutrik mounts for connector, switches
 		translate([0, (frame_y/2)-2.5, panel_z/2]) rotate([90, 0, 0]) neutrik_d_mount();
-		translate([0, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
+		translate([0, (frame_y/2)-neutrik_panel_thickness-4, 1]) frame_cutout();
 		translate([-40, (frame_y/2)-2.5, panel_z/2]) rotate([90, 0, 0]) neutrik_d_mount();
-		translate([-40, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
+		translate([-40, (frame_y/2)-neutrik_panel_thickness-4, 1]) frame_cutout();
 		translate([40, (frame_y/2)-2.5, panel_z/2]) rotate([90, 0, 0]) neutrik_d_mount();
-		translate([40, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
+		translate([40, (frame_y/2)-neutrik_panel_thickness-4, 1]) frame_cutout();
 
 		// aux button holes
 		translate([-frame_x/2+2.5, 0, panel_z/2]) rotate([90, 0, 270])
 			aux_control_three_button_cluster();
-		translate([(frame_x/2)-neutrik_panel_thickness-4, 0, 0]) rotate([0, 0, 90]) frame_cutout();
-		translate([(frame_x/2)-neutrik_panel_thickness-4, -37, 0]) rotate([0, 0, 90]) frame_cutout();
-		translate([(frame_x/2)-neutrik_panel_thickness-4, 37, 0]) rotate([0, 0, 90]) frame_cutout();
+		translate([(frame_x/2)-neutrik_panel_thickness-4, 0, 1]) rotate([0, 0, 90]) frame_cutout();
+		translate([(frame_x/2)-neutrik_panel_thickness-4, -37, 1]) rotate([0, 0, 90]) frame_cutout();
+		translate([(frame_x/2)-neutrik_panel_thickness-4, 37, 1]) rotate([0, 0, 90]) frame_cutout();
 
 		translate([frame_x/2+2.5, 0, panel_z/2]) rotate([90, 0, 270])
 			aux_control_three_button_cluster();
-		translate([-(frame_x/2)+neutrik_panel_thickness+4, 0, 0]) rotate([0, 0, 90]) frame_cutout();
-		translate([-(frame_x/2)+neutrik_panel_thickness+4, -37, 0]) rotate([0, 0, 90]) frame_cutout();
-		translate([-(frame_x/2)+neutrik_panel_thickness+4, 37, 0]) rotate([0, 0, 90]) frame_cutout();
+		translate([-(frame_x/2)+neutrik_panel_thickness+4, 0, 1]) rotate([0, 0, 90]) frame_cutout();
+		translate([-(frame_x/2)+neutrik_panel_thickness+4, -37, 1]) rotate([0, 0, 90]) frame_cutout();
+		translate([-(frame_x/2)+neutrik_panel_thickness+4, 37, 1]) rotate([0, 0, 90]) frame_cutout();
 	}
 }
 
