@@ -7,10 +7,10 @@ include <parameters.scad>
 include <components.scad>
 use <frame-left.scad>
 use <frame-right.scad>
-use <top-panel-left-lever-and-dir_arc-plus-w-30mm.scad>
-use <top-panel-right-sega-2p-plus-one-plus-control-with-mount.scad>
-use <bottom-panel-left.scad>
-use <bottom-panel-right.scad>
+use <top-panel-overhang-left-lever-and-dir_arc-plus-w-30mm.scad>
+use <top-panel-overhang-right-sega-2p-plus-one-plus-control-with-mount.scad>
+use <bottom-panel-overhang-left.scad>
+use <bottom-panel-overhang-right.scad>
 use <misc-decorative-plate-24mm-button.scad>
 use <misc-decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-plus-one.scad>
 use <misc-dustwasher-lsx-nobi.scad>

@@ -2,7 +2,7 @@
 
 Files for 3D printing an arcade stick.
 
-![An example of stick components displayed in OpenSCAD](docs/two-panel-example-v3.png)
+![An example of stick components displayed in OpenSCAD](docs/blown-up-demo.png)
 
 [OpenSCAD-based illustration of how the components for an overhang panel-based stick fit together.]
 
