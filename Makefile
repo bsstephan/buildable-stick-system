@@ -1,4 +1,5 @@
 SRC_FILES := $(wildcard ./src/*.scad)
+SRC_FILES := $(filter-out ./src/all-together-demo.scad, $(SRC_FILES))
 SRC_FILES := $(filter-out ./src/blown-up-demo.scad, $(SRC_FILES))
 SRC_FILES := $(filter-out ./src/components.scad, $(SRC_FILES))
 SRC_FILES := $(filter-out ./src/roundedcube.scad, $(SRC_FILES))
