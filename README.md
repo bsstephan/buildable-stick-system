@@ -28,6 +28,10 @@ These items all fit on a 256mm^2 print bed; I use a Bambu Lab P1P based on what 
 OpenStickCommunity. Standard settings seem sufficiently sturdy for my purposes, though the slicer has done a couple
 weird things, in my experience.
 
+My preferred settings are 3 wall loops with 20% gyroid sparse infill. This gives the models a bit more weight and
+stability, but something like 2 wall loops, 15% grid sparse infill is fine and does not lead to a weak enclosure. The
+costs below have been made against my settings.
+
 ## Assembling
 
 What you'll need beyond these objects:
@@ -59,10 +63,10 @@ What you'll need beyond these objects:
 This is a rough estimate of the cost to produce one of these sticks, assuming a usual 2-frame design and layout.
 Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
 
-* Left and right frame: **$7.08 USD** (141.84g each, as of 2023-09-12)
-* Left and right (overhang) top panels: **~$6.74 USD** (~135g each, as of 2023-09-12)
-* Left and right (overhang) bottom panels: **$5.90 USD** (118.16g each, as of 2023-09-12)
-* Miscellaneous mounting plates, decorative plates, etc.: **~$1.00 USD** (~40g, as of 2023-09-12)
+* Left and right frame: **$10.42 USD** (208.50g each, as of 2024-02-22)
+* Left and right (inset) top panels: **~$6.40 USD** (~128g each, as of 2024-02-22)
+* Left and right (non-overhang) bottom panels: **$6.80 USD** (135.99g each, as of 2024-02-22)
+* Miscellaneous mounting plates, decorative plates, etc.: **~$1.83 USD** (~73g, as of 2024-02-22)
 * 8 16mm M4 bolts to connect the frames: **$0.72 USD** (you can get a pack of 100 on Amazon for $9, as of 2023-09-12)
 * 8 M4 flange nuts to connect the frames: **$0.68 USD** (you can get a pack of 100 on Amazon for $8.50, as of 2023-09-12)
 * 4 10mm M3 bolts to connect Neutrik D plates to frames: **$0.40 USD** (you can get a pack of 100 on Amazon for $10, as
@@ -79,9 +83,10 @@ Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
 * 8 12mm M4 bolts to connect bottom plates to frames: **$0.72 USD** (you can get a pack of 100 on Amazon for $9, as of
   2023-09-12)
 
-With an enclosure coming in around $26, depending on your choices --- say, ~$30 for TheTrain's RP2040 Advanced Breakout
+With an enclosure coming in around $31, depending on your choices --- say, ~$30 for TheTrain's RP2040 Advanced Breakout
 Board, ~$60 for Sanwa buttons and a lever, and ~$20 for miscellaneous connectors and wiring --- you can put a
-full-featured controller with an open source foundation together for around $135.
+full-featured controller with an open source foundation together for around $140. Reducing wall and infill settings
+will probably save you around $5 of material, and you can probably decide what you want to do from there.
 
 ## Miscellany
 
