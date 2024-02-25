@@ -108,8 +108,9 @@ This project is hosted at [my personal Git site](https://git.incorporeal.org/bss
 more likely to want to interact with [the GitHub mirror](https://github.com/bsstephan/buildable-stick-system). Feel free
 to use either.
 
-You may find me at a number of places; I maintain an IRC channel, `#buildable-stick-system`, on [my IRC network,
-Randomus](https://randomus.net/).
+I'm reachable on the fediverse, over email, or on Discord, but if you're looking for an option I prefer, I maintain an
+IRC channel, `#buildable-stick-system`, on [my IRC network, Randomus](https://randomus.net/) if you would like a place
+to hang out and discuss issues and features and whatnot.
 
 ## Attribution
 
