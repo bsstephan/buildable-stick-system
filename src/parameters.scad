@@ -37,9 +37,9 @@ frame_x = 233;
 frame_y = 208;
 frame_z = 57;
 
-// this sinks the bottom of the frame inward a bit, and is used to math out two shapes
+// this sinks the bottom and top of the frame inward a bit, and is used to math out two shapes
 // when creating the frame box
-frame_bottom_bevel_height = 6;
+frame_bevel_height = 2;
 
 frame_center_to_neutrik = 70;
 

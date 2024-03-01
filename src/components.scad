@@ -245,10 +245,10 @@ module frame_box() {
 	difference() {
 		top_points = [
 			// top bevel
-			[(frame_x/2)-4, (frame_y/2)-4, frame_z/2-frame_bottom_bevel_height/2],
-			[-(frame_x/2)+4, (frame_y/2)-4, frame_z/2-frame_bottom_bevel_height/2],
-			[(frame_x/2)-4, -(frame_y/2)+4, frame_z/2-frame_bottom_bevel_height/2],
-			[-(frame_x/2)+4, -(frame_y/2)+4, frame_z/2-frame_bottom_bevel_height/2],
+			[(frame_x/2)-4, (frame_y/2)-4, frame_z/2-frame_bevel_height/2],
+			[-(frame_x/2)+4, (frame_y/2)-4, frame_z/2-frame_bevel_height/2],
+			[(frame_x/2)-4, -(frame_y/2)+4, frame_z/2-frame_bevel_height/2],
+			[-(frame_x/2)+4, -(frame_y/2)+4, frame_z/2-frame_bevel_height/2],
 		];
 		base_points = [
 			// majority of shape
@@ -259,20 +259,20 @@ module frame_box() {
 		];
 		bottom_points = [
 			// bottom bevel
-			[(frame_x/2)-4, (frame_y/2)-4, -frame_z/2+frame_bottom_bevel_height/2],
-			[-(frame_x/2)+4, (frame_y/2)-4, -frame_z/2+frame_bottom_bevel_height/2],
-			[(frame_x/2)-4, -(frame_y/2)+4, -frame_z/2+frame_bottom_bevel_height/2],
-			[-(frame_x/2)+4, -(frame_y/2)+4, -frame_z/2+frame_bottom_bevel_height/2],
+			[(frame_x/2)-4, (frame_y/2)-4, -frame_z/2+frame_bevel_height/2],
+			[-(frame_x/2)+4, (frame_y/2)-4, -frame_z/2+frame_bevel_height/2],
+			[(frame_x/2)-4, -(frame_y/2)+4, -frame_z/2+frame_bevel_height/2],
+			[-(frame_x/2)+4, -(frame_y/2)+4, -frame_z/2+frame_bevel_height/2],
 		];
 		hull() {
 			for (p = top_points) {
-				translate(p) cylinder(r=2, h=frame_bottom_bevel_height, center=true);
+				translate(p) cylinder(r=2, h=frame_bevel_height, center=true);
 			}
 			for (p = base_points) {
-				translate(p) cylinder(r=2, h=frame_z-(frame_bottom_bevel_height*2), center=true);
+				translate(p) cylinder(r=2, h=frame_z-(frame_bevel_height*2), center=true);
 			}
 			for (p = bottom_points) {
-				translate(p) cylinder(r=2, h=frame_bottom_bevel_height, center=true);
+				translate(p) cylinder(r=2, h=frame_bevel_height, center=true);
 			}
 		}
 		// cut out the middle to make it a box
