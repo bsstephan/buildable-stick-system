@@ -24,15 +24,15 @@ module left_frame() {
 		frame_cable_routing_hole();
 
 		// aux button holes
-		translate([-35, 101.5, panel_z/2]) rotate([270, 0, 0]) aux_control_three_button_cluster();
-		translate([-35, (frame_y/2)-neutrik_panel_thickness-4, 1]) frame_cutout();
-		translate([-72, (frame_y/2)-neutrik_panel_thickness-4, 1]) frame_cutout();
-		translate([2, (frame_y/2)-neutrik_panel_thickness-4, 1]) frame_cutout();
+		translate([-35, 101.5, 0]) rotate([270, 0, 0]) aux_control_three_button_cluster();
+		translate([-35, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
+		translate([-72, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
+		translate([2, (frame_y/2)-neutrik_panel_thickness-4, 0]) frame_cutout();
 
 		// neutrix button hole
-		translate([frame_center_to_neutrik, (frame_y/2)-neutrik_panel_thickness, panel_z/2])
+		translate([frame_center_to_neutrik, (frame_y/2)-neutrik_panel_thickness, 0])
 			rotate([90, 0, 0]) neutrik_d_mount();
-		translate([frame_center_to_neutrik, (frame_y/2)-neutrik_panel_thickness-4, 1])
+		translate([frame_center_to_neutrik, (frame_y/2)-neutrik_panel_thickness-4, 0])
 			frame_cutout();
 	}
 }

@@ -83,7 +83,7 @@ module rocker_20mm_mount() {
 
 // space for a neutrik D mount or 24mm button - Z is to cut the whole inside without affecting panel lip
 module frame_cutout() {
-	cube([30.5, 8, frame_z-(panel_z*2)-2], center=true);
+	cube([30.5, 8, frame_z-(panel_z*2)], center=true);
 }
 
 // bank of three 24mm buttons, commonly on a frame face
@@ -244,15 +244,35 @@ module panel_with_raised_overhang() {
 module frame_box() {
 	difference() {
 		top_points = [
-			// top part, majority of shape
-			[(frame_x/2)-3, (frame_y/2)-3, panel_z/2],
-			[-(frame_x/2)+3, (frame_y/2)-3, panel_z/2],
-			[(frame_x/2)-3, -(frame_y/2)+3, panel_z/2],
-			[-(frame_x/2)+3, -(frame_y/2)+3, panel_z/2],
+			// top bevel
+			[(frame_x/2)-4, (frame_y/2)-4, frame_z/2-frame_bottom_bevel_height/2],
+			[-(frame_x/2)+4, (frame_y/2)-4, frame_z/2-frame_bottom_bevel_height/2],
+			[(frame_x/2)-4, -(frame_y/2)+4, frame_z/2-frame_bottom_bevel_height/2],
+			[-(frame_x/2)+4, -(frame_y/2)+4, frame_z/2-frame_bottom_bevel_height/2],
+		];
+		base_points = [
+			// majority of shape
+			[(frame_x/2)-2, (frame_y/2)-2, 0],
+			[-(frame_x/2)+2, (frame_y/2)-2, 0],
+			[(frame_x/2)-2, -(frame_y/2)+2, 0],
+			[-(frame_x/2)+2, -(frame_y/2)+2, 0],
+		];
+		bottom_points = [
+			// bottom bevel
+			[(frame_x/2)-4, (frame_y/2)-4, -frame_z/2+frame_bottom_bevel_height/2],
+			[-(frame_x/2)+4, (frame_y/2)-4, -frame_z/2+frame_bottom_bevel_height/2],
+			[(frame_x/2)-4, -(frame_y/2)+4, -frame_z/2+frame_bottom_bevel_height/2],
+			[-(frame_x/2)+4, -(frame_y/2)+4, -frame_z/2+frame_bottom_bevel_height/2],
 		];
 		hull() {
 			for (p = top_points) {
-				translate(p) cylinder(r=3, h=frame_z-panel_z, center=true);
+				translate(p) cylinder(r=2, h=frame_bottom_bevel_height, center=true);
+			}
+			for (p = base_points) {
+				translate(p) cylinder(r=2, h=frame_z-(frame_bottom_bevel_height*2), center=true);
+			}
+			for (p = bottom_points) {
+				translate(p) cylinder(r=2, h=frame_bottom_bevel_height, center=true);
 			}
 		}
 		// cut out the middle to make it a box
@@ -305,12 +325,6 @@ module frame() {
 		translate([-panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([panel_to_frame_point_x, -panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([-panel_to_frame_point_x, -panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
-
-		// comfort bevel
-		translate([frame_x/2, 0, frame_z/2]) rotate([0, 45, 0]) cube([4, frame_y+0.01, 4], center=true);
-		translate([-frame_x/2, 0, frame_z/2]) rotate([0, 45, 0]) cube([4, frame_y+0.01, 4], center=true);
-		translate([0, frame_y/2, frame_z/2]) rotate([45, 0, 0]) cube([frame_x+0.01, 4, 4], center=true);
-		translate([0, -frame_y/2, frame_z/2]) rotate([45, 0, 0]) cube([frame_x+0.01, 4, 4], center=true);
 
 		// slightly larger holes than the posts in the base_panel
 		translate([panel_to_frame_point_x, panel_to_frame_point_y, frame_z/2-panel_z-5])
