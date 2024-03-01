@@ -42,6 +42,9 @@ frame_center_to_neutrik = 70;
 // depth of the "lip" of the frame that the top plate sets into/supports the overhang
 frame_wall = 4;
 
+// width of the column in the frame corners to support the hex bolt
+frame_mount_column_width = 20;
+
 // per neutrik (mm)
 neutrik_panel_thickness = 3;
 
