@@ -57,7 +57,7 @@ module frame_hex_bolt_hole() {
 }
 
 module frame_interchange_hole() {
-	cylinder(r=15, h=50, $fn=50, center=true);
+	cylinder(r=18, h=50, $fn=4, center=true);
 }
 
 module neutrik_d_hole() {
