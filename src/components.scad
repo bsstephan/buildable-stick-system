@@ -245,24 +245,40 @@ module frame_box() {
 	difference() {
 		top_points = [
 			// top bevel
-			[(frame_x/2)-4, (frame_y/2)-4, frame_z/2-frame_bevel_height/2],
-			[-(frame_x/2)+4, (frame_y/2)-4, frame_z/2-frame_bevel_height/2],
-			[(frame_x/2)-4, -(frame_y/2)+4, frame_z/2-frame_bevel_height/2],
-			[-(frame_x/2)+4, -(frame_y/2)+4, frame_z/2-frame_bevel_height/2],
+			[(frame_x/2)-(frame_bevel_height*2),
+			 (frame_y/2)-(frame_bevel_height*2),
+			 frame_z/2-frame_bevel_height/2],
+			[-(frame_x/2)+(frame_bevel_height*2),
+			 (frame_y/2)-(frame_bevel_height*2),
+			 frame_z/2-frame_bevel_height/2],
+			[(frame_x/2)-(frame_bevel_height*2),
+			 -(frame_y/2)+(frame_bevel_height*2),
+			 frame_z/2-frame_bevel_height/2],
+			[-(frame_x/2)+(frame_bevel_height*2),
+			 -(frame_y/2)+(frame_bevel_height*2),
+			 frame_z/2-frame_bevel_height/2],
 		];
 		base_points = [
 			// majority of shape
-			[(frame_x/2)-2, (frame_y/2)-2, 0],
-			[-(frame_x/2)+2, (frame_y/2)-2, 0],
-			[(frame_x/2)-2, -(frame_y/2)+2, 0],
-			[-(frame_x/2)+2, -(frame_y/2)+2, 0],
+			[(frame_x/2)-frame_bevel_height, (frame_y/2)-frame_bevel_height, 0],
+			[-(frame_x/2)+frame_bevel_height, (frame_y/2)-frame_bevel_height, 0],
+			[(frame_x/2)-frame_bevel_height, -(frame_y/2)+frame_bevel_height, 0],
+			[-(frame_x/2)+frame_bevel_height, -(frame_y/2)+frame_bevel_height, 0],
 		];
 		bottom_points = [
 			// bottom bevel
-			[(frame_x/2)-4, (frame_y/2)-4, -frame_z/2+frame_bevel_height/2],
-			[-(frame_x/2)+4, (frame_y/2)-4, -frame_z/2+frame_bevel_height/2],
-			[(frame_x/2)-4, -(frame_y/2)+4, -frame_z/2+frame_bevel_height/2],
-			[-(frame_x/2)+4, -(frame_y/2)+4, -frame_z/2+frame_bevel_height/2],
+			[(frame_x/2)-(frame_bevel_height*2),
+			 (frame_y/2)-(frame_bevel_height*2),
+			 -frame_z/2+frame_bevel_height/2],
+			[-(frame_x/2)+(frame_bevel_height*2),
+			 (frame_y/2)-(frame_bevel_height*2),
+			 -frame_z/2+frame_bevel_height/2],
+			[(frame_x/2)-(frame_bevel_height*2),
+			 -(frame_y/2)+(frame_bevel_height*2),
+			 -frame_z/2+frame_bevel_height/2],
+			[-(frame_x/2)+(frame_bevel_height*2),
+			 -(frame_y/2)+(frame_bevel_height*2),
+			 -frame_z/2+frame_bevel_height/2],
 		];
 		hull() {
 			for (p = top_points) {
