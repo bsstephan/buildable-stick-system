@@ -2,10 +2,6 @@
 
 Notes for "next time".
 
-## v3.3
-
-* Try not using roundedcube and instead bezel the top, to get cleaner seams everywhere else
-
 ## v4
 
 * Engraving some cosmetic stuff? Or maybe a place to mount other plates?

@@ -3,8 +3,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-include <roundedcube.scad>
-
 module m4_hole() {
 	cylinder(r=m4_bolt_radius, h=100, $fn=50, center=true);
 }
@@ -213,7 +211,28 @@ module bottom_panel() {
 }
 
 module overhang_plate() {
-	roundedcube([overhang_panel_x, overhang_panel_y, panel_z], center=true, radius=1);
+	top_points = [
+		// top bevel
+		[(overhang_panel_x/2)-(overhang_panel_bevel_height*2),
+		 (overhang_panel_y/2)-(overhang_panel_bevel_height*2),
+		 panel_z/2-overhang_panel_bevel_height/2],
+		[-(overhang_panel_x/2)+(overhang_panel_bevel_height*2),
+		 (overhang_panel_y/2)-(overhang_panel_bevel_height*2),
+		 panel_z/2-overhang_panel_bevel_height/2],
+		[(overhang_panel_x/2)-(overhang_panel_bevel_height*2),
+		 -(overhang_panel_y/2)+(overhang_panel_bevel_height*2),
+		 panel_z/2-overhang_panel_bevel_height/2],
+		[-(overhang_panel_x/2)+(overhang_panel_bevel_height*2),
+		 -(overhang_panel_y/2)+(overhang_panel_bevel_height*2),
+		 panel_z/2-overhang_panel_bevel_height/2],
+	];
+	hull() {
+		for (p = top_points) {
+			translate(p) cylinder(r=overhang_panel_bevel_height, h=overhang_panel_bevel_height, center=true);
+		}
+		translate([0, 0, -overhang_panel_bevel_height])
+			cube([overhang_panel_x, overhang_panel_y, panel_z-overhang_panel_bevel_height*2], center=true);
+	}
 }
 
 // this takes the base_panel and makes it a small frame, putting a larger top plate
