@@ -27,14 +27,14 @@ starting with an existing object and constructing what you'd like with new or ex
 There are a lot of parts to pick from, but there are some structural variants to pay attention to; here's some help
 about when/how to use specific parts:
 
-* `foo-panel-inset`s --- these fit flush into a frame, creating a closed box enclosure.
-* `foo-panel-overhang`s --- these have a tray that fits into a frame with the actual face extending beyond the frame,
+* `panel-inset` --- these fit flush into a frame, creating a closed box enclosure.
+* `panel-overhang` --- these have a tray that fits into a frame with the actual face extending beyond the frame,
   creating an ice cream sandwich enclosure.
     * These also yield a bit more space inside the box, for tall levers or whatever.
-* `frame`s (non-pieces) --- these create the box of the enclosure, as one part. These can be hard to print well ---
+* `frame` (non-pieces) --- these create the box of the enclosure, as one part. These can be hard to print well ---
   shrinkage forces tend to curl up the corners no matter what you do, and some points need supports --- but if you don't
   care about that because you're printing an ice cream sandwich, they are simpler than...
-* `frame-piece`s --- these break up the frame box into four faces, and are held together by friction fit and the hex
+* `frame-piece` --- these break up the frame box into four faces, and are held together by friction fit and the hex
   bolts. This is more stable than you might expect, but it does introduce some variability in the overall sturdiness of
   the enclosure compared with the frame as one box piece.
     * The `interconnect` replaces the need to bolt multiple frames together.
