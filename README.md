@@ -2,6 +2,11 @@
 
 Files for 3D printing an arcade stick.
 
+Have you ever wanted to conjure your own arcade stick out of the ether (well, plastic), or to prototype a new layout or
+design before sending it to a custom builder? Do you just love having your space filled with arcade stick enclosures,
+because you keep making different variants, colorways, and so on? Or do you simply want a good stick on the cheap, and
+know someone or a library with a 3D printer? The Buildable Stick System may be the project for you!
+
 ![An example of stick components displayed in OpenSCAD](docs/blown-up-demo.png)
 
 [OpenSCAD-based illustration of how the components for an overhang panel-based stick fit together.]
