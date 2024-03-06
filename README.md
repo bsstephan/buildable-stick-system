@@ -22,6 +22,23 @@ component objects or create new ones. The OpenSCAD language is essentially a fun
 it easy to reuse, alter, and compose objects. If you do not see the object you would like, you can likely create it by
 starting with an existing object and constructing what you'd like with new or existing components.
 
+## Usage of Parts
+
+There are a lot of parts to pick from, but there are some structural variants to pay attention to; here's some help
+about when/how to use specific parts:
+
+* `foo-panel-inset`s --- these fit flush into a frame, creating a closed box enclosure.
+* `foo-panel-overhang`s --- these have a tray that fits into a frame with the actual face extending beyond the frame,
+  creating an ice cream sandwich enclosure.
+    * These also yield a bit more space inside the box, for tall levers or whatever.
+* `frame`s (non-pieces) --- these create the box of the enclosure, as one part. These can be hard to print well
+  (shrinkage forces tend to curl up the corners no matter what you do), but if you don't care about that because you're
+  printing an ice cream sandwich, they are simpler than...
+* `frame-piece`s --- these break up the frame box into four faces, and are held together by friction fit and the hex
+  bolts. This is more stable than you might expect, but it does introduce some variability in the overall sturdiness of
+  the enclosure compared with the frame as one box piece.
+    * The `interconnect` replaces the need to bolt multiple frames together.
+
 ## Printing
 
 These items all fit on a 256mm^2 print bed; I use a Bambu Lab P1P based on what I've learned from the
@@ -68,6 +85,8 @@ Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
 * Left and right (non-overhang) bottom panels: **$6.80 USD** (135.99g each, as of 2024-02-22)
 * Miscellaneous mounting plates, decorative plates, etc.: **~$1.83 USD** (~73g, as of 2024-02-22)
 * 8 16mm M4 bolts to connect the frames: **$0.72 USD** (you can get a pack of 100 on Amazon for $9, as of 2023-09-12)
+    * These are only necessary if you are using the whole frames, but as a heads up, the material cost of the
+      pieces-based interconnect piece costs around $1, so it's roughly a wash since that's also a frame wall.
 * 8 M4 flange nuts to connect the frames: **$0.68 USD** (you can get a pack of 100 on Amazon for $8.50, as of 2023-09-12)
 * 4 10mm M3 bolts to connect Neutrik D plates to frames: **$0.40 USD** (you can get a pack of 100 on Amazon for $10, as
   of 2023-09-12)
