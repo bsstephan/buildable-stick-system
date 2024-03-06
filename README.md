@@ -6,7 +6,7 @@ Files for 3D printing an arcade stick.
 
 [OpenSCAD-based illustration of how the components for an overhang panel-based stick fit together.]
 
-![A photo of a completed stick](docs/finished-v3.1.jpg)
+![A photo of a completed stick](docs/finished-v4.1.jpg)
 
 [Photo of a completed inset panel-based stick.]
 
