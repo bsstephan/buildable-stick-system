@@ -37,6 +37,10 @@ frame_x = 233;
 frame_y = 208;
 frame_z = 57;
 
+// degree to which the extended frame pieces stick out from the end of the frame
+frame_extension_x = 25;
+frame_extension_y = 25;
+
 // this sinks the bottom and top of the frame inward a bit, and is used to math out two shapes
 // when creating the frame box / overhang panel
 frame_bevel_height = 2;
