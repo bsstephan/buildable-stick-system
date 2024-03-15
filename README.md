@@ -138,14 +138,7 @@ to hang out and discuss issues and features and whatnot.
 
 ## Attribution
 
-Inspired by the incredible work of [TheTrain](https://github.com/TheTrainGoes) on the [OpenStickCommunity Fightstick
-Case](https://github.com/OpenStickCommunity/Hardware/tree/main/Fightstick%20Case), itself based on the incredible work
-by [Dash n'Mash](https://twitter.com/Dash_xx_Mash?s=20). Original work Copyright 2023 TheTrain, [licensed under CC BY
-4.0](https://creativecommons.org/licenses/by/4.0/).
-
-Made possible by the amazing efforts of [slagcoin](https://www.slagcoin.com/).
-
-## Author and Licensing
+### Author and Licensing
 
 Written by and copyright Brian S. Stephan (<bss@incorporeal.org>).
 
@@ -158,3 +151,23 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Gen
 
 You should have received a copy of the GNU General Public License along with the Buildable Stick System. If not, see
 <https://www.gnu.org/licenses/>.
+
+### Lineage
+
+Inspired by the incredible work of [TheTrain](https://github.com/TheTrainGoes) on the [OpenStickCommunity Fightstick
+Case](https://github.com/OpenStickCommunity/Hardware/tree/main/Fightstick%20Case), itself based on the incredible work
+by [Dash n'Mash](https://twitter.com/Dash_xx_Mash?s=20). Original work Copyright 2023 TheTrain, [licensed under CC BY
+4.0](https://creativecommons.org/licenses/by/4.0/).
+
+Made possible by the amazing efforts of [slagcoin](https://www.slagcoin.com/).
+
+### Distributing BSS Sticks
+
+Under the terms of the GPLv3, you must inform the receiver of the "object code" of their rights under the GPLv3. This is
+a bit of a gray area for physical objects, but likely applies to distribution of modified or unmodified STL, STEP, etc.
+files at a minimum. The easiest way to satisfy the GPLv3 in either situation is to provide a link to the source code
+(either the unmodified mainline project, or your copy, with modifications listed in a "prominent notice"); something
+like the below should suffice in either electronic or printed form:
+
+> This arcade stick is part of the Buildable Stick System, version X.Y.Z; the source code to this program is available
+> under the terms of the GNU General Public License, at [LINK].
