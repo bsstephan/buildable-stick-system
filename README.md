@@ -47,12 +47,8 @@ about when/how to use specific parts:
 ## Printing
 
 These items all fit on a 256mm^2 print bed; I use a Bambu Lab P1P based on what I've learned from the
-OpenStickCommunity. Standard settings seem sufficiently sturdy for my purposes, though the slicer has done a couple
-weird things, in my experience.
-
-My preferred settings are 3 wall loops with 20% gyroid sparse infill. This gives the models a bit more weight and
-stability, but something like 2 wall loops, 15% grid sparse infill is fine and does not lead to a weak enclosure. The
-costs below have been made against my settings.
+OpenStickCommunity. Standard settings seem sufficiently sturdy, but see `docs/materials-and-printing.md` for more
+thoughts and settings based on my tinkering with prints.
 
 ## Assembling
 
@@ -83,7 +79,7 @@ What you'll need beyond these objects:
 ## Rough Costs
 
 This is a rough estimate of the cost to produce one of these sticks, assuming a usual 2-frame design and layout.
-Filament masses from Bambu Studio estimates, using Bambu PLA Basic.
+Filament masses from Bambu Studio estimates, using Bambu PLA Basic, 20% gyroid infill and 3 wall loops.
 
 * Left and right frame: **$10.42 USD** (208.50g each, as of 2024-02-22)
 * Left and right (inset) top panels: **~$6.40 USD** (~128g each, as of 2024-02-22)
