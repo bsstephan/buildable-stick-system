@@ -13,11 +13,25 @@ not lead to a weak enclosure.
 A lot of the pieces are long and flat, so I recommend really dialing in your printer settings. The frame pieces make
 corner curling of the frame less of a problem, but you may still get it on the panels and the beveled frame pieces.
 
-Another thing to consider, in my experience, is the bottom layer pattern. Monotonic prints fast but creates long,
+#### Bottom Layer Notes
+
+Considering the visible layer (usually, the bottom layer) pattern is ideal. Monotonic prints fast but creates long,
 uniform lines that create reflection patterns on long, flat surfaces. This can be especially distracting for the top
-panels, since they're what you're looking at 90% of the time. Using a non-uniform pattern, like hilbert curve,
-eliminates this problem, but at the expense of a much longer print --- around an hour longer for an inset panel. Other
-patterns may improve beyond monotonic, but hilbert curve seems to be the gold standard.
+panels and their decorative plates, since they're what you're looking at 90% of the time, and the holes break up a
+perfect pattern, making the long lines stand out even more.
+
+* **Top panels:** using a non-uniform pattern reduces if not eliminates the problem of the surface catching the light,
+  but for some patterns, it may come at the expense of time. Other patterns may improve beyond monotonic, but hilbert
+  curve seems to be the gold standard.
+* **Circle-centric decorative plates:** don't use complex patterns like Archimedean chords on decorative plates, as they
+  seem to have issues with filling curves and you still want to try to maximize contact with walls. Concentric is great
+  here if you dial it in.
+
+Panels may have tiny gaps against the circular button cutouts; this is largely not a problem as buttom rims, decorative
+plates, etc. will cover it up. However, I've had some interesting results with:
+
+* Initial layer line width: 0.42mm (down .08mm)
+* Initial layer height: 0.25mm (up .05mm)
 
 ## Materials
 
