@@ -32,6 +32,12 @@ plates, etc. will cover it up. However, I've had some interesting results with:
 
 * Initial layer line width: 0.42mm (down .08mm)
 * Initial layer height: 0.25mm (up .05mm)
+* Initial layer nozzle temperature: 230°C (up 10°C)
+* Initial layer bed temperature: 70°C (up 5°C)
+* Initial layer pattern: concentric
+
+These are good defaults and print awesome parts, with the only exception being the top panels, which benefit from using
+a Hilbert curve initial layer pattern instead of concentric.
 
 ## Materials
 
