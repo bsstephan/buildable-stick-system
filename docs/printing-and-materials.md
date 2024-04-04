@@ -27,15 +27,8 @@ perfect pattern, making the long lines stand out even more.
   seem to have issues with filling curves and you still want to try to maximize contact with walls. Concentric is great
   here if you dial it in.
 
-Panels may have tiny gaps against the circular button cutouts; this is largely not a problem as buttom rims, decorative
-plates, etc. will cover it up. However, I've had some interesting results with:
-
-* Initial layer line width: 0.42mm (down .08mm)
-* Initial layer height: 0.25mm (up .05mm)
-* Initial layer pattern: concentric
-
-These are good defaults and print awesome parts, with the only exception being the top panels, which benefit from using
-a Hilbert curve initial layer pattern instead of concentric.
+The concentric pattern is a good default and prints awesome parts, with the only exception being the top panels, which
+benefit from using a Hilbert curve initial layer pattern instead of concentric.
 
 ## Materials
 

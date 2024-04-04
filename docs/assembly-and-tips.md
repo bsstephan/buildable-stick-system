@@ -43,7 +43,7 @@ panels to make a long standard stick, and the frame made of pieces.
    can at least get the standoffs in the posts, you can catch them with the bottom bolts, and then let them guide the
    panels into the frame.
 10. Tighten all the bolts. If you didn't get the top panels flush in step 4, you can apply the same logic as in step 8
-   and tighten the bolts to guide the panels into the frame.
+    and tighten the bolts to guide the panels into the frame.
 
 In the end, this should be extremely sturdy. None of the frame or panels should be loose at all, and you should be able
 to move, flip, gently toss, etc. the stick without anything moving or feeling loose.
