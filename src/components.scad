@@ -164,32 +164,7 @@ module levermountcountersinks() {
 }
 
 module base_panel() {
-	difference() {
-		union() {
-			cube([panel_x, panel_y, panel_z], center=true);
-			// add posts that sink into the frame, just to give
-			// a somewhat more sturdy/tight connection
-			translate([panel_to_frame_point_x, panel_to_frame_point_y, -panel_z])
-				scale([1.5, 1.5, 0.1]) frame_hex_bolt_hole();
-			translate([-panel_to_frame_point_x, panel_to_frame_point_y, -panel_z])
-				scale([1.5, 1.5, 0.1]) frame_hex_bolt_hole();
-			translate([panel_to_frame_point_x, -panel_to_frame_point_y, -panel_z])
-				scale([1.5, 1.5, 0.1]) frame_hex_bolt_hole();
-			translate([-panel_to_frame_point_x, -panel_to_frame_point_y, -panel_z])
-				scale([1.5, 1.5, 0.1]) frame_hex_bolt_hole();
-		}
-		// the posts mentioned above need space for the actual hex bolts
-		// used in connecting to the frame
-		translate([panel_to_frame_point_x, panel_to_frame_point_y, -panel_z])
-			scale([1, 1, 0.1]) frame_hex_bolt_hole();
-		translate([-panel_to_frame_point_x, panel_to_frame_point_y, -panel_z])
-			scale([1, 1, 0.1]) frame_hex_bolt_hole();
-		translate([panel_to_frame_point_x, -panel_to_frame_point_y, -panel_z])
-			scale([1, 1, 0.1]) frame_hex_bolt_hole();
-		translate([-panel_to_frame_point_x, -panel_to_frame_point_y, -panel_z])
-			scale([1, 1, 0.1]) frame_hex_bolt_hole();
-	}
-
+	cube([panel_x, panel_y, panel_z], center=true);
 }
 
 module base_bottom_panel() {
@@ -360,16 +335,6 @@ module frame() {
 		translate([-panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([panel_to_frame_point_x, -panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([-panel_to_frame_point_x, -panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
-
-		// slightly larger holes than the posts in the base_panel
-		translate([panel_to_frame_point_x, panel_to_frame_point_y, frame_z/2-panel_z-5])
-			scale([1.55, 1.55, 0.2]) frame_hex_bolt_hole();
-		translate([-panel_to_frame_point_x, panel_to_frame_point_y, frame_z/2-panel_z-5])
-			scale([1.55, 1.55, 0.2]) frame_hex_bolt_hole();
-		translate([panel_to_frame_point_x, -panel_to_frame_point_y, frame_z/2-panel_z-5])
-			scale([1.55, 1.55, 0.2]) frame_hex_bolt_hole();
-		translate([-panel_to_frame_point_x, -panel_to_frame_point_y, frame_z/2-panel_z-5])
-			scale([1.55, 1.55, 0.2]) frame_hex_bolt_hole();
 	}
 }
 
