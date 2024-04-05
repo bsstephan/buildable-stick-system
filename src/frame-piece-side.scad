@@ -5,7 +5,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frame-piece-top-left.scad>
+use <frame-piece-top-left-or-right.scad>
 use <frame-piece-bottom-left-or-right.scad>
 
 module side_frame_piece() {
@@ -14,7 +14,7 @@ module side_frame_piece() {
 		// side piece is left/right agnostic
 		frame();
 		// minus the top and bottom
-		top_left_frame_piece();
+		top_left_or_right_frame_piece();
 		bottom_left_or_right_frame_piece();
 		// and just chop out the rest of the frame
 		translate([piece_width, 0, 0]) cube([frame_x, frame_y+1, frame_z+1], center=true);
