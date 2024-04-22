@@ -5,8 +5,10 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frame-left.scad>
-use <frame-right.scad>
+use <frame-piece-bottom-left-or-right.scad>
+use <frame-piece-interconnect.scad>
+use <frame-piece-side.scad>
+use <frame-piece-top-left-or-right.scad>
 use <top-panel-overhang-left-lever-and-dir_arc-plus-w-30mm.scad>
 use <top-panel-overhang-right-sega-2p-plus-one-plus-control-with-mount.scad>
 use <bottom-panel-overhang-left.scad>
@@ -17,8 +19,13 @@ use <misc-dustwasher-lsx-nobi.scad>
 
 color("#C12E1F") translate([-panel_x/2-25, 0, frame_z/2+75]) top_panel_left_lever_and_dir_arc_w_30mm();
 color("#C12E1F") translate([panel_x/2+25, 0, frame_z/2+75]) top_panel_right_sega_2p_plus_one_plus_control_with_mount();
-color("black") translate([-frame_x/2+5-25, 0, -2.5]) left_frame();
-color("black") translate([frame_x/2+25, 0, -2.5]) right_frame();
+color("black") translate([-frame_x/2+5-25, 35, -2.5]) top_left_or_right_frame_piece();
+color("black") rotate([0, 180, 0]) translate([-frame_x/2+5-25, 35, -2.5]) top_left_or_right_frame_piece();
+color("black") translate([-frame_x/2+5-50, 0, -2.5]) side_frame_piece();
+color("black") rotate([0, 180, 0]) translate([-frame_x/2+5-50, 0, -2.5]) side_frame_piece();
+color("black") translate([-frame_x/2+5-25, -35, -2.5]) bottom_left_or_right_frame_piece();
+color("black") rotate([0, 180, 0]) translate([-frame_x/2+5-25, -35, -2.5]) bottom_left_or_right_frame_piece();
+color("black") interconnect_frame_piece();
 color("#C12E1F") translate([-panel_x/2-25, 0, -5-frame_z/2-75]) bottom_panel_left();
 color("#C12E1F") translate([panel_x/2+25, 0, -5-frame_z/2-75]) bottom_panel_right();
 
