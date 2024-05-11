@@ -235,7 +235,7 @@ module panel_with_raised_overhang() {
 	}
 }
 
-module frame_box() {
+module frame_solid() {
 	difference() {
 		top_points = [
 			// top bevel
@@ -285,6 +285,12 @@ module frame_box() {
 				translate(p) cylinder(r=2, h=frame_bevel_height, center=true);
 			}
 		}
+	}
+}
+
+module frame_box() {
+	difference() {
+		frame_solid();
 		// cut out the middle to make it a box
 		cube([panel_x-(panel_support_width*2), panel_y-(panel_support_width*2), frame_z+5], center=true);
 	}
