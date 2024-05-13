@@ -55,7 +55,7 @@ module frame_hex_bolt_hole() {
 }
 
 module frame_interchange_hole() {
-	cylinder(r=35, h=50, $fn=50, center=true);
+	cylinder(r=37, h=50, $fn=50, center=true);
 }
 
 module neutrik_d_hole() {
@@ -322,7 +322,7 @@ module frame_connection_holes() {
 
 module frame_cable_routing_hole() {
 	// frame_y/12 is a hack for "kinda a bit above the center point"
-	translate([frame_x/2, frame_y/12, 25]) rotate([0, 90, 0]) frame_interchange_hole();
+	translate([frame_x/2, frame_y/12+1, 25]) rotate([0, 90, 0]) frame_interchange_hole();
 }
 
 module base_frame() {
