@@ -6,12 +6,8 @@
 include <../parameters.scad>
 include <../components.scad>
 
-stand_x = 5;
-stand_y = frame_z-25;
-stand_z = 8;
-
 base_extra = 10;
-back_extra_multiplier = 5;
+back_extra_multiplier = 4.25;
 rotation_alignment = 15;
 
 module stand() {
@@ -26,7 +22,7 @@ module stand() {
 			translate([0, 0, 0.5]) cube([stand_x+base_extra, stand_y+base_extra, 1], center=true);
 		}
 		/* cut out the actual frame solid */
-		translate([0, rotation_alignment, (frame_y/2)+5]) rotate([65, 0, 0]) frame_solid();
+		translate([0, rotation_alignment, (frame_y/2)+7]) rotate([65, 0, 0]) frame_solid();
 	}
 }
 
