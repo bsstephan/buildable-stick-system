@@ -39,8 +39,8 @@ frame_z = 57;
 
 // stand dimensions to display a stick
 stand_x = 5;
-stand_y = frame_z-25;
-stand_z = 10;
+stand_y = frame_z;
+stand_z = 15;
 
 // degree to which the extended frame pieces stick out from the end of the frame
 frame_extension_x = 25;
