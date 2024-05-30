@@ -79,9 +79,10 @@ module rocker_20mm_mount() {
 	translate([-9.5, -12, 0]) neutrik_d_screw_hole();
 }
 
-// space for a neutrik D mount or 24mm button - Z is to cut the whole inside without affecting panel lip
+// space for a neutrik D mount or 24mm button --- Z is meant to leave some lip now that frames
+// are primarily printed on their side
 module frame_cutout() {
-	cube([30.5, 8, frame_z-(panel_z*2)], center=true);
+	cube([30.5, 8, frame_z-(panel_z*3)], center=true);
 }
 
 // bank of three 24mm buttons, commonly on a frame face
