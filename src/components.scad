@@ -301,7 +301,11 @@ module frame_mount_column() {
 	cube([frame_mount_column_width, frame_mount_column_width, frame_z], center=true);
 	// add some corners back to do a lame chamfer
 	linear_extrude(height=frame_z, center=true)
-		polygon([[10, 10], [-20, 10], [10, -20]]);
+		polygon([
+			[frame_mount_column_width/2, frame_mount_column_width/2],
+			[-frame_mount_column_width, frame_mount_column_width/2],
+			[frame_mount_column_width/2, -frame_mount_column_width]
+		]);
 }
 
 module side_chopper() {
