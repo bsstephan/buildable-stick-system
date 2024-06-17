@@ -457,3 +457,8 @@ module sega_2p_plus_one() {
 	// just my guesstimate on this one
 	translate([0, -19-9-11-19-9-11, 0]) sega_2p_p1();
 }
+
+module shiokenstar() {
+	translate([-172, 32, 0]) dir_arc_24mm_directionals();
+	sega_2p();
+}
