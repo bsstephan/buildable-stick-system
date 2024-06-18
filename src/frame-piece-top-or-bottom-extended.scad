@@ -5,12 +5,12 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frame-piece-bottom-left-or-right.scad>
+use <frame-piece-top-or-bottom.scad>
 
 module bottom_piece_wall() {
 	// get a slice of the piece, to use it in extruding
 	projection(cut=true) rotate([-90, 0, 0]) translate([0, frame_y/2-frame_bevel_height, 0])
-		bottom_left_or_right_frame_piece();
+		top_or_bottom_frame_piece();
 }
 
 module bottom_piece_extension() {
@@ -21,9 +21,9 @@ module bottom_piece_extension() {
 	}
 }
 
-module extended_bottom_left_or_right_frame_piece() {
-	bottom_left_or_right_frame_piece();
+module extended_top_or_bottom_frame_piece() {
+	top_or_bottom_frame_piece();
 	translate([0, -frame_y/2+frame_bevel_height*2, 0]) rotate([90, 0, 0]) bottom_piece_extension();
 }
 
-extended_bottom_left_or_right_frame_piece();
+extended_top_or_bottom_frame_piece();

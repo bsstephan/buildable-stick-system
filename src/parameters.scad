@@ -67,6 +67,9 @@ panel_x = frame_x - (frame_wall * 2);
 panel_y = frame_y - (frame_wall * 2);
 panel_z = 5;
 
+// inside the frame
+inner_frame_z = frame_z - (panel_z * 2);
+
 // how much the top plate x/y is expanded to overhang the frame
 // note that this is relative to the top plate (so the wall is added back)
 panel_overhang_amount = 8.5;

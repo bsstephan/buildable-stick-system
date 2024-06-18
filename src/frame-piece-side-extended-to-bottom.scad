@@ -5,7 +5,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frame-piece-bottom-left-or-right-extended.scad>
+use <frame-piece-top-or-bottom-extended.scad>
 use <frame-piece-side.scad>
 
 module side_and_bottom_frame_piece_wall() {
