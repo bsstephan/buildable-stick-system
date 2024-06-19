@@ -5,25 +5,23 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frame-left.scad>
+use <frame-piece-top-or-bottom.scad>
 
 module top_or_bottom_aux_and_neutrik_frame_piece() {
-	piece_width = panel_support_width+frame_wall+frame_mount_column_width;
-	intersection() {
-		left_frame();
-		difference() {
-			// include the whole top wall (including mount columns)
-			translate([0, (frame_y/2)-(piece_width/2), 0]) cube([frame_x, piece_width, frame_z], center=true);
-			// ...minus the frame wall and lip on the left
-			translate([-frame_x/2+frame_wall/2, 0, 0])
-				cube([frame_wall, frame_y-frame_wall*2, frame_z], center=true);
-			linear_extrude(height=frame_z, center=true) polygon([
-				[-frame_x/2, frame_y/2], [-frame_x/2+frame_wall, frame_y/2-frame_wall],
-				[-frame_x/2, frame_y/2-frame_wall]
-			]);
-			// ...minus a slot for the combining piece to go into
-			cube([frame_x, frame_y-(panel_support_width+frame_wall)*2, inner_frame_z/3], center=true);
-		}
+	difference() {
+		top_or_bottom_frame_piece();
+
+		// aux button holes
+		translate([-35.25, -101.5, 0]) rotate([90, 0, 0]) aux_control_three_button_cluster();
+		translate([-35.25, -(frame_y/2)+neutrik_panel_thickness+4, 0]) frame_cutout();
+		translate([-72.25, -(frame_y/2)+neutrik_panel_thickness+4, 0]) frame_cutout();
+		translate([2, -(frame_y/2)+neutrik_panel_thickness+4, 0]) frame_cutout();
+
+		// neutrix button hole
+		translate([frame_center_to_neutrik, -(frame_y/2)+neutrik_panel_thickness, 0])
+			rotate([270, 0, 0]) neutrik_d_mount();
+		translate([frame_center_to_neutrik, -(frame_y/2)+neutrik_panel_thickness+4, 0])
+			frame_cutout();
 	}
 }
 
