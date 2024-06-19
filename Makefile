@@ -1,4 +1,4 @@
-EXCLUDES = blown-up-demo components parameters
+EXCLUDES = components parameters
 OBJECTS := $(filter-out $(EXCLUDES),$(patsubst src/%.scad,%,$(wildcard src/*.scad)))
 dir_guard=@mkdir -p ./build
 
