@@ -10,7 +10,11 @@ use <frame-piece-top-or-bottom.scad>
 module bottom_piece_wall() {
 	// get a slice of the piece, to use it in extruding
 	projection(cut=true) rotate([-90, 0, 0]) translate([0, frame_y/2-frame_bevel_height, 0])
-		top_or_bottom_frame_piece();
+		difference() {
+			top_or_bottom_frame_piece();
+			// chop off the lip we left on the basic piece
+			translate([-frame_x/2+frame_wall/2, 0, 0]) cube([frame_wall, frame_y, frame_z], center=true);
+		};
 }
 
 module bottom_piece_extension() {
@@ -22,8 +26,12 @@ module bottom_piece_extension() {
 }
 
 module extended_top_or_bottom_frame_piece() {
-	top_or_bottom_frame_piece();
-	translate([0, -frame_y/2+frame_bevel_height*2, 0]) rotate([90, 0, 0]) bottom_piece_extension();
+	difference() {
+		top_or_bottom_frame_piece();
+		// chop off the lip we left on the basic piece
+		translate([-frame_x/2+frame_wall/2, 0, 0]) cube([frame_wall, frame_y+1, frame_z], center=true);
+	}
+	translate([0, -frame_y/2+frame_bevel_height, 0]) rotate([90, 0, 0]) bottom_piece_extension();
 }
 
 extended_top_or_bottom_frame_piece();
