@@ -17,7 +17,7 @@ use <../src/misc-decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-plus-one-plate
 use <../src/misc-dustwasher-lsx-nobi.scad>
 
 panel_color    = "red";
-base_color     = "black";
+base_color     = "gray";
 top_deco_color = "white";
 
 color(panel_color) translate([-panel_x/2, 0, frame_z/2-panel_z+0.01]) top_panel_inset_lever_and_dir_arc_w_30mm();
