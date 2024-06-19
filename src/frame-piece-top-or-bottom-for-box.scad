@@ -7,7 +7,7 @@ include <parameters.scad>
 include <components.scad>
 use <frame-left.scad>
 
-module top_or_bottom_frame_piece() {
+module top_or_bottom_box_frame_piece() {
 	piece_width = panel_support_width+frame_wall+frame_mount_column_width;
 	intersection() {
 		left_frame();
@@ -27,4 +27,4 @@ module top_or_bottom_frame_piece() {
 	}
 }
 
-top_or_bottom_frame_piece();
+top_or_bottom_box_frame_piece();
