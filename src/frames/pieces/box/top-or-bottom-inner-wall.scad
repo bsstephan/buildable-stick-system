@@ -6,7 +6,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frame-piece-top-or-bottom-for-box.scad>
+use <top-or-bottom.scad>
 
 module top_or_bottom_inner_wall_frame_piece() {
 	difference() {

@@ -5,7 +5,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frame-piece-top-or-bottom-for-box.scad>
+use <top-or-bottom.scad>
 use <top-or-bottom-inner-wall.scad>
 
 module windowed_top_or_bottom_box_frame_piece() {

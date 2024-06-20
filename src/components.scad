@@ -168,21 +168,10 @@ module base_panel() {
 	cube([panel_x, panel_y, panel_z], center=true);
 }
 
-module base_bottom_panel() {
-	mirror([0, 0, 1]) base_panel();
-}
-
 module panel() {
 	difference() {
 		base_panel();
 		panel_holes();
-	}
-}
-
-module bottom_panel() {
-	difference() {
-		base_bottom_panel();
-		mirror([0, 0, 1]) panel_holes();
 	}
 }
 
@@ -342,7 +331,7 @@ module frame() {
 	difference() {
 		base_frame();
 		translate([0, 0, frame_z/2]) scale([1, 1, 2]) base_panel();
-		translate([0, 0, -frame_z/2]) scale([1, 1, 2]) bottom_panel();
+		translate([0, 0, -frame_z/2]) scale([1, 1, 2]) base_panel();;
 		translate([panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([-panel_to_frame_point_x, panel_to_frame_point_y, 0]) frame_hex_bolt_hole();
 		translate([panel_to_frame_point_x, -panel_to_frame_point_y, 0]) frame_hex_bolt_hole();

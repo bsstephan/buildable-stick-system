@@ -6,7 +6,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frame-piece-side-for-box.scad>
+use <side.scad>
 
 module side_inner_wall_frame_piece() {
 	difference() {
