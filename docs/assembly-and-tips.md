@@ -8,21 +8,21 @@ Assembly of a stick is pretty straightforward, but there are some choices that c
 following is the most consistent way I've found to put one together. This is assuming a v4.2 or beyond stick, with two
 panels to make a long standard stick, and the frame made of pieces.
 
-1. Prepare the frame top pieces --- `frame-piece-top-left-or-right`: this is your best shot to get auxillary buttons,
-   panel connectors, and the like installed, so do it now, and give them a good tighten. You shouldn't need to adjust
-   these again, so finish their installation while the pieces are free.
-    1. This of course includes decorative plates --- e.g. `misc-decorative-plate-aux-control-three-button-cluster` ---
-       you may choose to use. These are held to the top pieces by the buttons or component mounting screws.
-2. Start the top panels --- `top-panel-(inset|overhang)-*`: you want both to get the components installed now
-   when it's easy, and to make sure that the overall assembly works with your components, so again get your buttons,
-   lever, etc., in place. You can secure them at this point.
+1. Prepare the frame top pieces: this is your best shot the e.g. Neutrik plates for the USB mount, SPDT switches, etc.
+   installed, so do it now, and give them a good tighten. You shouldn't need to adjust these again, so finish their
+   installation while the pieces are free.
+    1. You could also do the decorative plates and top buttons, but it might be just as well to leave those for step 7,
+       just to make sure the buttons don't get in the way of other buttons or a lever or so on.
+2. Start the top panels: you want both to get the components installed now when it's easy, and to make sure that the
+   overall assembly works with your components, so again get your buttons, lever, etc., in place. You can secure them at
+   this point.
     1. If you are using a button decorative plate that spans two panels --- e.g.
-       `src/misc-decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-plus-one` --- take care to align the two panels as
-       tightly as possible, and accurately, as they will be hard to adjust once everything is secured and in the frame.
-    2. If using a lever, don't forget the lever mount spacer --- `src/misc-lever-mount-sanwa-seimitsu` --- if you want
-       it, and tighten those mounting bolts now as well.
-3. Create the frame box by combining your `frame-piece-*` parts together. This will be relatively stable just via
-   friction fit.
+       `misc/decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-plus-one` --- take care to align the two panels as tightly
+       as possible, and accurately, as they will be hard to adjust once everything is secured and in the frame.
+    2. If using a lever, don't forget the lever mount spacer --- `misc/lever-mount-sanwa-seimitsu` --- if you want it,
+       and tighten those mounting bolts now as well.
+3. Create the frame box by combining your frame piece parts, box or extended, together. This will be relatively stable
+   just via friction fit.
 4. Rest the frame top-up on a desk, and put the standoffs through the holes. This will probably be tight, and you may
    even need a rubber mallet or similar to drive the standoffs through the holes.
 5. Insert the top panels into the frame.
