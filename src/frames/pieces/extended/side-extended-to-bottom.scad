@@ -7,7 +7,7 @@ include <parameters.scad>
 include <components.scad>
 use <frames/complete/left-frame.scad>
 use <frames/pieces/box/side.scad>
-use <top-or-bottom.scad>
+use <front-or-back.scad>
 
 module side_and_bottom_frame_piece_wall() {
 	// get a slice of the pieces, to use it in extruding

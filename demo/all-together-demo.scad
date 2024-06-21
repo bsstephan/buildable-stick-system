@@ -7,8 +7,8 @@ include <parameters.scad>
 include <components.scad>
 use <frames/complete/left-frame.scad>
 use <frames/pieces/box/side.scad>
-use <frames/pieces/box/top-or-bottom.scad>
-use <frames/pieces/box/top-or-bottom-aux-and-neutrik.scad>
+use <frames/pieces/box/front-or-back.scad>
+use <frames/pieces/box/front-or-back-aux-and-neutrik.scad>
 use <panels/inset/lever-and-dir_arc-plus-w-30mm-panel.scad>
 use <panels/inset/sega-2p-plus-one-plus-control-panel-with-mount.scad>
 use <misc/decorative-plate-24mm-button.scad>
@@ -24,8 +24,8 @@ color(panel_color) translate([-panel_x/2, 0, frame_z/2-panel_z+0.01]) lever_and_
 color(panel_color) translate([panel_x/2, 0, frame_z/2-panel_z+0.01]) sega_2p_plus_one_plus_control_panel_with_mount();
 color(base_color) translate([-frame_x/2+5, 0, -2.5]) left_frame();
 color(base_color) translate([panel_x/2, 0, -2.5]) rotate([0, 180, 0]) side_box_frame_piece();
-color(base_color) translate([panel_x/2, 0, -2.5]) top_or_bottom_box_frame_piece();
-color(base_color) translate([panel_x/2, 0, -2.5]) rotate([180, 180, 0]) top_or_bottom_aux_and_neutrik_box_frame_piece();
+color(base_color) translate([panel_x/2, 0, -2.5]) front_or_back_box_frame_piece();
+color(base_color) translate([panel_x/2, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_box_frame_piece();
 color(base_color) translate([-panel_x/2, 0, -5-frame_z/2+5]) panel();
 color(base_color) translate([panel_x/2, 0, -5-frame_z/2+5]) panel();
 

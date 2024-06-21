@@ -5,9 +5,9 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frames/pieces/extended/top-or-bottom.scad>
+use <frames/pieces/extended/front-or-back.scad>
 use <frames/pieces/extended/side-extended-to-bottom.scad>
-use <frames/pieces/extended/top-or-bottom-clean-for-extended-side-aux-and-neutrik.scad>
+use <frames/pieces/extended/front-or-back-clean-for-extended-side-aux-and-neutrik.scad>
 use <panels/inset/lever-and-dir_arc-plus-w-30mm-panel.scad>
 use <panels/inset/sega-2p-plus-one-plus-control-panel-with-mount.scad>
 use <misc/decorative-plate-24mm-button.scad>
@@ -25,10 +25,10 @@ color(top_panel_color) translate([-panel_x/2, 0, frame_z/2-panel_z+0.01]) lever_
 color(top_panel_color) translate([panel_x/2, 0, frame_z/2-panel_z+0.01]) sega_2p_plus_one_plus_control_panel_with_mount();
 color(frame_side_color) translate([-frame_x/2+4, 0, -2.5]) extra_extended_left_or_right_frame_piece();
 color(frame_side_color) translate([frame_x/2-4, 0, -2.5]) mirror([1, 0, 0]) extra_extended_left_or_right_frame_piece();
-color(frame_top_bottom_color) translate([-frame_x/2+4, 0, -2.5])  extended_top_or_bottom_frame_piece();
-color(frame_top_bottom_color) translate([frame_x/2-4, 0, -2.5])  extended_top_or_bottom_frame_piece();
-color(frame_top_bottom_color) translate([-frame_x/2+4, 0, -2.5]) rotate([180, 0, 0]) top_or_bottom_aux_and_neutrik_box_frame_piece_for_extended_side();
-color(frame_top_bottom_color) translate([frame_x/2-4, 0, -2.5]) rotate([180, 180, 0]) top_or_bottom_aux_and_neutrik_box_frame_piece_for_extended_side();
+color(frame_top_bottom_color) translate([-frame_x/2+4, 0, -2.5])  extended_front_or_back_frame_piece();
+color(frame_top_bottom_color) translate([frame_x/2-4, 0, -2.5])  extended_front_or_back_frame_piece();
+color(frame_top_bottom_color) translate([-frame_x/2+4, 0, -2.5]) rotate([180, 0, 0]) front_or_back_aux_and_neutrik_box_frame_piece_for_extended_side();
+color(frame_top_bottom_color) translate([frame_x/2-4, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_box_frame_piece_for_extended_side();
 color(bottom_panel_color) translate([-panel_x/2, 0, -5-frame_z/2+5]) panel();
 color(bottom_panel_color) translate([panel_x/2, 0, -5-frame_z/2+5]) panel();
 

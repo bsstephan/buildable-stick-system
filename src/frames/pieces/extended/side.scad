@@ -7,7 +7,7 @@ include <parameters.scad>
 include <components.scad>
 use <frames/complete/left-frame.scad>
 use <frames/pieces/box/side.scad>
-use <top-or-bottom-clean-for-extended-side.scad>
+use <front-or-back-clean-for-extended-side.scad>
 
 module side_frame_piece_wall() {
 	// get a slice of the piece, to use it in extruding

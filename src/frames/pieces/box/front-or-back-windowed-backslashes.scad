@@ -5,8 +5,8 @@
 
 include <parameters.scad>
 include <components.scad>
-use <top-or-bottom.scad>
-use <top-or-bottom-inner-wall.scad>
+use <front-or-back.scad>
+use <front-or-back-inner-wall.scad>
 
 module backslash() {
 	polyhedron([[5, -frame_y/2, -(frame_z-panel_z*3)/2], [20, -frame_y/2, -(frame_z-panel_z*3)/2],
@@ -27,14 +27,14 @@ module backslashes() {
 	translate([60, 0, 0]) backslash();
 }
 
-module backslashes_windowed_top_or_bottom_box_frame_piece() {
+module backslashes_windowed_front_or_back_box_frame_piece() {
 	difference() {
-		top_or_bottom_box_frame_piece();
+		front_or_back_box_frame_piece();
 		// subtract slashes from the frame wall
 		backslashes();
 		// subtract the inner wall area that will be provided by the other piece
-		top_or_bottom_inner_wall_frame_piece();
+		front_or_back_inner_wall_frame_piece();
 	}
 }
 
-backslashes_windowed_top_or_bottom_box_frame_piece();
+backslashes_windowed_front_or_back_box_frame_piece();

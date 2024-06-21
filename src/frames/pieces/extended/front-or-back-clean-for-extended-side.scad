@@ -5,14 +5,14 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frames/pieces/box/top-or-bottom.scad>
+use <frames/pieces/box/front-or-back.scad>
 
-module top_or_bottom_box_frame_piece_for_extended_side() {
+module front_or_back_box_frame_piece_for_extended_side() {
 	difference() {
-		top_or_bottom_box_frame_piece();
+		front_or_back_box_frame_piece();
 		// ...minus the frame wall and lip on the left
 		translate([-frame_x/2+frame_wall/2, 0, 0]) cube([frame_wall, frame_y, frame_z], center=true);
 	}
 }
 
-top_or_bottom_box_frame_piece_for_extended_side();
+front_or_back_box_frame_piece_for_extended_side();

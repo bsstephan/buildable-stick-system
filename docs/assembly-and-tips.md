@@ -8,10 +8,10 @@ Assembly of a stick is pretty straightforward, but there are some choices that c
 following is the most consistent way I've found to put one together. This is assuming a v4.2 or beyond stick, with two
 panels to make a long standard stick, and the frame made of pieces.
 
-1. Prepare the frame top pieces: this is your best shot the e.g. Neutrik plates for the USB mount, SPDT switches, etc.
+1. Prepare the frame pieces: this is your best shot to get the e.g. Neutrik plates for the USB mount, SPDT switches, etc.
    installed, so do it now, and give them a good tighten. You shouldn't need to adjust these again, so finish their
    installation while the pieces are free.
-    1. You could also do the decorative plates and top buttons, but it might be just as well to leave those for step 7,
+    1. You could also do the decorative plates and related buttons, but it might be just as well to leave those for step 7,
        just to make sure the buttons don't get in the way of other buttons or a lever or so on.
 2. Start the top panels: you want both to get the components installed now when it's easy, and to make sure that the
    overall assembly works with your components, so again get your buttons, lever, etc., in place. You can secure them at

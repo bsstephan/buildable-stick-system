@@ -5,11 +5,11 @@
 
 include <parameters.scad>
 include <components.scad>
-use <top-or-bottom.scad>
+use <front-or-back.scad>
 
-module top_or_bottom_aux_and_neutrik_box_frame_piece() {
+module front_or_back_aux_and_neutrik_box_frame_piece() {
 	difference() {
-		top_or_bottom_box_frame_piece();
+		front_or_back_box_frame_piece();
 
 		// aux button holes
 		translate([-35.25, -101.5, 0]) rotate([90, 0, 0]) aux_control_three_button_cluster();
@@ -25,4 +25,4 @@ module top_or_bottom_aux_and_neutrik_box_frame_piece() {
 	}
 }
 
-top_or_bottom_aux_and_neutrik_box_frame_piece();
+front_or_back_aux_and_neutrik_box_frame_piece();

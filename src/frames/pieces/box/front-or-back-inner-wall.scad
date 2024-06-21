@@ -6,11 +6,11 @@
 
 include <parameters.scad>
 include <components.scad>
-use <top-or-bottom.scad>
+use <front-or-back.scad>
 
-module top_or_bottom_inner_wall_frame_piece() {
+module front_or_back_inner_wall_frame_piece() {
 	difference() {
-		top_or_bottom_box_frame_piece();
+		front_or_back_box_frame_piece();
 		// minus the outer wall
 		translate([0, -(frame_y-frame_wall)/2, 0]) cube([frame_x, frame_wall, frame_z], center=true);
 		// minus half of the mounting posts (the other half provided by the outer wall)
@@ -21,4 +21,4 @@ module top_or_bottom_inner_wall_frame_piece() {
 	}
 }
 
-top_or_bottom_inner_wall_frame_piece();
+front_or_back_inner_wall_frame_piece();
