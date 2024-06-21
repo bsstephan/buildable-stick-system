@@ -30,19 +30,42 @@ starting with an existing object and constructing what you'd like with new or ex
 ## Usage of Parts
 
 There are a lot of parts to pick from, but there are some structural variants to pay attention to; here's some help
-about when/how to use specific parts:
+about what the types of parts are and how to use them:
 
-* `panel-inset` --- these fit flush into a frame, creating a closed box enclosure.
-* `panel-overhang` --- these have a tray that fits into a frame with the actual face extending beyond the frame,
-  creating an ice cream sandwich enclosure.
-    * These also yield a bit more space inside the box, for tall levers or whatever.
-* `frame` (non-pieces) --- these create the box of the enclosure, as one part. These can be hard to print well ---
-  shrinkage forces tend to curl up the corners no matter what you do, and some points need supports --- but if you don't
-  care about that because you're printing an ice cream sandwich, they are simpler than...
-* `frame-piece` --- these break up the frame box into four faces, and are held together by friction fit and the hex
-  bolts. This is more stable than you might expect, but it does introduce some variability in the overall sturdiness of
-  the enclosure compared with the frame as one box piece.
-    * The `interconnect` replaces the need to bolt multiple frames together.
+* `frames/`
+    * `complete/` --- these are the four walls of the frame as one piece, in a couple variations for combining into
+      larger arcade sticks. They are simple to assemble, but you have fewer modularity/customization options, and they
+      are harder to print because the physics of the material cooling will probably pull the corners up. Use at your own
+      risk.
+    * `pieces/`
+        * `box/` --- these are the same four walls (generally speaking) as in the complete frames above, broken out into
+          modular faces to print separately. Because they are separate pieces, you can mix and match colors, and you can
+          lay them all face down on the print surface for better adhesion and surface patterns. There are also variants
+          here, the "windowed" pieces, for doing two-tone variants and that kind of thing.
+        * `extended/` --- the frame walls are pulled out to create MCZ TE-style extended sides/bottom. Rather than
+          getting a box look, you get a longer slab. These look nice, but slightly fiddily to print (and of course need
+          more material) --- watch your surface adhesion.
+        * `interconnect` --- complete frames are bolted to one another, but for frame pieces, there is an interconnect
+          that stands in for the joined inner wall. You need this if you are combining multiple sets of walls, e.g. for
+          a two-panel-long stick.
+* `panels/`
+    * `inset/` --- various panels, all of the same size, that fit into and flush with the frame, making the arcade stick
+      face or back. These work equally well with box or extended frames, and aside from using up a bit of the space
+      inside the frame, come with no downsides --- they print easily and are a pretty simple shape to tweak and remix.
+    * `overhang/` --- overhang panels have their face extending over the edge of the frame, creating a bit of a sandwich
+      look. This is mostly an aesthetic choice, but they sit higher in the frame as well, the main panel being
+      over/under the frame rather than within it. This extra space is useful for taller levers. The only downside to
+      these is that they aren't as reusable as the inset panels, since the inset panels can go anywhere, but the
+      overhang panels must be designed to not overlap with other overhang panels, so you might have to make more custom
+      variants depending on where you put things.
+* `misc/`
+    * Pieces that I haven't organized better (yet) --- there are decorative plates for face buttons or top buttons to
+      give more color variance and some layers to the arcade stick, some very simple dustwashers, plates that fit rocker
+      switches and the like in Neutrik D or 20mm holes, and a lever mount spacer for getting your lever shaft at the
+      desired height. You don't *need* any of these, but you'll probably use a few.
+* `extras/`
+    * Various experiments and things not directly related to making an arcade stick. At time of writing, there's a
+      couple pieces for a little stand for the stick, solely for vanity purposes.
 
 ## Printing
 
