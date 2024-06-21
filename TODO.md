@@ -4,4 +4,4 @@ Notes for "next time".
 
 ## v4.x
 
-* Engraving some cosmetic stuff? Or maybe a place to mount other plates?
+* Engraving some cosmetic stuff? Or maybe a place to mount other plates on the face?

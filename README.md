@@ -35,16 +35,16 @@ about what the types of parts are and how to use them:
 * `frames/`
     * `complete/` --- these are the four walls of the frame as one piece, in a couple variations for combining into
       larger arcade sticks. They are simple to assemble, but you have fewer modularity/customization options, and they
-      are harder to print because the physics of the material cooling will probably pull the corners up. Use at your own
-      risk.
+      are harder to print because the physics of the material cooling will probably pull the corners up. They also need
+      supports, since the face and back of the frame both have trays for panels to go into. Use at your own risk.
     * `pieces/`
         * `box/` --- these are the same four walls (generally speaking) as in the complete frames above, broken out into
           modular faces to print separately. Because they are separate pieces, you can mix and match colors, and you can
           lay them all face down on the print surface for better adhesion and surface patterns. There are also variants
           here, the "windowed" pieces, for doing two-tone variants and that kind of thing.
         * `extended/` --- the frame walls are pulled out to create MCZ TE-style extended sides/bottom. Rather than
-          getting a box look, you get a longer slab. These look nice, but slightly fiddily to print (and of course need
-          more material) --- watch your surface adhesion.
+          getting a box look, you get a longer slab with nice bevels. These look nice, but slightly fiddily to print
+          (and of course need more material) --- watch your surface adhesion.
         * `interconnect` --- complete frames are bolted to one another, but for frame pieces, there is an interconnect
           that stands in for the joined inner wall. You need this if you are combining multiple sets of walls, e.g. for
           a two-panel-long stick.
@@ -87,7 +87,7 @@ What you'll need beyond these objects:
         * Inset plates should probably use 8-12mm bolts --- some standoffs aren't threaded the whole way, making 16mm
           too long to go flush
         * If making the 45mm standoffs from multiple smaller ones, make sure they have enough length to take your bolts!
-* Per frame connection point:
+* Per frame connection point (only necessary if you are using complete frames and not frame pieces):
     * 8 16mm M4 bolts
     * 8 M4 flange nuts
 * For a lever:
