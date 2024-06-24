@@ -11,7 +11,7 @@ know someone or a library with a 3D printer? The Buildable Stick System may be t
 
 [OpenSCAD-based illustration of how the components for an overhang panel-based stick fit together.]
 
-![A photo of a completed stick](docs/finished-v4.2.jpg)
+![A photo of a completed stick](docs/finished-v4.4.jpg)
 
 [Photo of a completed inset panel-based stick.]
 
