@@ -26,7 +26,10 @@ os.chdir(SOURCE_DIR)
 for root, dirs, files in os.walk('.'):
     print(f"{root} {dirs} {files}")
     # make the current directory so that openscad can write stuff into it
-    os.makedirs(os.path.join(BUILD_DIR, root))
+    try:
+        os.makedirs(os.path.join(BUILD_DIR, root))
+    except FileExistsError:
+        pass
 
     input_dir = os.path.join(SOURCE_DIR, root)
     output_dir = os.path.join(BUILD_DIR, root)
