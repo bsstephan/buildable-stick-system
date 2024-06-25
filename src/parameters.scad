@@ -89,3 +89,7 @@ neutrik_d_radius = 12 + hole_tolerance;
 // additional button radius for decorative panels, etc.
 decorative_radius_scale = 1.75;
 jumbo_decorative_radius_scale = 2;
+
+// decorative slash parameters
+slash_inner_displacement = 10;
+slash_width = 15;

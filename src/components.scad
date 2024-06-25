@@ -339,6 +339,22 @@ module frame() {
 	}
 }
 
+/* MISC SHAPES --- for cutting out decorative panels, frame wall windows, etc. */
+
+// for cutting out slashes from the frame outer wall
+module slash_cutout() {
+	polyhedron([
+		[slash_inner_displacement/2, -frame_wall/2, -(frame_z-panel_z*3)/2],
+		[(slash_inner_displacement/2+slash_width), -frame_wall/2, -(frame_z-panel_z*3)/2],
+		[(slash_inner_displacement/2+slash_width), frame_wall/2, -(frame_z-panel_z*3)/2],
+		[slash_inner_displacement/2, frame_wall/2, -(frame_z-panel_z*3)/2],
+		[-(slash_inner_displacement/2+slash_width), -frame_wall/2, (frame_z-panel_z*3)/2],
+		[-slash_inner_displacement/2, -frame_wall/2, (frame_z-panel_z*3)/2],
+		[-slash_inner_displacement/2, frame_wall/2, (frame_z-panel_z*3)/2],
+		[-(slash_inner_displacement/2+slash_width), frame_wall/2, (frame_z-panel_z*3)/2]
+	], [[0, 1, 2, 3], [4, 5, 1, 0], [7, 6, 5, 4], [5, 6, 2, 1], [6, 7, 3, 2], [7, 4, 0, 3]]);
+}
+
 /* LAYOUTS */
 
 // Directional Arc (both hands)
