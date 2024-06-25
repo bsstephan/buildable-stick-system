@@ -26,7 +26,8 @@ color("black") rotate([180, 0, 0]) translate([-frame_x/2+5-25, -55, -2.5]) front
 color("black") rotate([180, 0, 0]) rotate([0, 180, 0]) translate([-frame_x/2+5-25, -55, -2.5]) front_or_back_aux_and_neutrik_box_frame_piece();
 color("black") rotate([0, 180, 0]) interconnect_frame_piece();
 color("#C12E1F") translate([-panel_x/2-25, 0, -5-frame_z/2-75]) left_or_right_overhang_panel();
-color("#C12E1F") mirror([0, 1, 0]) translate([panel_x/2+25, 0, -5-frame_z/2-75]) left_or_right_overhang_panel();
+color("#C12E1F") mirror([0, 1, 0]) translate([panel_x/2+25, 0, -5-frame_z/2-75]) rotate([0, 0, 180])
+	left_or_right_overhang_panel();
 
 color("black") translate([0, 0, 3+frame_z/2+150]) dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate();
 color("black") translate([-195, 25, 3+frame_z/2+150]) lsx_nobi_dustwasher();
