@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "buildable-stick-system"
+description = "Files for 3D printing an arcade stick."
+readme = "README.md"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+    {name = "Brian S. Stephan", email = "bss@incorporeal.org"},
+]
+requires-python = "<3.12,>=3.9"
+dependencies = ["build123d"]
+dynamic = ["version"]
+classifiers = [
+    # TODO
+]
+
+[project.urls]
+# TODO
+
+[project.optional-dependencies]
+dev = ["bandit", "flake8", "flake8-blind-except", "flake8-builtins", "flake8-docstrings",
+       "flake8-executable", "flake8-fixme", "flake8-isort", "flake8-logging-format", "flake8-mutable",
+       "flake8-pyproject", "mypy", "pip-tools", "pytest", "pytest-asyncio", "pytest-cov", "reuse",
+       "setuptools-scm", "tox", "twine"]
+gui = ["cadquery>=2.2", "CQ-Editor@git+https://github.com/jdegenstein/jmwright-CQ-Editor"]
+
+[project.scripts]
+# TODO
+
+[tool.flake8]
+enable-extensions = "G,M"
+exclude = [".tox/", "venv/", "_version.py", "tests/test-files/"]
+extend-ignore = "T101"
+max-complexity = 10
+max-line-length = 120
+
+[tool.isort]
+line_length = 120
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pytest]
+python_files = ["*_tests.py", "tests.py", "test_*.py"]
+
+[tool.setuptools]
+# TODO
+
+[tool.setuptools_scm]
+# TODO
