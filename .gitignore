@@ -1,5 +1,7 @@
 build/
 venv/
 *.egg-info/
+.tox/
 
+*.pyc
 *.sw*
