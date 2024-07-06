@@ -23,6 +23,11 @@ small_button_radius = 12 + hole_tolerance;
 // 30mm button
 big_button_radius = 15 + hole_tolerance;
 
+// carve out space around buttons for screw-in nuts
+// slagcoin has screw-in nut diameter at 36mm for 30mm buttons, 29.5 for 24mm buttons
+// radius + value below should leave space for the nut and for fingers to grab the nut
+button_radius_connector_space = 5;
+
 // JLF mount dimensions
 lever_mount_x = 53;
 lever_mount_y = 95;

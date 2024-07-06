@@ -28,10 +28,9 @@ module panel_holes() {
 // for snap-ins, etc.
 module button_24mm_hole() {
 	cylinder(r=small_button_radius, h=100, $fn=50, center=true);
-	// carve out space for snap-ins, leave 3mm
-	// slagcoin has screw-in nut diameter at 29.5mm, so radius+3 to leave some space
+	// carve out space for snap-ins and screw-in nuts
 	// translation is to leave 3mm thickness in the plate without recentering anything
-	translate([0, 0, -25]) cylinder(r=small_button_radius+3, h=49, $fn=50, center=true);
+	translate([0, 0, -25]) cylinder(r=small_button_radius+button_radius_connector_space, h=49, $fn=50, center=true);
 	// space for decorative button surround stuff
 	translate([0, 0, 50]) cylinder(r=small_button_radius*decorative_radius_scale, h=20, $fn=50, center=true);
 	translate([0, 0, 70]) cylinder(r=small_button_radius*jumbo_decorative_radius_scale, h=20, $fn=50, center=true);
@@ -41,10 +40,9 @@ module button_24mm_hole() {
 // for snap-ins, etc.
 module button_30mm_hole() {
 	cylinder(r=big_button_radius, h=100, $fn=50, center=true);
-	// carve out space for snap-ins, leave 3mm
-	// slagcoin has screw-in nut diameter at 36mm, so radius+6 to leave some space
+	// carve out space for snap-ins and screw-in nuts
 	// translation is to leave 3mm thickness in the plate without recentering anything
-	translate([0, 0, -25]) cylinder(r=big_button_radius+6, h=49, $fn=50, center=true);
+	translate([0, 0, -25]) cylinder(r=big_button_radius+button_radius_connector_space, h=49, $fn=50, center=true);
 	// space for decorative button surround stuff
 	translate([0, 0, 50]) cylinder(r=big_button_radius*decorative_radius_scale, h=20, $fn=50, center=true);
 	translate([0, 0, 70]) cylinder(r=big_button_radius*jumbo_decorative_radius_scale, h=20, $fn=50, center=true);
