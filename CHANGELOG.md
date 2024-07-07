@@ -2,6 +2,14 @@
 
 Included is a summary of changes to the project, by version. Details can be found in the commit history.
 
+## v4.4.2
+
+### Bugfixes
+
+* Fix a regression with the small button screw-in space cutting into the frame wall supports. The screw-in space is
+  potentially more important for some nuts than the thickness of the frame wall supports, so the latter have been
+  thinned slightly.
+
 ## v4.4.1
 
 ### Features
