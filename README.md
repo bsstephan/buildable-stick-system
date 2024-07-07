@@ -67,6 +67,9 @@ about what the types of parts are and how to use them:
     * Various experiments and things not directly related to making an arcade stick. At time of writing, there's a
       couple pieces for a little stand for the stick, solely for vanity purposes.
 
+Feel free to request or contribute to more objects. Additional documentation regarding assembling the stick is available
+in `docs/assembly-and-tips.md`.
+
 ## Printing
 
 These items all fit on a 256mm^2 print bed; I use a Bambu Lab P1P based on what I've learned from the
@@ -161,12 +164,13 @@ to hang out and discuss issues and features and whatnot.
 
 Written by and copyright Brian S. Stephan (<bss@incorporeal.org>).
 
-The Buildable Stick System is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
-License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
-version.
+The Buildable Stick System is free software: you can redistribute it and/or modify it under the terms of the GNU General
+Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any
+later version.
 
-The Buildable Stick System is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
-warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+The Buildable Stick System is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+details.
 
 You should have received a copy of the GNU General Public License along with the Buildable Stick System. If not, see
 <https://www.gnu.org/licenses/>.
