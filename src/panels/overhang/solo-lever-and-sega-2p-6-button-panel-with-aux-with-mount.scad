@@ -8,7 +8,10 @@ include <components.scad>
 
 module lever_and_sega_2p_6_button_solo_overhang_panel() {
 	difference() {
-		panel_with_raised_overhang();
+		union() {
+			panel_with_raised_overhang();
+			translate([45, -58, -panel_z/2]) rotate([0, 0, 13]) pcb_mount();
+		}
 		translate([90, -25, 0]) sega_2p_6_button();
 		translate([-65, 5, 0]) union() {
 			levermountholes();
