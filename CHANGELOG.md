@@ -2,6 +2,27 @@
 
 Included is a summary of changes to the project, by version. Details can be found in the commit history.
 
+## v4.4.1
+
+### Features
+
+* A new lever + Sega 2P 6 button panel has been added. The overhang version hadn't been updated in forever, but the
+  inset panel moved stuff around in a way that allowed a couple aux buttons to fit in, so those have been added to the
+  overhang panel as well.
+* A horizontal stripe frame windowed piece has been added. YMMV may vary a bit on this vs. an empty window --- you can
+  see less of the inner object with the stripes, but it's a bit more stable.
+
+### Improvements
+
+* The frame wall slashes have been made a bit more reusable.
+* The area around button holes for screw-ins has been tweaked to be a bit smaller for 30mm buttons and a bit larger for
+  24mm buttons.
+
+### Miscellaneous
+
+* A bottom overhang panel was positioned incorrectly in the demo file; this has been fixed.
+* Added a demo of the one-panel overhang lever + 6 button stick.
+
 ## v4.4.0
 
 ### Features
