@@ -12,7 +12,7 @@ module front_stripe() {
 	cube([frame_x-(frame_mount_column_width*1.75)*2, frame_wall, 6], center=true);
 }
 
-module windowed_front_or_back_box_frame_piece() {
+module horiz_striped_windowed_front_or_back_box_frame_piece() {
 	difference() {
 		front_or_back_box_frame_piece();
 		// subtract frame wall windows
@@ -26,4 +26,4 @@ module windowed_front_or_back_box_frame_piece() {
 	}
 }
 
-windowed_front_or_back_box_frame_piece();
+horiz_striped_windowed_front_or_back_box_frame_piece();

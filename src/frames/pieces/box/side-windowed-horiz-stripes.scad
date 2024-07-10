@@ -12,7 +12,7 @@ module side_stripe() {
 	cube([frame_wall, frame_y-(frame_mount_column_width*1.75)*2, 6], center=true);
 }
 
-module windowed_side_box_frame_piece() {
+module horiz_striped_windowed_side_box_frame_piece() {
 	difference() {
 		side_box_frame_piece();
 		// subtract frame wall windows
@@ -26,4 +26,4 @@ module windowed_side_box_frame_piece() {
 	}
 }
 
-windowed_side_box_frame_piece();
+horiz_striped_windowed_side_box_frame_piece();
