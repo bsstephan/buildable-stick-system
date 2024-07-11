@@ -15,7 +15,7 @@ module mount_column_cutout() {
 	}
 }
 
-module side_inner_wall_frame_piece() {
+module side_inner_wall_frame_base_piece() {
 	difference() {
 		side_box_frame_piece();
 		// minus the outer wall
@@ -30,6 +30,13 @@ module side_inner_wall_frame_piece() {
 		translate([-panel_to_frame_point_x, -(panel_to_frame_point_y), inner_frame_z/2]) rotate([0, 0, 180])
 			mount_column_cutout();
 	}
+}
+
+module side_inner_wall_frame_piece() {
+	side_inner_wall_frame_base_piece();
+	// extend the outward face 2mm in order to have it cut deeper into the frame outer wall
+	translate([-(frame_x-frame_wall)/2, 0, 0]) rotate([0, 90, 0]) linear_extrude(height=2) projection()
+		translate([0, 0, 50]) rotate([0, -90, 0]) side_inner_wall_frame_base_piece();
 }
 
 side_inner_wall_frame_piece();
