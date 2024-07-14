@@ -17,7 +17,8 @@ module mount_column_cutout() {
 
 module side_inner_wall_frame_base_piece() {
 	difference() {
-		side_box_frame_piece();
+		// Z is scaled so that some part of the original part inner wall is retained
+		scale([1, 1, inner_frame_z_decorative_scale]) side_box_frame_piece();
 		// minus the outer wall
 		translate([-(frame_x-frame_wall)/2, 0, 0]) cube([frame_wall, frame_y, frame_z], center=true);
 		// minus half of the mounting posts (the other half provided by the outer wall)

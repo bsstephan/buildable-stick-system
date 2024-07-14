@@ -75,6 +75,12 @@ panel_z = 5;
 // inside the frame
 inner_frame_z = frame_z - (panel_z * 2);
 
+// "windowed" pieces chop out the inner wall of the frame as a separate piece in order
+// to print it a different color/way/style. to improve friction fit, it is only the below
+// value scale of the whole wall, so that the rest of the wall is retained on the outer
+// piece, which helps clamp the two together (and helps the panels clamp it all)
+inner_frame_z_decorative_scale = 0.95;
+
 // how much the top plate x/y is expanded to overhang the frame
 // note that this is relative to the top plate (so the wall is added back)
 panel_overhang_amount = 8.5;
