@@ -7,6 +7,9 @@ design before sending it to a custom builder? Do you just love having your space
 because you keep making different variants, colorways, and so on? Or do you simply want a good stick on the cheap, and
 know someone or a library with a 3D printer? The Buildable Stick System may be the project for you!
 
+**Join the project IRC channel: [#buildable-stick-system @
+Randomus](https://webirc.randomus.net/#buildable-stick-system)!**
+
 ![An example of stick components displayed in OpenSCAD](docs/blown-up-demo.png)
 
 [OpenSCAD-based illustration of how the components for an overhang panel-based stick fit together.]
