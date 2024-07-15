@@ -2,6 +2,25 @@
 
 Included is a summary of changes to the project, by version. Details can be found in the commit history.
 
+## v4.4.3
+
+### Features
+
+* Windowed frame wall pieces were made for the "clean" front/back walls that line up with the extended sides.
+
+### Improvements
+
+* The inner wall piece has been thickened, bringing its surface closer to the end of the outer wall windowed frame
+  pieces, making the window less deep and the inner wall easier to see.
+* The inner wall piece has been shrunken on the Z in order to leave some material on the outer wall and thus improve the
+  friction fit and clamp of the outer wall piece, which was too weakened by the unsupported top and bottom otherwise.
+
+### Miscellaneous
+
+* Documentation updates, especially around the printing of parts.
+* Corrected the names of some pieces that were accidentally duplicated from the file they were copied from rather than
+  what they were, or otherwise didn't match the standard pattern (such as it is).
+
 ## v4.4.2
 
 ### Bugfixes
