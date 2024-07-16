@@ -5,7 +5,6 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frames/complete/left-frame.scad>
 use <frames/pieces/box/side.scad>
 use <frames/pieces/box/front-or-back.scad>
 use <frames/pieces/box/front-or-back-aux-and-neutrik.scad>
@@ -22,14 +21,15 @@ top_deco_color = "white";
 
 color(panel_color) translate([-panel_x/2, 0, frame_z/2-panel_z+0.01]) lever_and_dir_arc_w_30mm_panel();
 color(panel_color) translate([panel_x/2, 0, frame_z/2-panel_z+0.01]) sega_2p_plus_one_plus_control_panel_with_mount();
-color(base_color) translate([-frame_x/2+5, 0, -2.5]) left_frame();
 color(base_color) translate([panel_x/2, 0, -2.5]) rotate([0, 180, 0]) side_box_frame_piece();
+color(base_color) translate([-panel_x/2, 0, -2.5]) side_box_frame_piece();
 color(base_color) translate([panel_x/2, 0, -2.5]) front_or_back_box_frame_piece();
+color(base_color) translate([-panel_x/2, 0, -2.5]) front_or_back_box_frame_piece();
 color(base_color) translate([panel_x/2, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_box_frame_piece();
+color(base_color) translate([-panel_x/2, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_box_frame_piece();
 color(base_color) translate([-panel_x/2, 0, -5-frame_z/2+5]) panel();
 color(base_color) translate([panel_x/2, 0, -5-frame_z/2+5]) panel();
 
-/* color(top_deco_color) translate([0, 0, 3+frame_z/2-4]) dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate_of_plates(); */
 color(top_deco_color) translate([0, 0, 3+frame_z/2-panel_z]) dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate();
 color(top_deco_color) translate([-170, 20, 3+frame_z/2-panel_z]) lsx_nobi_dustwasher();
 color(top_deco_color) translate([panel_x-24, 30, 3+frame_z/2-panel_z]) button_24mm_decorative_plate();
