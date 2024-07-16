@@ -105,3 +105,18 @@ jumbo_decorative_radius_scale = 2;
 slash_inner_displacement = 10;
 slash_width = 15;
 slash_height = frame_z-panel_z*3;
+
+// LAYOUTS
+
+sega_2p_column_2_offset = 30.5;
+sega_2p_column_3_offset = sega_2p_column_2_offset + 36;
+sega_2p_column_4_offset = sega_2p_column_3_offset + 36;
+
+// this offset is from the left edge of the panel
+sega_2p_column_1_left_panel_edge_offset = 28.06;
+
+dir_arc_30mm_column_2_offset = 33.8;
+dir_arc_30mm_column_3_offset = dir_arc_30mm_column_2_offset + 34.8;
+dir_arc_30mm_row_2_offset = 57.2;
+dir_arc_30mm_row_3_offset = dir_arc_30mm_row_2_offset + 12.9;
+dir_arc_w_30mm_row_4_offset = dir_arc_30mm_row_3_offset + 34.5;

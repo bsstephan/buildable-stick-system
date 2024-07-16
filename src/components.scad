@@ -396,24 +396,24 @@ module dir_arc_plus_w_24mm_8_button() {
 
 module dir_arc_30mm_thumb_button() {
 	// just my guesstimate on this one, but note that this is the same position as sega 2p (just mirrored)
-	translate([(panel_x/2)-28.06, (-panel_y/2)+62, 0]) button_30mm_hole();
+	translate([(panel_x/2)-sega_2p_column_1_left_panel_edge_offset, (-panel_y/2)+62, 0]) button_30mm_hole();
 }
 
 module dir_arc_30mm_finger_buttons() {
-	translate([0, 57.2, 0]) dir_arc_30mm_thumb_button();
-	translate([-33.8, 57.2+12.9, 0]) dir_arc_30mm_thumb_button();
-	translate([-33.8-34.8, 57.2+12.9, 0]) dir_arc_30mm_thumb_button();
+	translate([0, dir_arc_30mm_row_2_offset, 0]) dir_arc_30mm_thumb_button();
+	translate([-dir_arc_30mm_column_2_offset, dir_arc_30mm_row_3_offset, 0]) dir_arc_30mm_thumb_button();
+	translate([-dir_arc_30mm_column_3_offset, dir_arc_30mm_row_3_offset, 0]) dir_arc_30mm_thumb_button();
 }
 
 module dir_arc_w_30mm() {
 	dir_arc_30mm_thumb_button();
 	dir_arc_30mm_finger_buttons();
-	translate([-26.8, 57.2+12.9+34.5, 0]) dir_arc_30mm_thumb_button();
+	translate([-26.8, dir_arc_w_30mm_row_4_offset, 0]) dir_arc_30mm_thumb_button();
 }
 
 module dir_arc_w_30mm_plus_one() {
 	dir_arc_w_30mm();
-	translate([-33.8-34.8-33.8, 57.2, 0]) dir_arc_30mm_thumb_button();
+	translate([-dir_arc_30mm_column_3_offset-33.8, dir_arc_30mm_row_2_offset, 0]) dir_arc_30mm_thumb_button();
 }
 
 // Namco Noir (right hand)
@@ -440,23 +440,24 @@ module noir_plus_one() {
 // Sega Astro City 2P (right hand)
 
 module sega_2p_p1() {
-	translate([-panel_x/2, -panel_y/2, 0]) translate([28.06, 140, 0]) button_30mm_hole();
+	translate([-panel_x/2, -panel_y/2, 0]) translate([sega_2p_column_1_left_panel_edge_offset, 140, 0])
+		button_30mm_hole();
 }
 
 module sega_2p_6_button() {
 	// via slagcoin
 	sega_2p_p1();
-	translate([30.5, 11+9, 0]) sega_2p_p1();
-	translate([30.5+36, 11+9, 0]) sega_2p_p1();
+	translate([sega_2p_column_2_offset, 11+9, 0]) sega_2p_p1();
+	translate([sega_2p_column_3_offset, 11+9, 0]) sega_2p_p1();
 	translate([0, -19-9-11, 0]) sega_2p_p1();
-	translate([30.5, -19, 0]) sega_2p_p1();
-	translate([30.5+36, -19, 0]) sega_2p_p1();
+	translate([sega_2p_column_2_offset, -19, 0]) sega_2p_p1();
+	translate([sega_2p_column_3_offset, -19, 0]) sega_2p_p1();
 }
 
 module sega_2p() {
 	sega_2p_6_button();
-	translate([30.5+36+36, 11, 0]) sega_2p_p1();
-	translate([30.5+36+36, -19-9, 0]) sega_2p_p1();
+	translate([sega_2p_column_4_offset, 11, 0]) sega_2p_p1();
+	translate([sega_2p_column_4_offset, -19-9, 0]) sega_2p_p1();
 }
 
 module sega_2p_plus_one() {
