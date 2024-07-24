@@ -9,18 +9,19 @@ use <side.scad>
 use <side-inner-wall.scad>
 
 module side_stripe() {
-	cube([frame_wall, frame_y-(frame_mount_column_width*1.75)*2, 6], center=true);
+	cube([frame_wall, frame_y-(frame_mount_column_width*1.75)*2, 5], center=true);
 }
 
 module horiz_striped_windowed_side_box_frame_piece() {
 	difference() {
 		side_box_frame_piece();
 		// subtract frame wall windows
-		translate([-(frame_x-frame_wall)/2, 0, 18]) side_stripe();
-		translate([-(frame_x-frame_wall)/2, 0, 9]) side_stripe();
-		translate([-(frame_x-frame_wall)/2, 0, 0]) side_stripe();
-		translate([-(frame_x-frame_wall)/2, 0, -9]) side_stripe();
-		translate([-(frame_x-frame_wall)/2, 0, -18]) side_stripe();
+		translate([-(frame_x-frame_wall)/2, 0, 17.5]) side_stripe();
+		translate([-(frame_x-frame_wall)/2, 0, 10.5]) side_stripe();
+		translate([-(frame_x-frame_wall)/2, 0, 3.5]) side_stripe();
+		translate([-(frame_x-frame_wall)/2, 0, -3.5]) side_stripe();
+		translate([-(frame_x-frame_wall)/2, 0, -10.5]) side_stripe();
+		translate([-(frame_x-frame_wall)/2, 0, -17.5]) side_stripe();
 		// subtract the inner wall area that will be provided by the other piece
 		side_inner_wall_frame_piece();
 	}
