@@ -11,6 +11,10 @@ module m4_hole_countersink() {
 	cylinder(r1=m4_bolt_radius, r2=m4_bolt_countersink_radius, h=3.2, $fn=50, center=true);
 }
 
+module m6_hole() {
+	cylinder(r=m6_bolt_radius, h=100, $fn=50, center=true);
+}
+
 module panel_holes() {
 	// holes for mount bolts
 	translate([panel_to_frame_point_x, panel_to_frame_point_y, 0]) m4_hole();

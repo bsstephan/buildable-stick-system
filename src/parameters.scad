@@ -17,6 +17,9 @@ m4_bolt_radius = 2 + hole_tolerance;
 m4_bolt_countersink_radius = 6.1 + hole_tolerance;
 m4_bolt_hex_exterior_radius = 3.6 + hole_tolerance;
 
+// M6
+m6_bolt_radius = 3 + hole_tolerance;
+
 // 24mm button
 small_button_radius = 12 + hole_tolerance;
 
