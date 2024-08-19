@@ -6,7 +6,7 @@
 include <parameters.scad>
 include <components.scad>
 use <frames/pieces/extended/front-or-back.scad>
-use <frames/pieces/extended/side-extended-to-bottom.scad>
+use <frames/pieces/extended/side-extended-to-front.scad>
 use <frames/pieces/extended/front-or-back-clean-for-extended-side-aux-and-neutrik.scad>
 use <panels/inset/lever-and-dir_arc-plus-w-30mm-panel.scad>
 use <panels/inset/sega-2p-plus-one-plus-control-panel-with-mount.scad>
