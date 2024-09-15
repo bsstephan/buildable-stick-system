@@ -94,6 +94,12 @@ module aux_control_three_button_cluster() {
 	translate([37, 0, 0]) button_24mm_hole();
 }
 
+module aux_control_three_button_tight_cluster() {
+	translate([-32, 0, 0]) button_24mm_hole();
+	translate([0, 0, 0]) button_24mm_hole();
+	translate([32, 0, 0]) button_24mm_hole();
+}
+
 module m2_mount_post() {
 	difference() {
 		cylinder(r=m2_screw_selftap_radius*2.25, h=3, $fn=6, center=true);
