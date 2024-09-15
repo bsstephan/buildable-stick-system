@@ -114,6 +114,7 @@ slash_height = frame_z-panel_z*3;
 sega_2p_column_2_offset = 30.5;
 sega_2p_column_3_offset = sega_2p_column_2_offset + 36;
 sega_2p_column_4_offset = sega_2p_column_3_offset + 36;
+sega_2p_column_5_offset = sega_2p_column_4_offset + 36;
 
 // this offset is from the left edge of the panel
 sega_2p_column_1_left_panel_edge_offset = 28.06;

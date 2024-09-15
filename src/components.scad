@@ -470,6 +470,12 @@ module sega_2p_plus_one() {
 	translate([0, -19-9-11-19-9-11, 0]) sega_2p_p1();
 }
 
+module sega_2p_eleven() {
+	sega_2p_plus_one();
+	translate([sega_2p_column_5_offset, 0, 0]) sega_2p_p1();
+	translate([sega_2p_column_5_offset, -19-9-11, 0]) sega_2p_p1();
+}
+
 module shiokenstar() {
 	translate([-172, 32, 0]) dir_arc_24mm_directionals();
 	sega_2p();
