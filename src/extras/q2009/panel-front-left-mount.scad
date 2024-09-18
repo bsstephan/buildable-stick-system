@@ -1,4 +1,5 @@
-/*
+/* A panel with a mount point for the front left of the enclosure.
+ *
  * SPDX-FileCopyrightText: © 2024 Brian S. Stephan <bss@incorporeal.org>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -15,10 +16,7 @@ mount_hole_y = (panel_y / 2) - 50.80;
 
 module front_left_mount_panel() {
 	difference() {
-		union() {
-			panel();
-			translate([-mount_hole_x, -mount_hole_y, panel_z/2]) cylinder(r=15, h=4, $fn=50, center=true);
-		}
+		panel();
 		translate([-mount_hole_x, -mount_hole_y, 0]) m6_hole();
 	}
 }
