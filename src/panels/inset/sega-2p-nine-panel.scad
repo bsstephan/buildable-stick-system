@@ -6,12 +6,11 @@
 include <parameters.scad>
 include <components.scad>
 
-module sega_2p_plus_one_right_overhang_panel() {
+module sega_2p_nine_panel() {
 	difference() {
-		panel_with_raised_overhang();
-		sega_2p_plus_one();
-		rotate([0, 0, 180]) side_chopper();
+		panel();
+		sega_2p_nine();
 	}
 }
 
-sega_2p_plus_one_right_overhang_panel();
+sega_2p_nine_panel();

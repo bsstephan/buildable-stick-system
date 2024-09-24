@@ -470,14 +470,14 @@ module sega_2p() {
 	translate([sega_2p_column_4_offset, -19-9, 0]) sega_2p_p1();
 }
 
-module sega_2p_plus_one() {
+module sega_2p_nine() {
 	sega_2p();
 	// just my guesstimate on this one
 	translate([0, -19-9-11-19-9-11, 0]) sega_2p_p1();
 }
 
 module sega_2p_eleven() {
-	sega_2p_plus_one();
+	sega_2p_nine();
 	translate([sega_2p_column_5_offset, 0, 0]) sega_2p_p1();
 	translate([sega_2p_column_5_offset, -19-9-11, 0]) sega_2p_p1();
 }

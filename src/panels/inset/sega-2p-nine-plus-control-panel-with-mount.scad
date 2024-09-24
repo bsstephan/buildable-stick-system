@@ -5,11 +5,11 @@
 
 include <parameters.scad>
 include <components.scad>
-use <right-sega-2p-plus-one-panel.scad>
+use <sega-2p-nine-plus-control-panel.scad>
 
-module sega_2p_plus_one_with_mount_right_overhang_panel() {
-	sega_2p_plus_one_right_overhang_panel();
+module sega_2p_nine_plus_control_panel_with_mount() {
+	sega_2p_nine_plus_control_panel();
 	translate([30, -50, -(panel_z/2) - 3]) pcb_mount();
 }
 
-sega_2p_plus_one_with_mount_right_overhang_panel();
+sega_2p_nine_plus_control_panel_with_mount();

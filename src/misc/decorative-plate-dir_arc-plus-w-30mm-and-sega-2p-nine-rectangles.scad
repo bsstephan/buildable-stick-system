@@ -8,7 +8,7 @@ decorative_radius_scale = 1.5;
 jumbo_decorative_radius_scale = 0;
 include <components.scad>
 
-module dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate_of_plates() {
+module dir_arc_plus_w_30mm_and_sega_2p_nine_decorative_plate_of_plates() {
 	difference() {
 		// layout offset + 30 = width for layout plus button width + 12+3 = space around button
 		left_plate_x = dir_arc_30mm_column_3_offset + 30 + 12;
@@ -29,8 +29,8 @@ module dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate_of_plates() {
 		}
 		// cut out the normal holes
 		translate([-panel_x/2, 0, -1]) dir_arc_w_30mm();
-		translate([panel_x/2, 0, -1]) sega_2p_plus_one();
+		translate([panel_x/2, 0, -1]) sega_2p_nine();
 	}
 }
 
-dir_arc_plus_w_30mm_and_sega_2p_plus_one_decorative_plate_of_plates();
+dir_arc_plus_w_30mm_and_sega_2p_nine_decorative_plate_of_plates();
