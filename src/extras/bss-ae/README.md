@@ -19,6 +19,7 @@ Pieces for mounting to a Qanba 2009 in order to create the Buildable Stick Syste
 * 2 `panel-three-aux-buttons-and-rocker-hole` --- for aux controls and the wired rocker in the back row
 * 4 `decorative-plate-aux-control-tight-three-button-cluster` --- for decorating the aux control clusters
 * 4 `src/misc/` decorative plates of your choice for the front controls, and similar miscellany
+* 4 `mount-spacer` --- making a flush mount between the enclosure and the base
 
 ## Hardware
 
