@@ -16,12 +16,11 @@ module horiz_striped_windowed_front_or_back_box_frame_piece() {
 	difference() {
 		front_or_back_box_frame_piece();
 		// subtract frame wall windows
-		translate([0, -(frame_y-frame_wall)/2, 17.5]) front_stripe();
-		translate([0, -(frame_y-frame_wall)/2, 10.5]) front_stripe();
-		translate([0, -(frame_y-frame_wall)/2, 3.5]) front_stripe();
-		translate([0, -(frame_y-frame_wall)/2, -3.5]) front_stripe();
-		translate([0, -(frame_y-frame_wall)/2, -10.5]) front_stripe();
-		translate([0, -(frame_y-frame_wall)/2, -17.5]) front_stripe();
+		translate([0, -(frame_y-frame_wall)/2, 18]) front_stripe();
+		translate([0, -(frame_y-frame_wall)/2, 9]) front_stripe();
+		translate([0, -(frame_y-frame_wall)/2, 0]) front_stripe();
+		translate([0, -(frame_y-frame_wall)/2, -9]) front_stripe();
+		translate([0, -(frame_y-frame_wall)/2, -18]) front_stripe();
 		// subtract the inner wall area that will be provided by the other piece
 		front_or_back_inner_wall_frame_piece();
 	}
