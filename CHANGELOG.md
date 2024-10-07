@@ -2,6 +2,30 @@
 
 Included is a summary of changes to the project, by version. Details can be found in the commit history.
 
+## v4.5.0
+
+### Features
+
+* Many components for the Buildable Stick System - Arcade Edition --- pieces to create a control enclosure for the Qanba
+  2009 base! These pieces live in `extras/bss-ae/` but do use some parts from the base project; check that subdir's
+  README.
+* Created a Sega 2P 11 button layout, basically following the curve of the fourth column and adding a fifth, plus one
+  extra button
+* More decorative plates, this time square ones for an NES-styled project.
+
+### Improvements
+
+* Button layout positions for Sega 2P and directional arc layouts have been parameterized.
+* The decorative plates for the directional arc + W and Sega 2P 9 layout have been split into two files, since there was
+  no reason to keep them as one with multiple pieces anymore.
+* Tweaks to the horizontal stripes in order to get them to print better.
+* Renamed "Sega 2P plus one" to Sega 2P 9, following the pattern of the 11 layout.
+
+### Miscellaneous
+
+* Renaming of extended side pieces to fit the front/back idiom.
+* Cleanups to the demos.
+
 ## v4.4.3
 
 ### Features
