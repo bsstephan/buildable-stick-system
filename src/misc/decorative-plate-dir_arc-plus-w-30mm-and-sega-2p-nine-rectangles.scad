@@ -10,14 +10,14 @@ include <components.scad>
 
 module dir_arc_plus_w_30mm_and_sega_2p_nine_decorative_plate_of_plates() {
 	difference() {
-		// layout offset + 30 = width for layout plus button width + 12+3 = space around button
-		left_plate_x = dir_arc_30mm_column_3_offset + 30 + 12;
-		// layout offset + 30 = width for layout plus button width + 12+3 = space around button
-		left_plate_y = dir_arc_w_30mm_row_4_offset + 30 + 12;
-		left_plate_center_x = (left_plate_x + sega_2p_column_1_left_panel_edge_offset - 15)/2;
-		// layout offset + 30 = width for layout plus button width + 12+3 = space around button
-		right_plate_x = sega_2p_column_4_offset + 30 + 12;
-		right_plate_center_x = (right_plate_x + sega_2p_column_1_left_panel_edge_offset - 15)/2;
+		// layout offset + 30 = width for layout plus button width + 19+3 = space around button
+		left_plate_x = dir_arc_30mm_column_3_offset + 30 + 19;
+		// layout offset + 30 = width for layout plus button width + 19+3 = space around button
+		left_plate_y = dir_arc_w_30mm_row_4_offset + 30 + 19;
+		left_plate_center_x = (left_plate_x + sega_2p_column_1_left_panel_edge_offset - 22)/2;
+		// layout offset + 30 = width for layout plus button width + 19+3 = space around button
+		right_plate_x = sega_2p_column_4_offset + 30 + 19;
+		right_plate_center_x = (right_plate_x + sega_2p_column_1_left_panel_edge_offset - 22)/2;
 
 		union() {
 			// y values are based on the other half below
