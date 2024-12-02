@@ -9,13 +9,14 @@ use <front-or-back.scad>
 use <front-or-back-inner-wall.scad>
 
 module backslashes() {
-	translate([-60, -(frame_y-frame_wall)/2, 0]) slash_cutout();
-	translate([-40, -(frame_y-frame_wall)/2, 0]) slash_cutout();
-	translate([-20, -(frame_y-frame_wall)/2, 0]) slash_cutout();
-	translate([0, -(frame_y-frame_wall)/2, 0]) slash_cutout();
-	translate([20, -(frame_y-frame_wall)/2, 0]) slash_cutout();
-	translate([40, -(frame_y-frame_wall)/2, 0]) slash_cutout();
-	translate([60, -(frame_y-frame_wall)/2, 0]) slash_cutout();
+	translate([-70, -(frame_y-frame_wall)/2, 0]) slash_cutout();
+	translate([-50, -(frame_y-frame_wall)/2, 0]) slash_cutout();
+	translate([-30, -(frame_y-frame_wall)/2, 0]) slash_cutout();
+	translate([-10, -(frame_y-frame_wall)/2, 0]) slash_cutout();
+	translate([10, -(frame_y-frame_wall)/2, 0]) slash_cutout();
+	translate([30, -(frame_y-frame_wall)/2, 0]) slash_cutout();
+	translate([50, -(frame_y-frame_wall)/2, 0]) slash_cutout();
+	translate([70, -(frame_y-frame_wall)/2, 0]) slash_cutout();
 }
 
 module backslashes_windowed_front_or_back_box_frame_piece() {

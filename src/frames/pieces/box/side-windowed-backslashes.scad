@@ -9,11 +9,12 @@ use <side.scad>
 use <side-inner-wall.scad>
 
 module backslashes() {
-	translate([-(frame_x-frame_wall)/2, -40, 0]) rotate([0, 0, -90]) slash_cutout();
-	translate([-(frame_x-frame_wall)/2, -20, 0]) rotate([0, 0, -90]) slash_cutout();
-	translate([-(frame_x-frame_wall)/2, 0, 0]) rotate([0, 0, -90]) slash_cutout();
-	translate([-(frame_x-frame_wall)/2, 20, 0]) rotate([0, 0, -90]) slash_cutout();
-	translate([-(frame_x-frame_wall)/2, 40, 0]) rotate([0, 0, -90]) slash_cutout();
+	translate([-(frame_x-frame_wall)/2, -50, 0]) rotate([0, 0, -90]) slash_cutout();
+	translate([-(frame_x-frame_wall)/2, -30, 0]) rotate([0, 0, -90]) slash_cutout();
+	translate([-(frame_x-frame_wall)/2, -10, 0]) rotate([0, 0, -90]) slash_cutout();
+	translate([-(frame_x-frame_wall)/2, 10, 0]) rotate([0, 0, -90]) slash_cutout();
+	translate([-(frame_x-frame_wall)/2, 30, 0]) rotate([0, 0, -90]) slash_cutout();
+	translate([-(frame_x-frame_wall)/2, 50, 0]) rotate([0, 0, -90]) slash_cutout();
 }
 
 module backslashes_windowed_side_box_frame_piece() {
