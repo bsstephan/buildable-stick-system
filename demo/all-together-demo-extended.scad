@@ -5,7 +5,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frames/pieces/extended/front-or-back.scad>
+use <frames/pieces/extended/front-or-back-trapezoid.scad>
 use <frames/pieces/extended/side-trapezoid-extended-to-front.scad>
 use <frames/pieces/extended/front-or-back-clean-for-extended-side-aux-and-neutrik.scad>
 use <panels/inset/lever-and-dir_arc-plus-w-30mm-panel.scad>
@@ -24,8 +24,8 @@ color(top_panel_color) translate([-panel_x/2, 0, frame_z/2-panel_z+0.01]) lever_
 color(top_panel_color) translate([panel_x/2, 0, frame_z/2-panel_z+0.01]) sega_2p_nine_plus_control_panel_with_mount();
 color(frame_side_color) translate([-frame_x/2+4, 0, -2.5]) side_trapezoid_extended_to_front_frame_piece();
 color(frame_side_color) translate([frame_x/2-4, 0, -2.5]) mirror([1, 0, 0]) side_trapezoid_extended_to_front_frame_piece();
-color(frame_top_bottom_color) translate([-frame_x/2+4, 0, -2.5])  extended_front_or_back_frame_piece();
-color(frame_top_bottom_color) translate([frame_x/2-4, 0, -2.5])  extended_front_or_back_frame_piece();
+color(frame_top_bottom_color) translate([-frame_x/2+4, 0, -2.5])  front_or_back_trapezoid_frame_piece();
+color(frame_top_bottom_color) translate([frame_x/2-4, 0, -2.5])  front_or_back_trapezoid_frame_piece();
 color(frame_top_bottom_color) translate([-frame_x/2+4, 0, -2.5]) rotate([180, 0, 0]) front_or_back_aux_and_neutrik_box_frame_piece_for_extended_side();
 color(frame_top_bottom_color) translate([frame_x/2-4, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_box_frame_piece_for_extended_side();
 color(bottom_panel_color) translate([-panel_x/2, 0, -5-frame_z/2+5]) panel();

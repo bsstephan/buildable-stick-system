@@ -5,7 +5,6 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frames/pieces/extended/front-or-back.scad>
 use <frames/pieces/extended/side-trapezoid.scad>
 use <frames/pieces/extended/front-or-back-clean-for-extended-side-aux-and-neutrik.scad>
 use <frames/pieces/extended/front-or-back-clean-for-extended-side-windowed-horiz-stripes.scad>
