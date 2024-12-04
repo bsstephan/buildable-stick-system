@@ -48,3 +48,5 @@ for root, dirs, files in os.walk('.'):
 
 for process in processes:
     process.wait()
+    if process.returncode != 0:
+        raise Exception(f"building {process.args} failed")
