@@ -26,7 +26,7 @@ module side_and_bottom_frame_piece_extension() {
 	}
 }
 
-module extra_extended_left_or_right_frame_piece() {
+module side_trapezoid_extended_to_front_frame_piece() {
 	difference() {
 		side_box_frame_piece();
 		// chop off the old edge which is getting replaced with the extension
@@ -35,4 +35,4 @@ module extra_extended_left_or_right_frame_piece() {
 	translate([-frame_x/2+frame_bevel_height*2, 0, 0]) rotate([0, -90, 0]) side_and_bottom_frame_piece_extension();
 }
 
-extra_extended_left_or_right_frame_piece();
+side_trapezoid_extended_to_front_frame_piece();
