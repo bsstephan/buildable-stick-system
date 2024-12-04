@@ -274,13 +274,13 @@ module frame_solid() {
 		];
 		hull() {
 			for (p = top_points) {
-				translate(p) cylinder(r=2, h=frame_bevel_height, center=true);
+				translate(p) cylinder(r=2, h=frame_bevel_height, center=true, $fn=4);
 			}
 			for (p = base_points) {
-				translate(p) cylinder(r=2, h=frame_z-(frame_bevel_height*2), center=true);
+				translate(p) cylinder(r=2, h=frame_z-(frame_bevel_height*2), center=true, $fn=4);
 			}
 			for (p = bottom_points) {
-				translate(p) cylinder(r=2, h=frame_bevel_height, center=true);
+				translate(p) cylinder(r=2, h=frame_bevel_height, center=true, $fn=4);
 			}
 		}
 	}
