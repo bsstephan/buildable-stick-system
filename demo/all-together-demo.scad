@@ -5,9 +5,9 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frames/pieces/box/side.scad>
-use <frames/pieces/box/front-or-back.scad>
-use <frames/pieces/box/front-or-back-aux-and-neutrik.scad>
+use <frames/pieces/extended/side.scad>
+use <frames/pieces/extended/front-or-back.scad>
+use <frames/pieces/extended/front-or-back-aux-and-neutrik.scad>
 use <panels/inset/lever-and-dir_arc-plus-w-30mm-panel.scad>
 use <panels/inset/sega-2p-nine-plus-control-panel-with-mount.scad>
 use <misc/decorative-plate-24mm-button.scad>
@@ -20,12 +20,12 @@ top_deco_color = "white";
 
 color(panel_color) translate([-panel_x/2, 0, frame_z/2-panel_z+0.01]) lever_and_dir_arc_w_30mm_panel();
 color(panel_color) translate([panel_x/2, 0, frame_z/2-panel_z+0.01]) sega_2p_nine_plus_control_panel_with_mount();
-color(base_color) translate([panel_x/2, 0, -2.5]) rotate([0, 180, 0]) side_box_frame_piece();
-color(base_color) translate([-panel_x/2, 0, -2.5]) side_box_frame_piece();
-color(base_color) translate([panel_x/2, 0, -2.5]) front_or_back_box_frame_piece();
-color(base_color) translate([-panel_x/2, 0, -2.5]) front_or_back_box_frame_piece();
-color(base_color) translate([panel_x/2, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_box_frame_piece();
-color(base_color) translate([-panel_x/2, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_box_frame_piece();
+color(base_color) translate([panel_x/2, 0, -2.5]) rotate([0, 180, 0]) side_frame_piece();
+color(base_color) translate([-panel_x/2, 0, -2.5]) side_frame_piece();
+color(base_color) translate([panel_x/2, 0, -2.5]) front_or_back_frame_piece();
+color(base_color) translate([-panel_x/2, 0, -2.5]) front_or_back_frame_piece();
+color(base_color) translate([panel_x/2, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_frame_piece();
+color(base_color) translate([-panel_x/2, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_frame_piece();
 color(base_color) translate([-panel_x/2, 0, -5-frame_z/2+5]) panel();
 color(base_color) translate([panel_x/2, 0, -5-frame_z/2+5]) panel();
 

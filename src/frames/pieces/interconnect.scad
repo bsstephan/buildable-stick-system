@@ -5,11 +5,11 @@
 
 include <parameters.scad>
 include <components.scad>
-use <box/side.scad>
+use <extended/side.scad>
 
 module interconnect_frame_half_piece() {
 	translate([frame_x/2-frame_wall, 0, 0]) difference() {
-		side_box_frame_piece();
+		side_frame_piece();
 		rotate([0, 0, 180]) side_chopper();
 	}
 }
