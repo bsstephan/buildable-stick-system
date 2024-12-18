@@ -6,7 +6,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <frames/pieces/extended/front-or-back-trapezoid.scad>
+use <frames/pieces/front-or-back-trapezoid.scad>
 
 module back_piece_extension() {
 	// combine the original wall with a copy to "pull" the wall out

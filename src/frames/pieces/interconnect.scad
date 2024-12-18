@@ -5,7 +5,7 @@
 
 include <parameters.scad>
 include <components.scad>
-use <extended/side.scad>
+use <side.scad>
 
 module interconnect_frame_half_piece() {
 	translate([frame_x/2-frame_wall, 0, 0]) difference() {

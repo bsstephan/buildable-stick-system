@@ -6,9 +6,9 @@
 include <parameters.scad>
 include <components.scad>
 use <frames/pieces/interconnect.scad>
-use <frames/pieces/extended/side.scad>
-use <frames/pieces/extended/front-or-back.scad>
-use <frames/pieces/extended/front-or-back-aux-and-neutrik.scad>
+use <frames/pieces/side.scad>
+use <frames/pieces/front-or-back.scad>
+use <frames/pieces/front-or-back-aux-and-neutrik.scad>
 use <panels/overhang/left-lever-and-dir_arc-plus-w-30mm-panel.scad>
 use <panels/overhang/right-sega-2p-nine-plus-control-panel-with-mount.scad>
 use <panels/overhang/left-or-right-panel.scad>

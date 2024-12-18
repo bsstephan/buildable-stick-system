@@ -7,8 +7,8 @@
 include <parameters.scad>
 include <components.scad>
 use <frames/complete/left-frame.scad>
-use <frames/pieces/extended/side.scad>
-use <frames/pieces/extended/front-or-back-trapezoid.scad>
+use <frames/pieces/side.scad>
+use <frames/pieces/front-or-back-trapezoid.scad>
 
 module side_frame_piece_wall() {
 	// this doesn't use the side_frame_piece because of the 45 degree angle geometry
