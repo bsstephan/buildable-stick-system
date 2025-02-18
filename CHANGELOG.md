@@ -2,6 +2,26 @@
 
 Included is a summary of changes to the project, by version. Details can be found in the commit history.
 
+## v4.6.0
+
+### Features
+
+* All frame pieces were updated to have flush edges, a la the "extended" sides, rather than the seam between the
+  front/back and the sides being at a 45 degree angle on some pieces, with the latter meaning that we were maintaining
+  two (complicated) duplicates of the same pieces because both 45 degree and 90 degree angles were necessary. This does
+  not affect the look of the build much, but simplifies the print and the maintenance of the project.
+* A slightly-extended flat side piece was added, to add just a bit of length to the overall build.
+
+### Improvements
+
+* One more slash has been added to the frame pieces, just for more interesting visuals.
+* The rectangle plates' positioning was tweaked slightly.
+
+### Fixes
+
+* The frame solid was very slightly shorter than it should have been as the corners relied on cylinders. The core solid
+  is now at its proper dimensions.
+
 ## v4.5.0
 
 ### Features
