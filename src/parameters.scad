@@ -104,6 +104,10 @@ neutrik_d_radius = 12 + hole_tolerance;
 decorative_radius_scale = 1.75;
 jumbo_decorative_radius_scale = 2;
 
+// decorative wall cutout parameters
+// thicker than the actual base wall to account for the longish pieces
+wall_cutout_depth = frame_wall * 3;
+
 // decorative slash parameters
 slash_inner_displacement = 10;
 slash_width = 15;

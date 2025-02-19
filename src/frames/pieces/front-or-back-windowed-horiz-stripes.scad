@@ -9,7 +9,7 @@ use <front-or-back.scad>
 use <front-or-back-inner-wall.scad>
 
 module front_stripe() {
-	cube([frame_x-(frame_mount_column_width*1.75)*2, frame_wall, 5], center=true);
+	cube([frame_x-(frame_mount_column_width*1.75)*2, wall_cutout_depth, 5], center=true);
 }
 
 module horiz_striped_windowed_front_or_back_frame_piece() {

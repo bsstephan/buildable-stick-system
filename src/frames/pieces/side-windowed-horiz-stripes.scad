@@ -9,7 +9,7 @@ use <side.scad>
 use <side-inner-wall.scad>
 
 module side_stripe() {
-	cube([frame_wall, frame_y-(frame_mount_column_width*1.75)*2, 5], center=true);
+	cube([wall_cutout_depth, frame_y-(frame_mount_column_width*1.75)*2, 5], center=true);
 }
 
 module horiz_striped_windowed_side_frame_piece() {
