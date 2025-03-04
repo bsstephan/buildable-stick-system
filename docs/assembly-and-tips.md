@@ -1,12 +1,48 @@
 # Assembly and Tips
 
-Just some miscellaneous notes for any dear reader, or more likely, my own forgetful self.
+These are the parts you need and instructions for creating a simple two panel arcade stick. The end product is a
+rectangular prism roughly 18" long, with ample space for back buttons and enough top panel space for almost any layout
+you can imagine. There are more pieces and designs to experiment with, but this will get you an awesome "standard"
+build.
+
+## Parts for a Basic Enclosure
+
+The pieces you need to print (all colors to your taste):
+
+* **The base frame:** `frame/pieces/front-or-back.stl` x2 + `frame/pieces/front-or-back-aux-and-neutrik.stl` x2 +
+  `frame/pieces/interconnect.stl`. This creates a large "H" with six 24mm button holes and two Neutrik D holes on the
+  back, which can mount USB connectors or rocker switches, or be covered if not used. All four of the front or back
+  pieces connect to the interconnect piece, which creates one frame out of the individual pieces, and also adds some
+  support to the center of the enclosure. The interconnect has a large hole that can either make wire routing easier, or
+  leave space in the center for button layouts that span it.
+* **The frame sides:** `frame/pieces/side.stl` x2. These cap the "H", completing the overall frame.
+* **The top:** `panels/inset/[LAYOUTS].stl`. These panels go on the top of the frame and are where you mount all of your
+  main buttons and levers and whatnot. There are a couple layouts whose panels are meant to be paired (e.g.
+  `shiokenstar-left-panel.stl` and `shiokenstar-right-panel.stl`), but usually you simply pick a left panel (e.g.
+  `lever-panel-with-mount.stl`) and right panel (e.g. `sega-2p-panel.stl`) based on what you want. Note that one of your
+  choices should be "with mount", which is where the usually-sized PCB will screw into inside the box.
+* **The bottom:** `panels/inset/panel.stl` x2. Other than being the color of your choice, these just close the box.
+  You could put foam pads or something on these if you wanted.
+
+The above gets you the basics. Some common things you may also want:
+
+* **Mounting Neutrik connectors:** Neutrik D connectors can mount flush to the inside of the frame, but you can choose
+  to have a little decorative plate (`misc/neutrik-d-plate.stl` for added depth or color choices on the outside of the
+  frame, if you'd like.
+* **Mounting a 24mm switch:** a rocker switch can also be mounted in the Neutrik D connector, but it needs to be placed
+  into a `misc/neutrik-d-plate-24mm-hole.stl` plate, and the plate mounted to the frame.
+* **Flair for the auxillary buttons:** the three buttons in a row on the back of the frame can also get some style, just
+  place a `misc/decorative-plate-aux-control-three-button-cluster.stl` between the buttons and the frame. This only
+  works for screw-in buttons.
+* **Flair for the top buttons:** same as above, a decorative plate for top panel layouts --- e.g.
+  `misc/decorative-plate-sega-2p.stl` --- can be sandwiched between the buttons and panel to add some style. This also
+  only tends to work on screw-in buttons.
+* **Dustwashers/flair:** same deal, if you want to print one, use e.g. `misc/dustwasher-jlf.stl`.
 
 ## Putting a BSS Stick Together
 
 Assembly of a stick is pretty straightforward, but there are some choices that can make it easier or harder. The
-following is the most consistent way I've found to put one together. This is assuming a v4.2 or beyond stick, with two
-panels to make a long standard stick, and the frame made of pieces.
+following is the most consistent way I've found to put one together.
 
 1. Prepare the frame pieces: this is your best shot to get the e.g. Neutrik plates for the USB mount, SPDT switches, etc.
    installed, so do it now, and give them a good tighten. You shouldn't need to adjust these again, so finish their
@@ -34,19 +70,3 @@ panels to make a long standard stick, and the frame made of pieces.
 
 In the end, this should be extremely sturdy. None of the frame or panels should be loose at all, and you should be able
 to move, flip, gently toss, etc. the stick without anything moving or feeling loose.
-
-## Removing Inset Panels
-
-As of v4.1 (or in v3), the top and bottom inset panels both insert into the frame, inside the frame "lip", meaning that
-when everything is put together, they create a flush surface (more or less). This can make them hard to get out, as you
-can't grab anything to get any leverage, and especially with v4.1, the plastic posts to aid the friction fit make it
-even harder to muscle out --- in fact, even if you could get an edge and start yanking, you'd probably just break some
-of the plastic.
-
-You can instead use the reverse side and the hex standoffs to push a panel out, as so:
-
-1. Loosen, or completely remove, the hex bolts for the panel you would like to remove.
-2. Flip the stick over, and remove the hex bolts on the opposite side.
-3. Screw in longer bolts, or anything else that'll fit into the hole without going flush against the panel.
-4. Push the long bolts in, thus pushing the standoffs, thus pushing the desired panel out from within.
-5. You may have to even get a mallet and tap on a bolt, occasionally, as everything can be *pretty* tight.
