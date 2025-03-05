@@ -42,7 +42,7 @@ for root, dirs, files in os.walk('.'):
         stl_file = re.sub(r'\.scad$', '.stl', file)
         input_ = os.path.join(input_dir, file)
         output = os.path.join(output_dir, stl_file)
-        cmd = f'openscad -o {output} {input_}'
+        cmd = f'openscad --hardwarnings -o {output} {input_}'
         print(cmd)
         processes.append(subprocess.Popen(cmd.split(' ')))
 
