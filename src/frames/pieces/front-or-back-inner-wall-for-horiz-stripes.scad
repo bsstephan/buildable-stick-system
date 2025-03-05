@@ -7,7 +7,6 @@
 include <parameters.scad>
 include <components.scad>
 use <front-or-back-inner-wall.scad>
-use <front-or-back-longish.scad>
 use <front-or-back-windowed-horiz-stripes.scad>
 
 // for stability's sake, this piece juts out a bit from the outside of the wall, so we
