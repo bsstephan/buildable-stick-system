@@ -25,7 +25,7 @@ color(base_color) translate([-panel_x/2, 0, -2.5]) side_frame_piece();
 color(base_color) translate([panel_x/2, 0, -2.5]) front_or_back_frame_piece();
 color(base_color) translate([-panel_x/2, 0, -2.5]) front_or_back_frame_piece();
 color(base_color) translate([panel_x/2, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_frame_piece();
-color(base_color) translate([-panel_x/2, 0, -2.5]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_frame_piece();
+color(base_color) translate([-panel_x/2, 0, -2.5]) rotate([180, 0, 0]) front_or_back_aux_and_neutrik_frame_piece();
 color(base_color) translate([-panel_x/2, 0, -5-frame_z/2+5]) panel();
 color(base_color) translate([panel_x/2, 0, -5-frame_z/2+5]) panel();
 
