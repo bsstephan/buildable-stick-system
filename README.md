@@ -40,21 +40,17 @@ about what the types of parts are and how to use them:
       larger arcade sticks. They are simple to assemble, but you have fewer modularity/customization options, and they
       are harder to print because the physics of the material cooling will probably pull the corners up. They also need
       supports, since the top and bottom of the frame both have trays for panels to go into. Use at your own risk.
-    * `pieces/`
-        * `box/` --- these are the same four walls (generally speaking) as in the complete frames above, broken out into
-          modular pieces to print separately. Because they are separate pieces, you can mix and match colors, and you
-          can lay them all face down on the print surface for better adhesion and surface patterns. There are also
-          variants here, the "windowed" pieces, for doing two-tone variants and that kind of thing.
-        * `extended/` --- the frame walls are pulled out to create MCZ TE-style extended sides. Rather than getting a
-          box look, you get a longer slab with nice bevels. These look nice, but slightly fiddily to print (and of
-          course need more material) --- watch your surface adhesion.
-        * `interconnect` --- complete frames are bolted to one another, but for frame pieces, there is an interconnect
-          that stands in for the joined inner wall. You need this if you are combining multiple sets of walls, e.g. for
-          a two-panel-long stick.
+    * `pieces/` these are the same four walls (generally speaking) as in the complete frames above, broken out into
+      modular pieces to print separately. Because they are separate pieces, you can mix and match colors, and you can
+      lay them all face down on the print surface for better adhesion and surface patterns. There are also variants
+      here, the "windowed" pieces, for doing two-tone variants and that kind of thing. There are also frame walls pulled
+      out to create MCZ TE-style extended sides. There is an interconnect that stands in for the joined inner wall
+      between boxes of the overall unit. You need this if you are combining multiple sets of walls, e.g. for a
+      two-panel-long stick.
 * `panels/`
     * `inset/` --- various panels, all of the same size, that fit into and flush with the frame, making the arcade stick
-      top or bottom. These work equally well with box or extended frames, and aside from using up a bit of the space
-      inside the frame, come with no downsides --- they print easily and are a pretty simple shape to tweak and remix.
+      top or bottom. Aside from using up a bit of the space for components inside the frame, come with no downsides ---
+      they print easily and are a pretty simple shape to tweak and remix.
     * `overhang/` --- overhang panels have their plane extending over the edge of the frame, creating a bit of a
       sandwich look. This is mostly an aesthetic choice, but they sit higher in the frame as well, the main panel being
       over/under the frame rather than within it. This extra space is useful for taller levers. The only downside to
@@ -69,6 +65,8 @@ about what the types of parts are and how to use them:
 * `extras/`
     * Various experiments and things not directly related to making an arcade stick. At time of writing, there's a
       couple pieces for a little stand for the stick, solely for vanity purposes.
+        * `bss-ae/` --- these are pieces for an arcade control panel that fits on the Qanba 2009. See the docs in that
+          directory for details.
 
 Feel free to request or contribute to more objects. Additional documentation regarding assembling the stick is available
 in `docs/assembly-and-tips.md`.
@@ -76,7 +74,7 @@ in `docs/assembly-and-tips.md`.
 ## Printing
 
 These items all fit on a 256mm^2 print bed; I use a Bambu Lab P1P based on what I've learned from the
-OpenStickCommunity. Standard settings seem sufficiently sturdy, but see `docs/materials-and-printing.md` for more
+OpenStickCommunity. Standard settings seem sufficiently sturdy, but see `docs/printing-and-materials.md` for more
 thoughts and settings based on my tinkering with prints.
 
 ## Assembling
