@@ -21,9 +21,9 @@ module dir_arc_plus_w_30mm_and_sega_2p_nine_decorative_plate_of_plates() {
 
 		union() {
 			// y values are based on the other half below
-			translate([right_plate_center_x, 15, 0]) linear_extrude(2) offset(r=3, $fn=50)
+			translate([right_plate_center_x, 15, 0]) linear_extrude(2) offset(r=3, $fn=100)
 				square([right_plate_x, left_plate_y], center=true);
-			translate([-left_plate_center_x, 15, 0]) linear_extrude(2) offset(r=3, $fn=50)
+			translate([-left_plate_center_x, 15, 0]) linear_extrude(2) offset(r=3, $fn=100)
 				square([left_plate_x, left_plate_y], center=true);
 			/* translate([-50, 0, 0]) cube([200, 200, 2], center=true); */
 		}
