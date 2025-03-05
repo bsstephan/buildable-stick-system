@@ -14,10 +14,8 @@ module front_or_back_frame_piece() {
 		left_frame();
 		difference() {
 			// include the whole bottom wall (including mount columns)
-			translate([0, -(frame_y/2)+(piece_width/2), 0]) cube([frame_x, piece_width, frame_z], center=true);
-			// ...minus the frame wall and lip on the left
-			translate([-frame_x/2+frame_wall/2, 0, 0])
-				cube([frame_wall, frame_y, frame_z], center=true);
+			translate([0, -(frame_y/2)+(piece_width/2), 0])
+				cube([frame_piece_x_x, piece_width, frame_z], center=true);
 			// ...minus a slot for the combining piece to go into
 			cube([frame_x, frame_y-(panel_support_width+frame_wall)*2, inner_frame_z/3], center=true);
 		}
