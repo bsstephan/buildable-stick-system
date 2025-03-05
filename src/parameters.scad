@@ -3,6 +3,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+
+// CONNECTION POINT SIZES
+
+
 // adjustments
 hole_tolerance = 0.15;
 
@@ -31,24 +35,34 @@ big_button_radius = 15 + hole_tolerance;
 // radius + value below should leave space for the nut and for fingers to grab the nut
 button_radius_connector_space = 5;
 
+// standard lever hole
+lever_plate_hole = 12;
+
+// neutrik D screw holes
+neutrik_d_screw_radius = 1.6 + hole_tolerance;
+neutrik_d_radius = 12 + hole_tolerance;
+
+
+// ELEMENT DIMENSIONS
+
+
 // JLF mount dimensions
 lever_mount_x = 53;
 lever_mount_y = 95;
 lever_mount_z = 2;
 
-// standard lever hole
-lever_plate_hole = 12;
-
-// case dimensions
-// base frame box. reminder: top of inside (including mounts) is chopped by panel_z for plates
+// base frame box. reminder: inside top and bottom (including mounts) are chopped by panel_z for plates
 frame_x = 233;
 frame_y = 208;
 frame_z = 57;
 
-// stand dimensions to display a stick
-stand_x = 5;
-stand_y = frame_z;
-stand_z = 15;
+// depth of the "lip" of the frame that the top plate sets into/supports the overhang
+frame_wall = 4;
+
+// top plate, which can either be the whole plate ("inset") or the mounting frame for a plate that overhangs
+panel_x = frame_x - (frame_wall * 2);
+panel_y = frame_y - (frame_wall * 2);
+panel_z = 5;
 
 // degree to which the extended frame pieces stick out from the end of the frame
 frame_extension_x = 25;
@@ -61,19 +75,11 @@ overhang_panel_bevel_height = 1;
 
 frame_center_to_neutrik = 70;
 
-// depth of the "lip" of the frame that the top plate sets into/supports the overhang
-frame_wall = 4;
-
 // width of the column in the frame corners to support the hex bolt
 frame_mount_column_width = 20;
 
 // per neutrik (mm)
 neutrik_panel_thickness = 3;
-
-// top plate, which can either be the whole plate ("inset") or the mounting frame for a plate that overhangs
-panel_x = frame_x - (frame_wall * 2);
-panel_y = frame_y - (frame_wall * 2);
-panel_z = 5;
 
 // inside the frame
 inner_frame_z = frame_z - (panel_z * 2);
@@ -96,10 +102,6 @@ panel_to_frame_point_y = (panel_y/2)-10;
 // frame interior that supports the top plates
 panel_support_width = 5;
 
-// neutrik D screw holes
-neutrik_d_screw_radius = 1.6 + hole_tolerance;
-neutrik_d_radius = 12 + hole_tolerance;
-
 // additional button radius for decorative panels, etc.
 decorative_radius_scale = 1.75;
 jumbo_decorative_radius_scale = 2;
@@ -113,7 +115,14 @@ slash_inner_displacement = 10;
 slash_width = 15;
 slash_height = frame_z-panel_z*3;
 
+// stand dimensions to display a stick
+stand_x = 5;
+stand_y = frame_z;
+stand_z = 15;
+
+
 // LAYOUTS
+
 
 sega_2p_column_2_offset = 30.5;
 sega_2p_column_3_offset = sega_2p_column_2_offset + 36;
