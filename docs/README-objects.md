@@ -28,6 +28,15 @@ details.
 You should have received a copy of the GNU General Public License along with the Buildable Stick System. If not, see
 <https://www.gnu.org/licenses/>.
 
+### Lineage
+
+Inspired by the incredible work of [TheTrain](https://github.com/TheTrainGoes) on the [OpenStickCommunity Fightstick
+Case](https://github.com/OpenStickCommunity/Hardware/tree/main/Fightstick%20Case), itself based on the incredible work
+by [Dash n'Mash](https://twitter.com/Dash_xx_Mash?s=20). Original work Copyright 2023 TheTrain, [licensed under CC BY
+4.0](https://creativecommons.org/licenses/by/4.0/).
+
+Made possible by the amazing efforts of [slagcoin](https://www.slagcoin.com/).
+
 ### Distributing BSS Sticks
 
 Under the terms of the GPLv3, you must inform the receiver of the "object code" of their rights under the GPLv3. This is
