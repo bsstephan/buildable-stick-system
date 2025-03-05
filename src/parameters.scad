@@ -66,6 +66,7 @@ panel_z = 5;
 
 // some dimensions for frame pieces, useful in doing some intersections and chopping
 frame_piece_x_x = frame_x - (frame_wall * 2);	// essentially panel_x, yes
+frame_piece_y_y = frame_y;			// the whole y of the frame, yes
 
 // degree to which the extended frame pieces stick out from the end of the frame
 frame_extension_x = 25;
