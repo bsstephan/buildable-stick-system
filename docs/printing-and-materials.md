@@ -4,7 +4,7 @@ bss's random thoughts and notes on the actual printing of the Buildable Stick Sy
 
 ## Printing Settings
 
-My preferred settings are 3 wall loops with 20% gyroid sparse infill. This gives the models a bit more weight and
+My preferred settings are 3 wall loops with 25% gyroid sparse infill. This gives the models a bit more weight and
 strength against bowing forces, but something more default, like 2 wall loops, 15% grid sparse infill, is fine and does
 not lead to a weak enclosure.
 
