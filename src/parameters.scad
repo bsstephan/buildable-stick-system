@@ -100,8 +100,9 @@ panel_overhang_amount = 8.5;
 overhang_panel_x = panel_x + (frame_wall * 2) + (panel_overhang_amount * 2);
 overhang_panel_y = panel_y + (frame_wall * 2) + (panel_overhang_amount * 2);
 
-panel_to_frame_point_x = (panel_x/2)-10;
-panel_to_frame_point_y = (panel_y/2)-10;
+panel_to_frame_point_offset = 10;
+panel_to_frame_point_x = (panel_x/2) - panel_to_frame_point_offset;
+panel_to_frame_point_y = (panel_y/2) - panel_to_frame_point_offset;
 
 // frame interior that supports the top plates
 panel_support_width = 5;
