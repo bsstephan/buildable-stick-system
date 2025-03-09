@@ -119,6 +119,15 @@ slash_inner_displacement = 10;
 slash_width = 15;
 slash_height = frame_z-panel_z*3;
 
+// dustwasher parameters
+jlf_dustwasher_radius = 19;
+jlf_shaft_inner_radius = 4.55;
+
+lsx_nobi_dustwasher_radius = jlf_dustwasher_radius;
+lsx_nobi_shaft_inner_radius = 5;
+
+shaft_position_tolerance = 2;
+
 // stand dimensions to display a stick
 stand_x = 5;
 stand_y = frame_z;
