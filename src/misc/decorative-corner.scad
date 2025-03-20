@@ -1,5 +1,7 @@
 /* A bit of plastic to put on the corners of a case, just for more flair and seam hiding.
  *
+ * Note: this only works on the standard side and front/back pieces, not the longish/extended pieces.
+ *
  * SPDX-FileCopyrightText: © 2025 Brian S. Stephan <bss@incorporeal.org>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
