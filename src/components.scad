@@ -409,16 +409,32 @@ module dir_arc_30mm_thumb_button() {
 	translate([(panel_x/2)-sega_2p_column_1_left_panel_edge_offset, (-panel_y/2)+62, 0]) button_30mm_hole();
 }
 
-module dir_arc_30mm_finger_buttons() {
-	translate([0, dir_arc_30mm_row_2_offset, 0]) dir_arc_30mm_thumb_button();
-	translate([-dir_arc_30mm_column_2_offset, dir_arc_30mm_row_3_offset, 0]) dir_arc_30mm_thumb_button();
+module dir_arc_30mm_fingers_left_button() {
 	translate([-dir_arc_30mm_column_3_offset, dir_arc_30mm_row_3_offset, 0]) dir_arc_30mm_thumb_button();
+}
+
+module dir_arc_30mm_fingers_middle_button() {
+	translate([-dir_arc_30mm_column_2_offset, dir_arc_30mm_row_3_offset, 0]) dir_arc_30mm_thumb_button();
+}
+
+module dir_arc_30mm_fingers_right_button() {
+	translate([0, dir_arc_30mm_row_2_offset, 0]) dir_arc_30mm_thumb_button();
+}
+
+module dir_arc_30mm_finger_buttons() {
+	dir_arc_30mm_fingers_left_button();
+	dir_arc_30mm_fingers_middle_button();
+	dir_arc_30mm_fingers_right_button();
+}
+
+module dir_arc_30mm_w_button() {
+	translate([-26.8, dir_arc_w_30mm_row_4_offset, 0]) dir_arc_30mm_thumb_button();
 }
 
 module dir_arc_w_30mm() {
 	dir_arc_30mm_thumb_button();
 	dir_arc_30mm_finger_buttons();
-	translate([-26.8, dir_arc_w_30mm_row_4_offset, 0]) dir_arc_30mm_thumb_button();
+	dir_arc_30mm_w_button();
 }
 
 module dir_arc_w_30mm_plus_one() {
@@ -470,10 +486,14 @@ module sega_2p() {
 	translate([sega_2p_column_4_offset, -19-9, 0]) sega_2p_p1();
 }
 
-module sega_2p_nine() {
-	sega_2p();
+module sega_2p_nine_thumb_button() {
 	// just my guesstimate on this one
 	translate([0, -19-9-11-19-9-11, 0]) sega_2p_p1();
+}
+
+module sega_2p_nine() {
+	sega_2p();
+	sega_2p_nine_thumb_button();
 }
 
 module sega_2p_eleven() {
