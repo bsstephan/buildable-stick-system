@@ -5,7 +5,6 @@
 
 include <parameters.scad>
 decorative_radius_scale = 1.5;
-jumbo_decorative_radius_scale = 0;
 include <components.scad>
 
 module dir_arc_plus_w_30mm_and_sega_2p_nine_decorative_plate_of_plates() {

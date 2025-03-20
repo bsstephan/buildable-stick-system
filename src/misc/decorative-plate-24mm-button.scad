@@ -4,6 +4,7 @@
  */
 
 include <parameters.scad>
+decorative_radius_scale = 1.5;
 include <components.scad>
 
 module button_24mm_decorative_plate() {

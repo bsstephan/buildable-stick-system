@@ -6,7 +6,6 @@
 
 include <parameters.scad>
 decorative_radius_scale = 1.5;
-jumbo_decorative_radius_scale = 0;
 include <components.scad>
 
 module aux_control_three_button_tight_cluster_decorative_plate() {
