@@ -195,3 +195,9 @@ like the below should suffice in either electronic or printed form:
 
 > This arcade stick is part of the Buildable Stick System, version X.Y.Z; the source code to this program is available
 > under the terms of the GNU General Public License, at [LINK].
+
+## Gallery
+
+More photos.
+
+![A photo of three completed sticks](docs/finished-v4.7-x3.jpg)
