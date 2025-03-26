@@ -7,7 +7,8 @@ all:
 	cp ./docs/printing-and-materials.md ./build/docs/printing-and-materials.md
 	cp ./LICENSE ./build/LICENSE
 	cp ./CHANGELOG.md ./build/CHANGELOG.md
-	pushd ./build; zip ./buildable-stick-system-`git describe --dirty`-stls.zip . -r; popd
+	pushd ./build; zip ./buildable-stick-system-`git describe --dirty`-stls-and-docs.zip . -r; popd
+	pushd ./build; zip ./buildable-stick-system-`git describe --dirty`-stls.zip extras frames misc panels -r; popd
 
 clean:
 	rm -rf ./build
