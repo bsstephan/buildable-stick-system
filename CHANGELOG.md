@@ -2,6 +2,40 @@
 
 Included is a summary of changes to the project, by version. Details can be found in the commit history.
 
+## v4.7.0
+
+### Features
+
+* Inner wall pieces where the horizontal stripes jut through the horizontal stripe windows have been added, these look
+  decent and avoid the outer wall feeling extremely flimsy. This piece uses a "longish" front/back piece which isn't
+  retained as a separate piece, because the latter is not meant to be printed itself.
+* I somehow went this whole time without creating a simple Sega 2P layout panel and decorative plate; those have been
+  added.
+* Prototype (still literally a bit rough) braces for the corners and middle have been added. These pieces cover up the
+  seams of the frame, and add some visual depth and distinction, but are not for everyone. YMMV.
+* A new "superplate" of the "directional arc + W" plus "sega 2P nine" layouts combined has been added, this is a piece I
+  ended up not using in a build, but it functions as well as any of the plates, so why not.
+
+### Improvements
+
+* Visible round edges have been made more round.
+* The single-24mm-button decorative disc has been shrunk a bit, since (IMO) it stood out a bit too much relative to the
+  button.
+* The "longish" extended side has been made a bit simpler to construct.
+* The side piece construction has been reworked, making it a bit simpler to construct and reducing the build complexity,
+  though preview mode still complains about 2-manifold errors.
+* The assembly documentation has been cleaned up, with more pieces explained a bit better as well.
+* Dustwashers got some small updates to shrink the size of the disc to the normal JLF dustwasher size, and to fit the
+  shaft a bit tighter without obstructing the lever's ability to... be a lever.
+
+### Miscellaneous
+
+* The build has been improved to error when there are issues in the .scad files, to keep me from making bad packages.
+* The back pieces are aligned properly in the all together demo.
+* Updates to the docs on my preferred printing settings.
+* README updates following the previous releases' reorganizations.
+* Objects README update to add attribution to TheTrain.
+
 ## v4.6.0
 
 ### Features
