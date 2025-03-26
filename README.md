@@ -1,6 +1,6 @@
 # The Buildable Stick System
 
-Files for 3D printing an arcade stick.
+Files for 3D printing and building an arcade stick enclosure.
 
 Have you ever wanted to conjure your own arcade stick out of the ether (well, plastic), or to prototype a new layout or
 design before sending it to a custom builder? Do you just love having your space filled with arcade stick enclosures,
