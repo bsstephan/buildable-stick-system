@@ -12,7 +12,7 @@ module dir_arc_plus_w_30mm_and_sega_2p_nine_decorative_superplate() {
 	difference() {
 		union() {
 			hull() difference() {
-				// get a 2mm slice of the bigger button cylinders
+				// get a 2mm slice of the decorative button cylinders
 				union() {
 					translate([-panel_x/2, 0, -50]) dir_arc_w_30mm();
 					translate([panel_x/2, 0, -50]) sega_2p_nine();

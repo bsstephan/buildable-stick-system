@@ -8,17 +8,17 @@ include <parameters.scad>
 decorative_radius_scale = 1.5;
 include <components.scad>
 
-module sega_2p_nine_decorative_plate_of_plates() {
+module sega_2p_nine_decorative_plate() {
 	difference() {
-		// get a 2mm slice of the bigger button cylinders
-		union() {
-			translate([panel_x/2, 0, -25]) hull() sega_2p_nine();
+		hull() difference() {
+			// get a 2mm slice of the decorative button cylinders
+			translate([panel_x/2, 0, -50]) sega_2p_nine();
+			translate([0, 0, -100]) cube([500, 500, 198], center=true);
+			translate([0, 0, 100]) cube([500, 500, 198], center=true);
 		}
-		translate([0, 0, -100]) cube([500, 500, 198], center=true);
-		translate([0, 0, 100]) cube([500, 500, 198], center=true);
 		// cut out the normal holes
 		translate([panel_x/2, 0, -1]) sega_2p_nine();
 	}
 }
 
-sega_2p_nine_decorative_plate_of_plates();
+sega_2p_nine_decorative_plate();

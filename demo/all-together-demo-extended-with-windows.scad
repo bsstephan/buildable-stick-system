@@ -31,7 +31,6 @@ color(frame_top_bottom_color) translate([frame_x/2-4, 0, -2.5]) rotate([180, 180
 color(bottom_panel_color) translate([-panel_x/2, 0, -5-frame_z/2+5]) panel();
 color(bottom_panel_color) translate([panel_x/2, 0, -5-frame_z/2+5]) panel();
 
-/* color(top_deco_color) translate([0, 0, 3+frame_z/2-4]) dir_arc_plus_w_30mm_and_sega_2p_nine_decorative_plate_of_plates(); */
 color(top_deco_color) translate([0, 0, 3+frame_z/2-panel_z]) dir_arc_plus_w_30mm_and_sega_2p_nine_decorative_plate();
 color(top_deco_color) translate([-170, 20, 3+frame_z/2-panel_z]) lsx_nobi_dustwasher();
 color(top_deco_color) translate([panel_x-24, 30, 3+frame_z/2-panel_z]) button_24mm_decorative_plate();
