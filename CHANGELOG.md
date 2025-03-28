@@ -2,6 +2,20 @@
 
 Included is a summary of changes to the project, by version. Details can be found in the commit history.
 
+## v4.7.1
+
+### Fixes
+
+* Hull-based decorative plates were accidentally grown in v4.7.0 due to ye olde refactoring. They are back to the
+  dimensions they should be (give or take) because there was an underlying bug in how they were geometried pre-v4.7.1.
+* The docs/ directory in the build now includes the images referred to, especially in the README.
+
+### Miscellaneous
+
+* Some README tweaks, including another demonstrative photo.
+* The build creates both a ZIP of everything, including docs, for humans to download, and also a ZIP of *just* the STLs,
+  to ease uploading to Printables.
+
 ## v4.7.0
 
 ### Features
