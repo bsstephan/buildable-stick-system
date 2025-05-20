@@ -119,6 +119,26 @@ module oled_ssd1306_mount_cutout() {
 	translate([0, 0, -1.0]) cube([35, 35, 4], center=true);
 }
 
+module adafruit_pid_326_oled_ssd1306_mount_post() {
+	cylinder(r=2.25/2, h=8, $fn=50, center=true);
+}
+
+// aligned to the cutout below
+module adafruit_pid_326_oled_ssd1306_mount() {
+	translate([12, 13.25, -2]) adafruit_pid_326_oled_ssd1306_mount_post();
+	translate([12, -13.25, -2]) adafruit_pid_326_oled_ssd1306_mount_post();
+	translate([-12, 13.25, -2]) adafruit_pid_326_oled_ssd1306_mount_post();
+	translate([-12, -13.25, -2]) adafruit_pid_326_oled_ssd1306_mount_post();
+}
+
+module adafruit_pid_326_oled_ssd1306_mount_cutout() {
+	translate([0, 3.5, 0]) cube([ssd1306_x, ssd1306_y, panel_z+0.1], center=true);
+	translate([0, 0, -ssd1306_z/2]) cube([adafruit_pid_326_oled_ssd1306_cutout_x,
+		adafruit_pid_326_oled_ssd1306_cutout_y, panel_z-ssd1306_z+0.1], center=true);
+	translate([0, 0, -ssd1306_z/2-2]) cube([adafruit_pid_326_oled_ssd1306_cutout_x*3/2,
+		adafruit_pid_326_oled_ssd1306_cutout_y/2, panel_z/2+0.1], center=true);
+}
+
 module m3_mount_post() {
 	difference() {
 		cylinder(r=m3_screw_selftap_radius*4, h=8, $fn=6, center=true);

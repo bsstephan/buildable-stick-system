@@ -134,6 +134,13 @@ stand_x = 5;
 stand_y = frame_z;
 stand_z = 15;
 
+// oled cutout stuff
+ssd1306_x = 23;
+ssd1306_y = 12;
+ssd1306_z = 1;
+adafruit_pid_326_oled_ssd1306_cutout_x = 30;
+adafruit_pid_326_oled_ssd1306_cutout_y = 32;
+
 
 // LAYOUTS
 
