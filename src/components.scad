@@ -107,18 +107,6 @@ module m2_mount_post() {
 	}
 }
 
-module oled_ssd1306_mount() {
-	translate([11.5, 12, 0]) m2_mount_post();
-	translate([11.5, -12, 0]) m2_mount_post();
-	translate([-11.5, 12, 0]) m2_mount_post();
-	translate([-11.5, -12, 0]) m2_mount_post();
-}
-
-module oled_ssd1306_mount_cutout() {
-	translate([0, 1.9, 0]) cube([25, 14, 5], center=true);
-	translate([0, 0, -1.0]) cube([35, 35, 4], center=true);
-}
-
 module adafruit_pid_326_oled_ssd1306_mount_post() {
 	cylinder(r=2.25/2, h=8, $fn=50, center=true);
 }
