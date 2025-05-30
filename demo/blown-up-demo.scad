@@ -10,14 +10,14 @@ use <frames/pieces/side.scad>
 use <frames/pieces/front-or-back.scad>
 use <frames/pieces/front-or-back-aux-and-neutrik.scad>
 use <panels/overhang/left-lever-and-dir_arc-plus-w-30mm-panel.scad>
-use <panels/overhang/right-sega-2p-nine-plus-control-panel-with-mount.scad>
+use <panels/overhang/right-sega-2p-nine-plus-aux-button-with-mount.scad>
 use <panels/overhang/left-or-right-panel.scad>
 use <misc/decorative-plate-24mm-button.scad>
 use <misc/decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-nine.scad>
 use <misc/dustwasher-lsx-nobi.scad>
 
 color("#C12E1F") translate([-panel_x/2-25, 0, frame_z/2+75]) lever_and_dir_arc_w_30mm_left_overhang_panel();
-color("#C12E1F") translate([panel_x/2+25, 0, frame_z/2+75]) sega_2p_nine_plus_control_right_overhang_panel_with_mount();
+color("#C12E1F") translate([panel_x/2+25, 0, frame_z/2+75]) sega_2p_nine_plus_aux_button_right_overhang_panel_with_mount();
 color("black") translate([-frame_x/2+5-25, -55, -2.5]) front_or_back_frame_piece();
 color("black") rotate([0, 180, 0]) translate([-frame_x/2+5-25, -55, -2.5]) front_or_back_frame_piece();
 color("black") translate([-frame_x/2+5-50, 0, -2.5]) side_frame_piece();

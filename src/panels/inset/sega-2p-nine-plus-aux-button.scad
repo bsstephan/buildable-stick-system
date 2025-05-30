@@ -6,7 +6,7 @@
 include <parameters.scad>
 include <components.scad>
 
-module sega_2p_nine_plus_control_panel() {
+module sega_2p_nine_plus_aux_button() {
 	difference() {
 		panel();
 		sega_2p_nine();
@@ -14,4 +14,4 @@ module sega_2p_nine_plus_control_panel() {
 	}
 }
 
-sega_2p_nine_plus_control_panel();
+sega_2p_nine_plus_aux_button();

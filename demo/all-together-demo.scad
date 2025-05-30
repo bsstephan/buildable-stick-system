@@ -9,7 +9,7 @@ use <frames/pieces/side.scad>
 use <frames/pieces/front-or-back.scad>
 use <frames/pieces/front-or-back-aux-and-neutrik.scad>
 use <panels/inset/lever-and-dir_arc-plus-w-30mm-panel.scad>
-use <panels/inset/sega-2p-nine-plus-control-panel-with-mount.scad>
+use <panels/inset/sega-2p-nine-plus-aux-button-with-mount.scad>
 use <misc/decorative-plate-24mm-button.scad>
 use <misc/decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-nine.scad>
 use <misc/dustwasher-lsx-nobi.scad>
@@ -21,7 +21,7 @@ top_deco_color = "white";
 brace_color    = "gray";
 
 color(panel_color) translate([-panel_x/2, 0, frame_z/2-panel_z/2+0.001]) lever_and_dir_arc_w_30mm_panel();
-color(panel_color) translate([panel_x/2, 0, frame_z/2-panel_z/2+0.001]) sega_2p_nine_plus_control_panel_with_mount();
+color(panel_color) translate([panel_x/2, 0, frame_z/2-panel_z/2+0.001]) sega_2p_nine_plus_aux_button_with_mount();
 color(base_color) translate([panel_x/2, 0, 0]) rotate([0, 180, 0]) side_frame_piece();
 color(base_color) translate([-panel_x/2, 0, 0]) side_frame_piece();
 color(base_color) translate([panel_x/2, 0, 0]) front_or_back_frame_piece();

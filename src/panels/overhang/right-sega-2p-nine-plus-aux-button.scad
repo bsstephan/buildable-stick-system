@@ -6,7 +6,7 @@
 include <parameters.scad>
 include <components.scad>
 
-module sega_2p_nine_plus_control_right_overhang_panel() {
+module sega_2p_nine_plus_aux_button_right_overhang_panel() {
 	difference() {
 		panel_with_raised_overhang();
 		sega_2p_nine();
@@ -15,4 +15,4 @@ module sega_2p_nine_plus_control_right_overhang_panel() {
 	}
 }
 
-sega_2p_nine_plus_control_right_overhang_panel();
+sega_2p_nine_plus_aux_button_right_overhang_panel();
