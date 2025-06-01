@@ -13,7 +13,6 @@ use <panels/inset/sega-2p-nine-plus-aux-button-with-mount.scad>
 use <misc/decorative-plate-24mm-button.scad>
 use <misc/decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-nine.scad>
 use <misc/dustwasher-lsx-nobi.scad>
-use <misc/decorative-corner.scad>
 
 panel_color    = "red";
 base_color     = "gray";
@@ -30,11 +29,6 @@ color(base_color) translate([panel_x/2, 0, 0]) rotate([180, 180, 0]) front_or_ba
 color(base_color) translate([-panel_x/2, 0, 0]) rotate([180, 0, 0]) front_or_back_aux_and_neutrik_frame_piece();
 color(base_color) translate([-panel_x/2, 0, -frame_z/2+panel_z/2]) panel();
 color(base_color) translate([panel_x/2, 0, -frame_z/2+panel_z/2]) panel();
-
-color(brace_color) translate([-panel_x/2, 0, 0]) decorative_corner();
-color(brace_color) mirror([1, 0, 0]) translate([-panel_x/2, 0, 0]) decorative_corner();
-color(brace_color) mirror([0, 1, 0]) translate([-panel_x/2, 0, 0]) decorative_corner();
-color(brace_color) mirror([1, 0, 0]) mirror([0, 1, 0]) translate([-panel_x/2, 0, 0]) decorative_corner();
 
 color(top_deco_color) translate([0, 0, 4+frame_z/2-panel_z/2+0.001]) dir_arc_plus_w_30mm_and_sega_2p_nine_decorative_plate();
 color(top_deco_color) translate([-170, 20, 4+frame_z/2-panel_z/2+0.001]) lsx_nobi_dustwasher();
