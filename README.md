@@ -141,9 +141,9 @@ will probably save you around $5 of material, and you can probably decide what y
 
 OpenSCAD pathing is relative to the current working directory by default, which is probably not the `src/` directory.
 When you start OpenSCAD, you must either start it from inside the project's `src/` directory, or point it at the path to
-the source files via e.g. `OPENSCADPATH=path/to/buildable-stick-system/src/` openscad`.
+the source files via e.g. `OPENSCADPATH=path/to/buildable-stick-system/src/ openscad`.
 
-See https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement.
+See <https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement>.
 
 ## Miscellany
 
