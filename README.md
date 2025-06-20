@@ -135,6 +135,16 @@ Board, ~$60 for Sanwa buttons and a lever, and ~$20 for miscellaneous connectors
 full-featured controller with an open source foundation together for around $140. Reducing wall and infill settings
 will probably save you around $5 of material, and you can probably decide what you want to do from there.
 
+## FAQ
+
+### I get a bunch of warnings on not being able to include files when I open them in OpenSCAD, what do I do?
+
+OpenSCAD pathing is relative to the current working directory by default, which is probably not the `src/` directory.
+When you start OpenSCAD, you must either start it from inside the project's `src/` directory, or point it at the path to
+the source files via e.g. `OPENSCADPATH=path/to/buildable-stick-system/src/` openscad`.
+
+See https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement.
+
 ## Miscellany
 
 See the `/docs/` directory for more thoughts too scattered for this document.
