@@ -510,6 +510,76 @@ module sega_2p_eleven() {
 	translate([sega_2p_column_5_offset, -19-9-11, 0]) sega_2p_p1();
 }
 
+// BSS ERGO - 30mm
+
+module ergo_wasd_30mm() {
+	button_30mm_hole();					// W
+	translate([0, -36, 0]) button_30mm_hole();		// S
+	translate([-34.5, -36-9, 0]) button_30mm_hole();	// A
+	translate([34.5, -36-9, 0]) button_30mm_hole();		// D
+}
+
+module ergo_six_30mm() {
+	ergo_wasd_30mm();
+	translate([-34.5, -9, 0]) button_30mm_hole();		// left of W
+	translate([34.5, -9, 0]) button_30mm_hole();		// right of W
+}
+
+module ergo_eight_30mm() {
+	ergo_six_30mm();
+	translate([34.5*1.9, -9*3, 0]) button_30mm_hole();	// top right of right of W
+	translate([34.5*1.9, -36-9*3, 0]) button_30mm_hole();	// right of D
+}
+
+module ergo_wasd_five_30mm() {
+	translate([-51.75, 65.5, 0]) rotate([0, 0, 10]) {
+		ergo_wasd_30mm();
+	}
+	translate([0, 0, 0]) sega_2p_nine_thumb_button();
+}
+
+module ergo_nine_30mm() {
+	translate([-51.75, 65.5, 0]) rotate([0, 0, 10]) {
+		ergo_eight_30mm();
+	}
+	translate([0, 0, 0]) sega_2p_nine_thumb_button();
+}
+
+// untested
+// BSS ERGO - 24mm
+/* module ergo_wasd() { */
+/* 	button_24mm_hole();					// W */
+/* 	translate([0, -27, 0]) button_24mm_hole();		// S */
+/* 	translate([-26, -27-7, 0]) button_24mm_hole();		// A */
+/* 	translate([26, -27-7, 0]) button_24mm_hole();		// D */
+/* } */
+
+/* module ergo_six() { */
+/* 	ergo_wasd(); */
+/* 	translate([-26, -7, 0]) button_24mm_hole();		// left of W */
+/* 	translate([26, -7, 0]) button_24mm_hole();		// right of W */
+/* } */
+
+/* module ergo_eight() { */
+/* 	ergo_six(); */
+/* 	translate([26*2-2, -7*3, 0]) button_24mm_hole();	// top right of right of W */
+/* 	translate([26*2-2, -27-7*3, 0]) button_24mm_hole();	// top right of right of W */
+/* } */
+
+/* module ergo_wasd_five() { */
+/* 	translate([-63.25, 65.5, 0]) rotate([0, 0, 10]) { */
+/* 		ergo_wasd(); */
+/* 	} */
+/* 	translate([0, 0, 0]) sega_2p_nine_thumb_button(); */
+/* } */
+
+/* module ergo_nine() { */
+/* 	translate([-63.25, 65.5, 0]) rotate([0, 0, 10]) { */
+/* 		ergo_eight(); */
+/* 	} */
+/* 	translate([0, 0, 0]) sega_2p_nine_thumb_button(); */
+/* } */
+
 module shiokenstar() {
 	translate([-172, 32, 0]) dir_arc_24mm_directionals();
 	sega_2p();
