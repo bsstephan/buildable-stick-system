@@ -10,9 +10,9 @@ use <frames/pieces/front-or-back.scad>
 use <frames/pieces/front-or-back-aux-and-neutrik.scad>
 use <panels/inset/lever-and-ergo-wasd-five-panel-with-oled.scad>
 use <panels/inset/ergo-nine-plus-aux-button-with-mount.scad>
-use <misc/decorative-plate-24mm-button.scad>
-use <misc/decorative-plate-ergo-wasd-five-30mm-and-ergo-nine-30mm.scad>
-use <misc/dustwasher-lsx-nobi.scad>
+use <plates/decorative-plate-24mm-button.scad>
+use <plates/decorative-plate-ergo-wasd-five-30mm-and-ergo-nine-30mm.scad>
+use <plates/dustwasher-lsx-nobi.scad>
 
 panel_color    = "red";
 base_color     = "gray";

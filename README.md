@@ -57,11 +57,15 @@ about what the types of parts are and how to use them:
       these is that they aren't as reusable as the inset panels, since the inset panels can go anywhere, but the
       overhang panels must be designed to not overlap with other overhang panels, so you might have to make more custom
       variants depending on where you put things.
-* `misc/`
-    * Pieces that I haven't organized better (yet) --- there are decorative plates for top buttons and similar to give
+* `plates/`
+    * Flat pieces used for cosmetic or connective reasons --- decorative plates for top buttons and similar to give
       more color variance and some layers to the arcade stick, some very simple dustwashers, plates that fit rocker
       switches and the like in Neutrik D or 20mm holes, and a lever mount spacer for getting your lever shaft at the
       desired height. You don't *need* any of these, but you'll probably use a few.
+* `misc/`
+    * Pieces that I haven't organized better (yet) --- odd things and scratch ideas, mostly. There are some decorative
+      corners for a bit more height/nicer seams, a sleeve to make smaller hex spacers fit in the hole as they're
+      supposed to, things of that nature.
 * `extras/`
     * Various experiments and things not directly related to making an arcade stick. At time of writing, there's a
       couple pieces for a little stand for the stick, solely for vanity purposes.

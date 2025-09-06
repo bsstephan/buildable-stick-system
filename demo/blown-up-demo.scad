@@ -12,9 +12,9 @@ use <frames/pieces/front-or-back-aux-and-neutrik.scad>
 use <panels/overhang/left-lever-and-dir_arc-plus-w-30mm-panel.scad>
 use <panels/overhang/right-sega-2p-nine-plus-aux-button-with-mount.scad>
 use <panels/overhang/left-or-right-panel.scad>
-use <misc/decorative-plate-24mm-button.scad>
-use <misc/decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-nine.scad>
-use <misc/dustwasher-lsx-nobi.scad>
+use <plates/decorative-plate-24mm-button.scad>
+use <plates/decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-nine.scad>
+use <plates/dustwasher-lsx-nobi.scad>
 
 color("#C12E1F") translate([-panel_x/2-25, 0, frame_z/2+75]) lever_and_dir_arc_w_30mm_left_overhang_panel();
 color("#C12E1F") translate([panel_x/2+25, 0, frame_z/2+75]) sega_2p_nine_plus_aux_button_right_overhang_panel_with_mount();

@@ -10,7 +10,7 @@ use <frames/pieces/side-trapezoid-extended-to-front-trapezoid.scad>
 use <frames/pieces/front-or-back-aux-and-neutrik.scad>
 use <panels/inset/lever-and-dir_arc-plus-w-30mm-panel.scad>
 use <panels/inset/lever-and-sega-2p-6-button-panel-with-aux-with-mount.scad>
-use <misc/dustwasher-jlf.scad>
+use <plates/dustwasher-jlf.scad>
 
 top_panel_color        = "#5B6579";
 bottom_panel_color     = "#8E9089";

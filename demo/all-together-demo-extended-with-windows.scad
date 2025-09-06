@@ -10,9 +10,9 @@ use <frames/pieces/front-or-back-aux-and-neutrik.scad>
 use <frames/pieces/front-or-back-windowed-horiz-stripes.scad>
 use <panels/inset/lever-and-dir_arc-plus-w-30mm-panel.scad>
 use <panels/inset/sega-2p-nine-plus-aux-button-with-mount.scad>
-use <misc/decorative-plate-24mm-button.scad>
-use <misc/decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-nine.scad>
-use <misc/dustwasher-lsx-nobi.scad>
+use <plates/decorative-plate-24mm-button.scad>
+use <plates/decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-nine.scad>
+use <plates/dustwasher-lsx-nobi.scad>
 
 top_panel_color        = "#5B6579";
 bottom_panel_color     = "#8E9089";

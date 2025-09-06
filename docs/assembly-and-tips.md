@@ -27,17 +27,17 @@ The pieces you need to print (all colors to your taste):
 The above gets you the basics. Some common things you may also want:
 
 * **Mounting Neutrik connectors:** Neutrik D connectors can mount flush to the inside of the frame, but you can choose
-  to have a little decorative plate (`misc/neutrik-d-plate.stl` for added depth or color choices on the outside of the
+  to have a little decorative plate (`plates/neutrik-d-plate.stl` for added depth or color choices on the outside of the
   frame, if you'd like.
 * **Mounting a 24mm switch:** a rocker switch can also be mounted in the Neutrik D connector, but it needs to be placed
-  into a `misc/neutrik-d-plate-24mm-hole.stl` plate, and the plate mounted to the frame.
+  into a `plates/neutrik-d-plate-24mm-hole.stl` plate, and the plate mounted to the frame.
 * **Flair for the auxillary buttons:** the three buttons in a row on the back of the frame can also get some style, just
-  place a `misc/decorative-plate-aux-control-three-button-cluster.stl` between the buttons and the frame. This only
+  place a `plates/decorative-plate-aux-control-three-button-cluster.stl` between the buttons and the frame. This only
   works for screw-in buttons.
 * **Flair for the top buttons:** same as above, a decorative plate for top panel layouts --- e.g.
-  `misc/decorative-plate-sega-2p.stl` --- can be sandwiched between the buttons and panel to add some style. This also
+  `plates/decorative-plate-sega-2p.stl` --- can be sandwiched between the buttons and panel to add some style. This also
   only tends to work on screw-in buttons.
-* **Dustwashers/flair:** same deal, if you want to print one, use e.g. `misc/dustwasher-jlf.stl`.
+* **Dustwashers/flair:** same deal, if you want to print one, use e.g. `plates/dustwasher-jlf.stl`.
 
 ## Putting a BSS Stick Together
 
@@ -53,9 +53,9 @@ following is the most consistent way I've found to put one together.
    overall assembly works with your components, so again get your buttons, lever, etc., in place. You can secure them at
    this point.
     1. If you are using a button decorative plate that spans two panels --- e.g.
-       `misc/decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-plus-one` --- take care to align the two panels as tightly
+       `plates/decorative-plate-dir_arc-plus-w-30mm-and-sega-2p-plus-one` --- take care to align the two panels as tightly
        as possible, and accurately, as they will be hard to adjust once everything is secured and in the frame.
-    2. If using a lever, don't forget the lever mount spacer --- `misc/lever-mount-sanwa-seimitsu` --- if you want it,
+    2. If using a lever, don't forget the lever mount spacer --- `plates/lever-mount-sanwa-seimitsu` --- if you want it,
        and tighten those mounting bolts now as well.
 3. Create the frame box by combining your frame piece parts, box or extended, together. This will be relatively stable
    just via friction fit.
