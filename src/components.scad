@@ -512,35 +512,35 @@ module sega_2p_eleven() {
 
 // BSS ERGO - 30mm
 
-module ergo_wasd_30mm() {
+module wasd_30mm() {
 	button_30mm_hole();					// W
 	translate([0, -36, 0]) button_30mm_hole();		// S
 	translate([-34.5, -36-9, 0]) button_30mm_hole();	// A
 	translate([34.5, -36-9, 0]) button_30mm_hole();		// D
 }
 
-module ergo_six_30mm() {
-	ergo_wasd_30mm();
+module wasd_six_30mm() {
+	wasd_30mm();
 	translate([-34.5, -9, 0]) button_30mm_hole();		// left of W
 	translate([34.5, -9, 0]) button_30mm_hole();		// right of W
 }
 
-module ergo_eight_30mm() {
-	ergo_six_30mm();
+module wasd_eight_30mm() {
+	wasd_six_30mm();
 	translate([34.5*1.9, -9*3, 0]) button_30mm_hole();	// top right of right of W
 	translate([34.5*1.9, -36-9*3, 0]) button_30mm_hole();	// right of D
 }
 
 module ergo_wasd_five_30mm() {
 	translate([-51.75, 65.5, 0]) rotate([0, 0, 10]) {
-		ergo_wasd_30mm();
+		wasd_30mm();
 	}
 	translate([0, 0, 0]) sega_2p_nine_thumb_button();
 }
 
 module ergo_nine_30mm() {
 	translate([-51.75, 65.5, 0]) rotate([0, 0, 10]) {
-		ergo_eight_30mm();
+		wasd_eight_30mm();
 	}
 	translate([0, 0, 0]) sega_2p_nine_thumb_button();
 }
