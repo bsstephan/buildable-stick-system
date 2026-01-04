@@ -23,8 +23,8 @@ color(panel_color) translate([-panel_x/2, 0, frame_z/2-panel_z/2+0.001]) lever_a
 color(panel_color) translate([panel_x/2, 0, frame_z/2-panel_z/2+0.001]) ergo_nine_plus_aux_button_panel_with_mount();
 color(base_color) translate([panel_x/2, 0, 0]) rotate([0, 180, 0]) side_frame_piece();
 color(base_color) translate([-panel_x/2, 0, 0]) side_frame_piece();
-color(base_color) translate([panel_x/2, 0, 0]) front_or_back_frame_piece();
-color(base_color) translate([-panel_x/2, 0, 0]) front_or_back_frame_piece();
+color(base_color) translate([panel_x/2, 0, 0]) clean_edge_front_or_back_frame_piece();
+color(base_color) translate([-panel_x/2, 0, 0]) clean_edge_front_or_back_frame_piece();
 color(base_color) translate([panel_x/2, 0, 0]) rotate([180, 180, 0]) front_or_back_aux_and_neutrik_frame_piece();
 color(base_color) translate([-panel_x/2, 0, 0]) rotate([180, 0, 0]) front_or_back_aux_and_neutrik_frame_piece();
 /* color(base_color) translate([-panel_x/2, 0, -frame_z/2+panel_z/2]) panel(); */

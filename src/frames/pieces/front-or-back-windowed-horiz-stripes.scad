@@ -22,7 +22,7 @@ module front_horiz_stripes() {
 
 module horiz_striped_windowed_front_or_back_frame_piece() {
 	difference() {
-		front_or_back_frame_piece();
+		clean_edge_front_or_back_frame_piece();
 		// subtract frame wall windows
 		front_horiz_stripes();
 		// subtract the inner wall area that will be provided by the other piece

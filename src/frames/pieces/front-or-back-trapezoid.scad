@@ -9,7 +9,7 @@ use <front-or-back.scad>
 
 module clean_front_or_back() {
 	difference() {
-		front_or_back_frame_piece();
+		clean_edge_front_or_back_frame_piece();
 		// chop off the lip we left on the basic piece
 		translate([-frame_x/2+frame_wall/2, 0, 0]) cube([frame_wall, frame_y, frame_z], center=true);
 	};

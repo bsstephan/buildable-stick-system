@@ -21,7 +21,7 @@ module backslashes() {
 
 module backslashes_windowed_front_or_back_frame_piece() {
 	difference() {
-		front_or_back_frame_piece();
+		clean_edge_front_or_back_frame_piece();
 		// subtract slashes from the frame wall
 		backslashes();
 		// subtract the inner wall area that will be provided by the other piece

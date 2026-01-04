@@ -10,7 +10,7 @@ use <frames/pieces/front-or-back.scad>
 
 module interconnect_frame_half_piece() {
 	translate([0, frame_y/2-frame_wall, 0]) difference() {
-		front_or_back_frame_piece();
+		clean_edge_front_or_back_frame_piece();
 		translate([0, (-frame_y+frame_wall)/2-panel_overhang_amount, 0])
 			cube([overhang_panel_x, frame_wall+panel_overhang_amount*2, frame_z], center=true);
 	}
