@@ -538,6 +538,13 @@ module ergo_wasd_five_30mm() {
 	translate([0, 0, 0]) sega_2p_nine_thumb_button();
 }
 
+module ergo_wasd_seven_30mm() {
+	translate([-51.75, 65.5, 0]) rotate([0, 0, 10]) {
+		wasd_six_30mm();
+	}
+	translate([0, 0, 0]) sega_2p_nine_thumb_button();
+}
+
 module ergo_nine_30mm() {
 	translate([-51.75, 65.5, 0]) rotate([0, 0, 10]) {
 		wasd_eight_30mm();
