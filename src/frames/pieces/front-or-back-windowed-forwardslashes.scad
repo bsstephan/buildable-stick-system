@@ -19,12 +19,4 @@ module forwardslashes_windowed_front_or_back_frame_piece() {
 	}
 }
 
-module forwardslashes_windowed_front_or_back_frame_piece_for_extended_side() {
-	difference() {
-		forwardslashes_windowed_front_or_back_frame_piece();
-		// ...minus the frame wall and lip on the left
-		translate([-frame_x/2+frame_wall/2, 0, 0]) cube([frame_wall, frame_y, frame_z], center=true);
-	}
-}
-
-forwardslashes_windowed_front_or_back_frame_piece_for_extended_side();
+forwardslashes_windowed_front_or_back_frame_piece();
