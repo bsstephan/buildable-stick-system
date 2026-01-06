@@ -9,7 +9,7 @@ use <front-or-back.scad>
 
 module clean_front_or_back() {
 	difference() {
-		clean_edge_front_or_back_frame_piece();
+		front_or_back_frame_piece();
 		// chop off the lip we left on the basic piece
 		translate([-frame_x/2+frame_wall/2, 0, 0]) cube([frame_wall, frame_y, frame_z], center=true);
 	};
@@ -17,7 +17,7 @@ module clean_front_or_back() {
 
 module bottom_piece_wall() {
 	// get a slice of the piece (before the bevel), to use it in extruding
-	projection(cut=true) rotate([-90, 0, 0]) translate([0, frame_y/2-(frame_wall-frame_bevel_height)*3/2, 0])
+	projection(cut=true) rotate([-90, 0, 0]) translate([0, frame_y/2-frame_wall+0.01, 0])
 		clean_front_or_back();
 }
 
@@ -25,12 +25,12 @@ module bottom_piece_extension() {
 	// combine the original with a shrunken piece to "pull" the wall out
 	hull() {
 		linear_extrude(height=frame_extension_y) scale([1, 0.5, 1]) bottom_piece_wall();
-		linear_extrude(height=(frame_wall-frame_bevel_height)) bottom_piece_wall();
+		linear_extrude(height=frame_wall) bottom_piece_wall();
 	}
 }
 
 module front_or_back_trapezoid_frame_piece() {
-	clean_front_or_back();
+	clean_edge_front_or_back_frame_piece();
 	translate([0, -frame_y/2+frame_wall, 0]) rotate([90, 0, 0]) bottom_piece_extension();
 }
 

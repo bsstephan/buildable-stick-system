@@ -74,7 +74,7 @@ frame_extension_y = 25;
 
 // this sinks the bottom and top of the frame inward a bit, and is used to math out two shapes
 // when creating the frame box / overhang panel
-frame_bevel_height = 2;
+frame_bevel_height = 1.25;
 overhang_panel_bevel_height = 1;
 
 frame_center_to_neutrik = 70;
