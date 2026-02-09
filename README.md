@@ -16,7 +16,7 @@ Randomus](https://webirc.randomus.net/#buildable-stick-system)!**
 
 ![A photo of a completed stick](docs/finished-v4.4.jpg)
 
-[Photo of a completed inset panel-based stick.]
+[Photo of a completed overhang panel-based stick.]
 
 Originally an attempt to make a couple customized STL files for the [OpenStickCommunity Fightstick
 Case](https://github.com/OpenStickCommunity/Hardware/tree/main/Fightstick%20Case), the changes ballooned to fit my
