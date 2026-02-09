@@ -552,40 +552,39 @@ module ergo_nine_30mm() {
 	translate([0, 0, 0]) sega_2p_nine_thumb_button();
 }
 
-// untested
 // BSS ERGO - 24mm
-/* module ergo_wasd() { */
-/* 	button_24mm_hole();					// W */
-/* 	translate([0, -27, 0]) button_24mm_hole();		// S */
-/* 	translate([-26, -27-7, 0]) button_24mm_hole();		// A */
-/* 	translate([26, -27-7, 0]) button_24mm_hole();		// D */
-/* } */
+module wasd_24mm() {
+	button_24mm_hole();					// W
+	translate([0, -27, 0]) button_24mm_hole();		// S
+	translate([-26, -27-7, 0]) button_24mm_hole();		// A
+	translate([26, -27-7, 0]) button_24mm_hole();		// D
+}
 
-/* module ergo_six() { */
-/* 	ergo_wasd(); */
-/* 	translate([-26, -7, 0]) button_24mm_hole();		// left of W */
-/* 	translate([26, -7, 0]) button_24mm_hole();		// right of W */
-/* } */
+module wasd_six_24mm() {
+	wasd_24mm();
+	translate([-26, -7, 0]) button_24mm_hole();		// left of W
+	translate([26, -7, 0]) button_24mm_hole();		// right of W
+}
 
-/* module ergo_eight() { */
-/* 	ergo_six(); */
-/* 	translate([26*2-2, -7*3, 0]) button_24mm_hole();	// top right of right of W */
-/* 	translate([26*2-2, -27-7*3, 0]) button_24mm_hole();	// top right of right of W */
-/* } */
+module wasd_eight_24mm() {
+	wasd_six_24mm();
+	translate([26*2-2, -7*3, 0]) button_24mm_hole();	// top right of right of W
+	translate([26*2-2, -27-7*3, 0]) button_24mm_hole();	// top right of right of W
+}
 
-/* module ergo_wasd_five() { */
-/* 	translate([-63.25, 65.5, 0]) rotate([0, 0, 10]) { */
-/* 		ergo_wasd(); */
-/* 	} */
-/* 	translate([0, 0, 0]) sega_2p_nine_thumb_button(); */
-/* } */
+module ergo_wasd_five_24mm() {
+	translate([-63.25, 65.5, 0]) rotate([0, 0, 10]) {
+		wasd_24mm();
+	}
+	translate([0, 0, 0]) sega_2p_nine_thumb_button();
+}
 
-/* module ergo_nine() { */
-/* 	translate([-63.25, 65.5, 0]) rotate([0, 0, 10]) { */
-/* 		ergo_eight(); */
-/* 	} */
-/* 	translate([0, 0, 0]) sega_2p_nine_thumb_button(); */
-/* } */
+module ergo_nine_24mm() {
+	translate([-63.25, 65.5, 0]) rotate([0, 0, 10]) {
+		wasd_eight_24mm();
+	}
+	translate([0, 0, 0]) sega_2p_nine_thumb_button();
+}
 
 module shiokenstar() {
 	translate([-172, 32, 0]) dir_arc_24mm_directionals();
