@@ -11,8 +11,8 @@ import re
 import subprocess
 
 PROJECT_ROOT = os.path.abspath(os.getcwd())
-BUILD_DIR = os.path.join(PROJECT_ROOT, 'build/')
-SOURCE_DIR = os.path.join(PROJECT_ROOT, 'src/')
+BUILD_DIR = os.path.join(PROJECT_ROOT, 'build', 'models')
+SOURCE_DIR = os.path.join(PROJECT_ROOT, 'src')
 
 EXCLUDES = ['components.scad', 'parameters.scad']
 
