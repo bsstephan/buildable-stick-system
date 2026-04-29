@@ -545,10 +545,14 @@ module ergo_wasd_seven_30mm() {
 	translate([0, 0, 0]) sega_2p_nine_thumb_button();
 }
 
-module ergo_nine_30mm() {
+module ergo_eight_30mm() {
 	translate([-51.75, 65.5, 0]) rotate([0, 0, 10]) {
 		wasd_eight_30mm();
 	}
+}
+
+module ergo_nine_30mm() {
+	ergo_eight_30mm();
 	translate([0, 0, 0]) sega_2p_nine_thumb_button();
 }
 
@@ -579,10 +583,14 @@ module ergo_wasd_five_24mm() {
 	translate([0, 0, 0]) sega_2p_nine_thumb_button();
 }
 
-module ergo_nine_24mm() {
+module ergo_eight_24mm() {
 	translate([-63.25, 65.5, 0]) rotate([0, 0, 10]) {
 		wasd_eight_24mm();
 	}
+}
+
+module ergo_nine_24mm() {
+	ergo_eight_24mm();
 	translate([0, 0, 0]) sega_2p_nine_thumb_button();
 }
 
