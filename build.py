@@ -25,6 +25,9 @@ processes = []
 os.chdir(SOURCE_DIR)
 for root, dirs, files in os.walk('.'):
     print(f"{root} {dirs} {files}")
+    if root == './lib':
+        continue
+
     # make the current directory so that openscad can write stuff into it
     try:
         os.makedirs(os.path.join(BUILD_DIR, root))
