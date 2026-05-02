@@ -1,5 +1,5 @@
 include <parameters.scad>
-// decorative_radius_scale = 1.5;
+decorative_radius_scale = 1.5;
 include <components.scad>
 include <lib/MinkowskiRound.scad>
 
